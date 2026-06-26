@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" role="img" aria-label="Energy media growth project cover">
+  <rect width="1400" height="900" fill="#242a38"/>
+  <circle cx="1090" cy="230" r="330" fill="#9bb6c8" opacity=".55"/>
+  <circle cx="406" cy="592" r="330" fill="#c89aae" opacity=".72"/>
+  <circle cx="760" cy="450" r="190" fill="#e5b1c2" opacity=".55"/>
+  <g fill="none" stroke="#f6f1e8" stroke-opacity=".5" stroke-width="2">
+    <circle cx="760" cy="450" r="146"/>
+    <circle cx="760" cy="450" r="228"/>
+    <circle cx="760" cy="450" r="316"/>
+    <path d="M188 450h1024M760 82v736M294 230c284 196 624 204 934 0M250 668c308-194 672-194 1010 4"/>
+  </g>
+  <g fill="#f6f1e8">
+    <circle cx="760" cy="450" r="18"/>
+    <circle cx="1000" cy="294" r="14"/>
+    <circle cx="525" cy="612" r="14"/>
+    <circle cx="378" cy="450" r="12"/>
+  </g>
+  <text x="94" y="178" font-family="Georgia, serif" font-size="112" fill="#f6f1e8">Hard-tech</text>
+  <text x="94" y="286" font-family="Georgia, serif" font-size="112" fill="#f6f1e8">Media</text>
+  <text x="100" y="816" font-family="Arial, sans-serif" font-size="24" fill="#f6f1e8" opacity=".72">SEO / KOL / PRIVATE TRAFFIC SOP / A-B TEST</text>
+</svg>

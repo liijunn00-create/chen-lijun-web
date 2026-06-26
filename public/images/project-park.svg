@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" role="img" aria-label="Digital park content project cover">
+  <rect width="1400" height="900" fill="#e5b1c2"/>
+  <path d="M0 580C250 520 392 652 642 548s412-180 758-74v426H0V580Z" fill="#5f789d" opacity=".7"/>
+  <path d="M0 0h1400v900H0z" fill="#eadfe8" opacity=".22"/>
+  <g transform="translate(130 142)">
+    <rect width="310" height="520" fill="#242a38" opacity=".84"/>
+    <rect x="54" y="72" width="202" height="34" fill="#f6f1e8" opacity=".6"/>
+    <rect x="54" y="134" width="164" height="18" fill="#f6f1e8" opacity=".36"/>
+    <rect x="54" y="184" width="202" height="172" fill="#9bb6c8"/>
+    <rect x="54" y="394" width="202" height="32" fill="#c89aae"/>
+  </g>
+  <g transform="translate(502 84)">
+    <rect width="748" height="590" fill="#f6f1e8" opacity=".28"/>
+    <path d="M66 500V150h150v350M278 500V82h188v418M530 500V220h152v280" fill="none" stroke="#191822" stroke-opacity=".55" stroke-width="18"/>
+    <circle cx="530" cy="160" r="54" fill="#191822" opacity=".32"/>
+    <circle cx="672" cy="116" r="30" fill="#c89aae"/>
+  </g>
+  <text x="116" y="792" font-family="Georgia, serif" font-size="102" fill="#191822">Content Matrix</text>
+</svg>

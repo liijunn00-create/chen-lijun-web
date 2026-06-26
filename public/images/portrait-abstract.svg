@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" role="img" aria-label="Abstract portrait placeholder">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#9bb6c8"/>
+      <stop offset=".56" stop-color="#eadfe8"/>
+      <stop offset="1" stop-color="#c89aae"/>
+    </linearGradient>
+    <clipPath id="arch">
+      <path d="M120 1080V458C120 250 266 106 452 106s328 144 328 352v622H120Z"/>
+    </clipPath>
+  </defs>
+  <rect width="900" height="1200" fill="#eadfe8"/>
+  <path d="M0 0h900v1200H0z" fill="url(#bg)"/>
+  <g clip-path="url(#arch)">
+    <rect x="120" y="80" width="660" height="1040" fill="#f4eff4"/>
+    <circle cx="450" cy="328" r="142" fill="#e5b1c2"/>
+    <path d="M314 292c54-114 231-126 291-8 18 36 22 82 8 132-70-34-171-45-296-32-22-34-24-64-3-92Z" fill="#242a38"/>
+    <path d="M278 640c48-104 118-156 210-156 96 0 169 55 218 164l80 432H190l88-440Z" fill="#5f789d"/>
+    <path d="M362 536c50 64 122 68 178 2l72 168-104 188-198-168 52-190Z" fill="#c89aae" opacity=".82"/>
+    <path d="M184 850c150-95 334-118 552-70v300H184V850Z" fill="#191822" opacity=".16"/>
+  </g>
+  <path d="M120 1080V458C120 250 266 106 452 106s328 144 328 352v622" fill="none" stroke="#191822" stroke-opacity=".2" stroke-width="2"/>
+  <g fill="#191822" opacity=".18">
+    <rect x="48" y="72" width="170" height="2"/>
+    <rect x="690" y="164" width="150" height="2"/>
+    <rect x="58" y="1070" width="240" height="2"/>
+  </g>
+</svg>
