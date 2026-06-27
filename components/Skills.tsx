@@ -8,9 +8,9 @@ export function Skills() {
         <Reveal>
           <p className="section-kicker">AI能力</p>
           <div className="grid gap-8 lg:grid-cols-[0.55fr_0.45fr]">
-            <h2 className="section-title">我最想突出的，是用AI把运营能力系统化。</h2>
+            <h2 className="section-title">用AI将运营能力系统化。</h2>
             <p className="text-xl leading-8 text-[#384049]">
-              我不是只把AI当成写文案工具，而是用它搭工作流、知识库、Agent协作、内容生成和增长实验系统，让运营判断可以被复用、被验证、被持续优化。
+              AI不仅用于文案生成，更用于搭建工作流、知识库、Agent协作、内容生成和增长实验系统，使运营判断能够被复用、验证和持续优化。
             </p>
           </div>
         </Reveal>
@@ -49,7 +49,7 @@ export function Skills() {
               运营能力栈
             </h3>
             <p className="text-xl leading-8 text-[#384049]">
-              AI能力是我的加速器，底层仍然是内容策略、用户转化、产品运营和创意生产能力。下面这些能力会在作品集证据区持续补充真实材料。
+              AI能力作为效率放大器，底层仍然依托内容策略、用户转化、产品运营和创意生产能力。相关能力将在作品集证据区持续补充真实材料。
             </p>
           </div>
         </Reveal>

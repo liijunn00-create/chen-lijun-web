@@ -10,7 +10,7 @@ export function FeaturedWork() {
           <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
             <h2 className="section-title max-w-5xl">先看项目，再看经历。</h2>
             <p className="max-w-md text-lg leading-8 text-[#5c5751]">
-              我把作品集重点放在项目方法、AI系统设计、运营成果和真实作品证据上，而不是把页面做成一份线上简历。
+              作品集重点聚焦项目方法、AI系统设计、运营成果和真实作品证据，而非传统线上简历式呈现。
             </p>
           </div>
         </Reveal>

@@ -2,7 +2,7 @@ const navItems = [
   { label: "项目", href: "#work" },
   { label: "作品", href: "#evidence" },
   { label: "AI能力", href: "#ai-skills" },
-  { label: "关于我", href: "#about" },
+  { label: "概览", href: "#about" },
   { label: "联系", href: "#contact" },
 ];
 
@@ -24,7 +24,7 @@ export function Navbar() {
           href="mailto:hello@example.com"
           className="border border-[#1e1c1a] px-4 py-2 transition hover:bg-[#1e1c1a] hover:text-[#f6f1ec]"
         >
-          联系我
+          联系
         </a>
       </nav>
     </header>

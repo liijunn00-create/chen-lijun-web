@@ -55,7 +55,7 @@ export function Hero() {
             transition={{ duration: 1, delay: 0.55, ease: [0.16, 1, 0.3, 1] }}
           >
             <p className="text-2xl leading-snug sm:text-3xl">
-              我是陈丽君。我用AI工作流、内容增长和产品运营思维，把创意内容转化为可验证的增长系统。
+              以AI工作流、内容增长和产品运营思维为核心，将创意内容转化为可验证的增长系统。
             </p>
             <div className="mt-8 flex flex-wrap gap-3 text-sm">
               {["Dify工作流", "RAG知识库", "多智能体", "内容增长", "产品运营"].map((item) => (

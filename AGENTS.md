@@ -101,11 +101,13 @@ Motion direction:
 
 ## Content Positioning
 
-Use first-person language where appropriate. Chen Lijun's core positioning:
+Use professional, neutral descriptions across the whole website. Avoid first-person phrasing such as `我`, `我的`, `本人`, and `自己` in visible page copy. The portfolio should read like a polished professional case archive, not a self-introduction diary.
+
+Chen Lijun's core positioning should be expressed as:
 
 ```text
-我是一名应届毕业生，专注于 B2B 内容增长、用户转化链路设计与 AI 驱动运营系统构建。
-我关注的不是简单内容传播，而是如何将内容转化为可持续增长系统，并实现可量化的业务结果。
+应届毕业生，专注于 B2B 内容增长、用户转化链路设计与 AI 驱动运营系统构建。
+核心关注点不是简单内容传播，而是如何将内容转化为可持续增长系统，并实现可量化的业务结果。
 ```
 
 Key experience:

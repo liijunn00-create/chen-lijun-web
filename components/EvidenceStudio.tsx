@@ -45,7 +45,7 @@ export function EvidenceStudio() {
       <div className="section-grid">
         <Reveal>
           <p className="section-kicker">作品证据</p>
-          <h2 className="section-title max-w-6xl">我会在这里集中展示真实作品证据，而不是把素材随意堆满页面。</h2>
+          <h2 className="section-title max-w-6xl">集中展示真实作品证据，避免素材无序堆叠。</h2>
         </Reveal>
         <div className="space-y-14">
           {evidenceGroups.map((group, groupIndex) => (
