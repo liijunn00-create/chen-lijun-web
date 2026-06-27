@@ -82,6 +82,17 @@ export function EvidenceStudio() {
                           />
                         </div>
                       ) : null}
+                      {item.type === "video" && item.src ? (
+                        <div className="flex h-[520px] items-center justify-center overflow-hidden bg-[#171513] p-3">
+                          <video
+                            src={item.src}
+                            controls
+                            preload="metadata"
+                            playsInline
+                            className="h-full w-full object-contain"
+                          />
+                        </div>
+                      ) : null}
                       {item.type === "pdf" && item.src ? (
                         <PdfCover title={item.title} href={item.src} />
                       ) : null}

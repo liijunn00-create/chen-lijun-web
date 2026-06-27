@@ -1,6 +1,6 @@
 export type EvidenceItem = {
   title: string;
-  type: "image" | "pdf" | "placeholder";
+  type: "image" | "video" | "pdf" | "placeholder";
   src?: string;
   note: string;
   links?: {
@@ -210,6 +210,24 @@ export const evidenceGroups: EvidenceGroup[] = [
     description:
       "这里展示短视频脚本、拉片分镜和电影分镜脚本材料，体现我从内容策划、镜头拆解到拍摄执行的前期制作能力。",
     items: [
+      {
+        title: "短视频成片展示 01",
+        type: "video",
+        src: "/videos/video-production/campus-short-video-01.mp4",
+        note: "短视频成片样例，展示拍摄画面组织、节奏控制和内容呈现能力。",
+      },
+      {
+        title: "短视频成片展示 02",
+        type: "video",
+        src: "/videos/video-production/campus-short-video-02.mp4",
+        note: "短视频成片样例，体现镜头衔接、画面节奏和基础剪辑执行能力。",
+      },
+      {
+        title: "短视频成片展示 03",
+        type: "video",
+        src: "/videos/video-production/campus-short-video-03.mp4",
+        note: "短视频成片样例，可用于补充展示从脚本到成片的落地效果。",
+      },
       {
         title: "抖音短视频拍摄脚本",
         type: "image",

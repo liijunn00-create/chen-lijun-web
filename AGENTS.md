@@ -75,6 +75,8 @@ public/images/
 public/docs/
   full-plans/          full PDF plans converted from DOCX
   presentations/       PPTX originals and PDF exports
+public/videos/
+  video-production/    video production clips shown in portfolio cards
 ```
 
 ## Design Direction
@@ -191,6 +193,9 @@ Full document assets:
 - `docs/video-production/douyin-shot-breakdown-storyboard.pdf`
 - `docs/video-production/film-storyboard-script.docx`
 - `docs/video-production/film-storyboard-script.pdf`
+- `videos/video-production/campus-short-video-01.mp4`
+- `videos/video-production/campus-short-video-02.mp4`
+- `videos/video-production/campus-short-video-03.mp4`
 
 ## What Is Done
 
