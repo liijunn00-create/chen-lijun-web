@@ -143,6 +143,12 @@ export const evidenceGroups: EvidenceGroup[] = [
         note: "围绕玩偶产品做商业化场景包装，强调产品主体、情绪氛围和电商视觉的生活方式表达。",
       },
       {
+        title: "咖啡节品牌视觉海报",
+        type: "image",
+        src: "/images/commercial-posters/starbucks-coffee-festival-poster.png",
+        note: "以咖啡产品为中心做拼贴式商业海报，突出产品主体、品牌识别、生活场景和促销活动氛围。",
+      },
+      {
         title: "可口可乐夏日场景海报",
         type: "image",
         src: "/images/commercial-posters/coca-cola-summer-poster.png",

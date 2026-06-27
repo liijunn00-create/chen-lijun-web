@@ -168,6 +168,7 @@ New categorized evidence assets:
 - `wechat-editorial/color-run-article.png`
 - `commercial-posters/spring-heart-dream-poster.jpg`
 - `commercial-posters/jellycat-sleepover-poster.png`
+- `commercial-posters/starbucks-coffee-festival-poster.png`
 - `commercial-posters/coca-cola-summer-poster.png`
 - `report-decks/pet-paradise-deck-cover.png`
 - `report-decks/innovation-entrepreneurship-competition-cover.png`
