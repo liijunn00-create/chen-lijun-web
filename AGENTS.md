@@ -64,6 +64,10 @@ public/images/
   design-layout/       posters, campus activity layouts, recruitment visuals
   wechat-editorial/    WeChat account and article screenshots
   commercial-posters/  product/brand poster experiments
+  report-decks/        exported deck cover previews
+public/docs/
+  full-plans/          full PDF plans converted from DOCX
+  presentations/       PPTX originals and PDF exports
 ```
 
 ## Design Direction
@@ -139,7 +143,6 @@ These assets are already copied into `public/images`:
 - `energy-chain-xhs.jpg`
 - `disney-plush-xhs.png`
 - `campus-cultural-festival-page.png`
-- `campus-cultural-festival-copywriting.pdf`
 - `brand-marketing-plan-pages.png`
 - `project-growth.svg`
 - `project-park.svg`
@@ -158,6 +161,15 @@ New categorized evidence assets:
 - `commercial-posters/spring-heart-dream-poster.jpg`
 - `commercial-posters/jellycat-sleepover-poster.png`
 - `commercial-posters/coca-cola-summer-poster.png`
+- `report-decks/pet-paradise-deck-cover.png`
+
+Full document assets:
+
+- `docs/full-plans/startup-plan.pdf`
+- `docs/full-plans/business-plan.pdf`
+- `docs/full-plans/color-run-plan.pdf`
+- `docs/presentations/pet-paradise-deck.pptx`
+- `docs/presentations/pet-paradise-deck.pdf`
 
 ## What Is Done
 

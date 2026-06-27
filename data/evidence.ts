@@ -3,6 +3,10 @@ export type EvidenceItem = {
   type: "image" | "pdf" | "placeholder";
   src?: string;
   note: string;
+  links?: {
+    label: string;
+    href: string;
+  }[];
 };
 
 export type EvidenceGroup = {
@@ -58,10 +62,22 @@ export const evidenceGroups: EvidenceGroup[] = [
         note: "从活动背景、主题阐释、目标设定到执行结构，体现校园活动策划与长文案组织能力。",
       },
       {
-        title: "完整策划书PDF",
+        title: "创业计划书完整版PDF",
         type: "pdf",
-        src: "/images/campus-cultural-festival-copywriting.pdf",
-        note: "保留完整文档入口，后续可作为面试官查看详细策划逻辑的资料。",
+        src: "/docs/full-plans/startup-plan.pdf",
+        note: "展示从项目背景、商业模式、市场分析到执行规划的完整计划书写作能力。",
+      },
+      {
+        title: "商业计划书完整版PDF",
+        type: "pdf",
+        src: "/docs/full-plans/business-plan.pdf",
+        note: "用于展示商业逻辑梳理、用户需求分析、产品定位和落地路径表达能力。",
+      },
+      {
+        title: "彩色跑策划书完整版PDF",
+        type: "pdf",
+        src: "/docs/full-plans/color-run-plan.pdf",
+        note: "校园活动策划类文档，体现活动目标、流程安排、传播设计和执行管理能力。",
       },
       {
         title: "3秒清爽免洗洗发水品牌策划",
@@ -158,12 +174,17 @@ export const evidenceGroups: EvidenceGroup[] = [
     title: "小组报告PPT",
     subtitle: "Report Deck",
     description:
-      "预留展示课程报告、竞品分析、行业研究或项目汇报PPT，体现结构化表达和研究整理能力。",
+      "这里展示小组汇报、课程报告和商业展示类PPT，重点体现选题策划、结构化表达、视觉排版和汇报材料组织能力。",
     items: [
       {
-        title: "待上传：小组报告PPT",
-        type: "placeholder",
-        note: "建议选择3-5页代表页：封面、框架、分析图、结论页。",
+        title: "萌宠乐园项目PPT",
+        type: "image",
+        src: "/images/report-decks/pet-paradise-deck-cover.png",
+        note: "小组项目汇报型PPT，适合展示项目概念、视觉风格、商业表达和团队汇报材料的完整组织能力。",
+        links: [
+          { label: "查看PDF版", href: "/docs/presentations/pet-paradise-deck.pdf" },
+          { label: "下载PPTX", href: "/docs/presentations/pet-paradise-deck.pptx" },
+        ],
       },
     ],
   },

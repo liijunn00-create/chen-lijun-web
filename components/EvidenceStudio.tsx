@@ -65,6 +65,21 @@ export function EvidenceStudio() {
                       <div className="p-5">
                         <h4 className="text-xl font-semibold text-[#171513]">{item.title}</h4>
                         <p className="mt-3 text-sm leading-6 text-[#625c55]">{item.note}</p>
+                        {item.links ? (
+                          <div className="mt-5 flex flex-wrap gap-2">
+                            {item.links.map((link) => (
+                              <a
+                                key={link.href}
+                                href={link.href}
+                                target="_blank"
+                                rel="noreferrer"
+                                className="border border-black/10 bg-[#ebe6df] px-3 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-[#171513] transition hover:bg-[#171513] hover:text-[#f6f1ec]"
+                              >
+                                {link.label}
+                              </a>
+                            ))}
+                          </div>
+                        ) : null}
                       </div>
                     </article>
                   ))}
