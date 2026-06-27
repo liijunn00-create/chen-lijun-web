@@ -25,7 +25,7 @@ export function Hero() {
               animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             >
-              B2B Content Growth / AI Operation / Product Ops
+              AI Operation / Portfolio Evidence / B2B Growth
             </motion.p>
             <div className="overflow-hidden">
               <motion.h1
@@ -55,10 +55,10 @@ export function Hero() {
             transition={{ duration: 1, delay: 0.55, ease: [0.16, 1, 0.3, 1] }}
           >
             <p className="text-2xl leading-snug sm:text-3xl">
-              我是陈丽君，一名应届毕业生。我专注于B2B内容增长、用户转化链路设计与AI驱动运营系统构建。
+              我是陈丽君。我用AI工作流、内容增长和产品运营思维，把创意内容转化为可验证的增长系统。
             </p>
             <div className="mt-8 flex flex-wrap gap-3 text-sm">
-              {["Content Growth", "AI Workflow", "SEO", "Product Operation"].map((item) => (
+              {["Dify Workflow", "RAG", "Multi-Agent", "Content Growth", "Product Operation"].map((item) => (
                 <span key={item} className="border border-[#1e1c1a]/20 bg-white/30 px-4 py-2">
                   {item}
                 </span>
@@ -73,7 +73,7 @@ export function Hero() {
           transition={{ duration: 0.9, delay: 0.82, ease: [0.16, 1, 0.3, 1] }}
         >
           <span className="py-5 md:border-r md:border-[#1e1c1a]/18">Based in Guangdong</span>
-          <span className="py-5 md:border-r md:border-[#1e1c1a]/18 md:px-6">Open to New Media / Growth Ops</span>
+          <span className="py-5 md:border-r md:border-[#1e1c1a]/18 md:px-6">AI-powered operation portfolio</span>
           <a href="#work" className="py-5 transition hover:text-[#171513] md:px-6">
             Explore portfolio
           </a>

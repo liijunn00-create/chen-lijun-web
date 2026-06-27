@@ -14,14 +14,14 @@ export const projects: Project[] = [
   {
     slug: "growth-os",
     title: "AI Growth Decision System",
-    eyebrow: "AI OPERATION SYSTEM",
+    eyebrow: "CORE AI PROJECT",
     period: "2026",
-    role: "AI运营系统设计 / Multi-Agent流程设计",
+    role: "AI运营系统设计 / Dify Workflow / RAG / Multi-Agent",
     summary:
-      "我将内容增长、用户分层、实验设计和复盘报告拆解为可协作的Agent链路，用Dify Workflow、RAG知识库和结构化Prompt把增长策略从经验判断转成可复用系统。",
+      "这是我作品集中最核心的AI项目。我把增长团队的思考过程拆成Business Parser、User Insight、Diagnosis、Experiment、Execution、Evaluation等Agent链路，用Dify Workflow、RAG知识库和结构化Prompt把增长策略从经验判断转成可复用系统。",
     image: "/images/project-growth.svg",
-    tags: ["Dify Workflow", "RAG", "Multi-Agent", "Growth Experiment"],
-    metrics: ["8个决策模块", "2-3周实验方案", "自动化报告输出"],
+    tags: ["Dify Workflow", "RAG Knowledge Base", "Multi-Agent", "Prompt Engineering"],
+    metrics: ["8个决策模块", "输入驱动输出变化", "自动化增长报告"],
   },
   {
     slug: "digital-park-growth",

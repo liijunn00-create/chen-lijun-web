@@ -4,6 +4,52 @@ export type SkillGroup = {
   items: string[];
 };
 
+export type AiCapability = {
+  title: string;
+  label: string;
+  description: string;
+  outputs: string[];
+};
+
+export const aiCapabilities: AiCapability[] = [
+  {
+    title: "Workflow Builder",
+    label: "Dify / Automation",
+    description: "我能把运营流程拆成输入、判断、生成、复盘等节点，搭建可复用的AI工作流。",
+    outputs: ["Dify Workflow", "条件分支", "Code Node", "自动化报告"],
+  },
+  {
+    title: "Knowledge System",
+    label: "RAG / Method Library",
+    description: "我会把增长方法论、行业资料和项目经验整理成知识库，让AI输出更稳定、更贴近业务。",
+    outputs: ["RAG知识库", "增长方法库", "行业资料检索", "案例复用"],
+  },
+  {
+    title: "Agent Thinking",
+    label: "Multi-Agent",
+    description: "我能用多Agent模拟增长团队分工，让AI分别承担洞察、诊断、实验设计和风险评估。",
+    outputs: ["Business Parser", "Diagnosis Agent", "Experiment Agent", "QA Judge"],
+  },
+  {
+    title: "Prompt Design",
+    label: "Structured Output",
+    description: "我关注Prompt不是写得长，而是让AI按目标、变量、约束和输出格式稳定产出。",
+    outputs: ["Prompt Engineering", "JSON输出", "内容模板", "复盘框架"],
+  },
+  {
+    title: "AIGC Production",
+    label: "Content / Visual",
+    description: "我能把AI用于选题、脚本、标题、海报方向和产品视觉探索，提升内容生产效率。",
+    outputs: ["选题生成", "脚本文案", "视觉参考", "产品海报"],
+  },
+  {
+    title: "Growth Experiment",
+    label: "AI + Operation",
+    description: "我能让AI辅助完成用户分层、增长假设、A/B测试方案、指标体系和执行清单。",
+    outputs: ["用户分层", "实验假设", "KPI设计", "执行Checklist"],
+  },
+];
+
 export const skillGroups: SkillGroup[] = [
   {
     title: "Content Growth",
@@ -17,8 +63,8 @@ export const skillGroups: SkillGroup[] = [
   },
   {
     title: "AI Automation",
-    intro: "我能够把运营经验结构化，转译成AI工作流和可复用的增长决策系统。",
-    items: ["Dify Workflow", "RAG知识库", "Multi-Agent", "Prompt Engineering"],
+    intro: "我能够把运营经验结构化，转译成AI工作流、知识库和可复用的增长决策系统。",
+    items: ["Dify Workflow", "RAG知识库", "Multi-Agent", "结构化Prompt"],
   },
   {
     title: "Creative Production",
@@ -34,4 +80,10 @@ export const stats = [
   { value: "70+", label: "企业入驻转化" },
   { value: "500+", label: "工业客户询盘" },
   { value: "210万+", label: "KOL传播曝光" },
+];
+
+export const profileHighlights = [
+  "应届毕业生，方向集中在内容增长、产品运营和AI运营系统",
+  "实习经历覆盖数字产业园与硬科技B2B业务",
+  "作品集重点展示账号运营、策划文案、PPT汇报、视觉排版和AI增长系统",
 ];

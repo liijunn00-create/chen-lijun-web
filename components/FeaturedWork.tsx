@@ -9,9 +9,9 @@ export function FeaturedWork() {
         <Reveal>
           <p className="section-kicker">Featured Work</p>
           <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
-            <h2 className="section-title max-w-5xl">精选项目不是罗列经历，而是展示我如何拆解增长问题。</h2>
+            <h2 className="section-title max-w-5xl">先看项目，再看经历。</h2>
             <p className="max-w-md text-lg leading-8 text-[#5c5751]">
-              三个核心方向：AI运营系统、B2B内容增长、硬科技SEO与线索转化。
+              我把作品集重点放在项目方法、AI系统设计、运营成果和真实作品证据上，而不是把页面做成一份线上简历。
             </p>
           </div>
         </Reveal>

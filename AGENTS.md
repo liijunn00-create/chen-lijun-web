@@ -13,6 +13,13 @@ The site should feel like a curated portfolio/creative studio website rather tha
 - Product operation and growth funnel thinking
 - Visual layout, WeChat article production, PPT/report design, shooting/editing placeholders
 
+Current positioning priority:
+
+- Keep personal profile and internship history concise.
+- Put the strongest visual and content weight on project work, portfolio evidence, and capability proof.
+- The most important differentiator is Chen Lijun's ability to use AI tools for operations: Dify Workflow, RAG, Multi-Agent thinking, Prompt Engineering, AIGC content production, structured output, and AI-assisted growth experiments.
+- The page order should support this priority: Hero -> Featured Work -> Evidence Studio -> AI/Skill Stack -> concise About -> Contact.
+
 ## Tech Stack
 
 - Next.js 16 App Router
