@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
+import { heroContent } from "@/data/siteContent";
 
 export function Hero() {
   const reduceMotion = useReducedMotion();
@@ -25,7 +26,7 @@ export function Hero() {
               animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             >
-              AI运营 / 作品集证据 / B2B增长
+              {heroContent.kicker}
             </motion.p>
             <div className="overflow-hidden">
               <motion.h1
@@ -34,7 +35,7 @@ export function Hero() {
                 animate={reduceMotion ? undefined : { y: 0, scaleY: 1 }}
                 transition={{ duration: 1.25, ease: [0.16, 1, 0.3, 1] }}
               >
-                AI驱动
+                {heroContent.titleLines[0]}
               </motion.h1>
             </div>
             <div className="overflow-hidden">
@@ -44,9 +45,25 @@ export function Hero() {
                 animate={reduceMotion ? undefined : { y: 0, scaleY: 1 }}
                 transition={{ duration: 1.25, delay: 0.16, ease: [0.16, 1, 0.3, 1] }}
               >
-                运营作品集
+                {heroContent.titleLines[1]}
               </motion.h1>
             </div>
+            <motion.div
+              className="mt-8 flex flex-wrap gap-3"
+              initial={reduceMotion ? false : { opacity: 0, y: 22 }}
+              animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.48, ease: [0.16, 1, 0.3, 1] }}
+            >
+              {heroContent.ctas.map((cta) => (
+                <a
+                  key={cta.href}
+                  href={cta.href}
+                  className="glass-chip px-4 py-3 text-xs font-semibold uppercase tracking-[0.16em] text-[#171513] transition hover:bg-[#171513] hover:text-[#f8f5ef]"
+                >
+                  {cta.label}
+                </a>
+              ))}
+            </motion.div>
           </div>
           <motion.div
             className="max-w-xl border-l border-[#1e1c1a]/20 pl-6 text-[#2d2a27]"
@@ -55,10 +72,11 @@ export function Hero() {
             transition={{ duration: 1, delay: 0.55, ease: [0.16, 1, 0.3, 1] }}
           >
             <p className="text-2xl leading-snug sm:text-3xl">
-              以AI工作流、内容增长和产品运营思维为核心，将创意内容转化为可验证的增长系统。
+              {heroContent.subtitle}
             </p>
+            <p className="mt-6 text-base leading-7 text-[#5c5751]">{heroContent.note}</p>
             <div className="mt-8 flex flex-wrap gap-3 text-sm">
-              {["Dify工作流", "RAG知识库", "多智能体", "内容增长", "产品运营"].map((item) => (
+              {heroContent.keywords.map((item) => (
                 <span key={item} className="glass-chip px-4 py-2">
                   {item}
                 </span>

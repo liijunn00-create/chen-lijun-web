@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { profileHighlights, stats } from "@/data/skills";
+import { aboutCopy } from "@/data/siteContent";
 import { Reveal } from "./Reveal";
 
 export function About() {
@@ -10,10 +11,10 @@ export function About() {
           <p className="section-kicker">个人概览</p>
           <div className="grid gap-8 lg:grid-cols-[0.42fr_0.58fr] lg:items-end">
             <h2 className="text-[clamp(1.6rem,2.7vw,3.3rem)] font-black leading-[1.08] tracking-normal text-[#171513]">
-              简洁介绍，重点留给作品。
+              {aboutCopy.title}
             </h2>
             <p className="max-w-3xl text-xl leading-8 text-[#4a4641]">
-              陈丽君，应届毕业生，方向集中在B2B内容增长、产品运营和AI驱动运营系统。个人资料用于快速理解背景，网站重点展示项目、作品证据和AI应用能力。
+              {aboutCopy.description}
             </p>
           </div>
         </Reveal>

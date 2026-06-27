@@ -18,7 +18,8 @@ Current positioning priority:
 - Keep personal profile and internship history concise.
 - Put the strongest visual and content weight on project work, portfolio evidence, and capability proof.
 - The most important differentiator is Chen Lijun's ability to use AI tools for operations: Dify Workflow, RAG, Multi-Agent thinking, Prompt Engineering, AIGC content production, structured output, and AI-assisted growth experiments.
-- The page order should support this priority: Hero -> Featured Work -> Evidence Studio -> concise About -> Contact. AI operation capability should be expressed through the AI project cards and detail pages, not through a separate repeated capability section.
+- The page order should support this priority: Hero -> Featured Work -> Core Capabilities -> Evidence Studio -> Experience Cases -> Skill Tags -> concise About -> Contact.
+- AI operation capability should be expressed through the AI project cards/detail pages and reinforced by concise capability cards, not repeated as long self-introduction copy.
 - The two AI projects should be framed as one AI Native operation system portfolio: `AI增长决策系统` represents the strategy/decision layer, while `AI内容矩阵自动化工作流` represents the execution/content-production layer.
 
 ## Tech Stack
@@ -60,14 +61,18 @@ components/
   Navbar.tsx
   Hero.tsx
   About.tsx
+  CoreCapabilities.tsx
   FeaturedWork.tsx
   EvidenceStudio.tsx
+  ExperienceCases.tsx
+  SkillTags.tsx
   Contact.tsx
   Footer.tsx
   Reveal.tsx        Framer Motion scroll reveal wrapper
 data/
   projects.ts       selected project data
   projectCases.ts   project detail page case data
+  siteContent.ts    homepage IA copy: hero, capability cards, experience cases, skill tags, about copy
   skills.ts         capability groups and metrics
   evidence.ts       evidence gallery and reserved slots
 public/images/
