@@ -154,9 +154,6 @@ These assets are already copied into `public/images`:
 - `disney-plush-xhs.png`
 - `campus-cultural-festival-page.png`
 - `brand-marketing-plan-pages.png`
-- `project-growth.svg`
-- `project-park.svg`
-- `project-energy.svg`
 - `portrait-abstract.svg`
 - `hero-motion.webm`
 

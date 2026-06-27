@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { projects } from "@/data/projects";
 import { Reveal } from "./Reveal";
 
@@ -18,17 +17,8 @@ export function FeaturedWork() {
         <div className="space-y-8">
           {projects.map((project, index) => (
             <Reveal key={project.slug} delay={index * 0.08}>
-              <article className="group grid overflow-hidden border border-black/10 bg-[#f8f5ef] lg:grid-cols-[0.95fr_1.05fr]">
-                <div className="relative min-h-[420px] overflow-hidden border-b border-black/10 bg-[#d8dde1] lg:border-b-0 lg:border-r">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    className="object-cover transition duration-700 ease-out group-hover:scale-[1.035]"
-                    sizes="(min-width: 1024px) 48vw, 100vw"
-                  />
-                </div>
-                <div className="flex min-h-[420px] flex-col justify-between p-7 sm:p-10 lg:p-12">
+              <article className="grid overflow-hidden border border-black/10 bg-[#f8f5ef]">
+                <div className="flex min-h-[360px] flex-col justify-between p-7 sm:p-10 lg:p-12">
                   <div>
                     <div className="mb-10 flex items-center justify-between gap-5 text-xs uppercase tracking-[0.2em] text-[#7a746d]">
                       <span>{project.eyebrow}</span>
@@ -39,7 +29,7 @@ export function FeaturedWork() {
                     </h3>
                     <p className="mt-7 max-w-3xl text-xl leading-8 text-[#403c37]">{project.summary}</p>
                   </div>
-                  <div className="mt-10 grid gap-6 lg:grid-cols-[1fr_1fr]">
+                  <div className="mt-10 grid gap-6 lg:grid-cols-[0.45fr_0.55fr]">
                     <div>
                       <p className="mb-3 text-xs uppercase tracking-[0.2em] text-[#8a847b]">职责</p>
                       <p className="text-lg font-semibold text-[#171513]">{project.role}</p>
