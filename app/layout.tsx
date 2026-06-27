@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "陈丽君 | Growth Operator Portfolio",
+  title: "陈丽君 | AI运营作品集",
   description:
     "陈丽君的个人作品集，展示B2B内容增长、AI运营系统、产品运营、文案策划与创意生产能力。",
 };

@@ -19,7 +19,7 @@ export type EvidenceGroup = {
 export const evidenceGroups: EvidenceGroup[] = [
   {
     title: "账号运营优质笔记",
-    subtitle: "Account Operation",
+    subtitle: "账号运营",
     description:
       "这里集中展示我做过的内容账号样例，包括硬科技行业科普、报告型笔记和个人小红书电商账号。图片保持原图完整展示，便于查看信息结构和互动数据。",
     items: [
@@ -51,7 +51,7 @@ export const evidenceGroups: EvidenceGroup[] = [
   },
   {
     title: "文案写作能力",
-    subtitle: "Copywriting",
+    subtitle: "文案策划",
     description:
       "这里展示我对活动策划、品牌定位、传播主张和长文案结构的处理能力。重点不是单句文案，而是把目标、受众、场景和转化动作写清楚。",
     items: [
@@ -89,7 +89,7 @@ export const evidenceGroups: EvidenceGroup[] = [
   },
   {
     title: "运营能力展示",
-    subtitle: "Operation System",
+    subtitle: "运营系统",
     description:
       "预留放置活动复盘、用户分层、投放A/B测试、SEO关键词库、私域转化链路等运营方法论材料。",
     items: [
@@ -102,7 +102,7 @@ export const evidenceGroups: EvidenceGroup[] = [
   },
   {
     title: "设计排版能力",
-    subtitle: "Layout Design",
+    subtitle: "视觉排版",
     description:
       "这里展示我对海报、活动物料和商业视觉的排版控制能力。重点呈现标题层级、画面气质、信息组织和不同场景下的视觉表达。",
     items: [
@@ -125,19 +125,19 @@ export const evidenceGroups: EvidenceGroup[] = [
         note: "以大标题、日期和地点为主视觉骨架，结合海边纹理背景，练习活动海报的信息优先级与视觉节奏。",
       },
       {
-        title: "Light in Motion 展览海报",
+        title: "光影动态展览海报",
         type: "image",
         src: "/images/design-layout/light-in-motion-poster.jpg",
         note: "黑白高对比排版练习，突出字体重量、留白比例和展览类海报的现代感。",
       },
       {
-        title: "Heart Dream 春日海报",
+        title: "春日梦境海报",
         type: "image",
         src: "/images/commercial-posters/spring-heart-dream-poster.jpg",
         note: "偏梦幻风格的春日主题视觉，练习透明材质、泡泡元素和高饱和柔色画面的统一控制。",
       },
       {
-        title: "Jellycat 产品视觉海报",
+        title: "玩偶产品视觉海报",
         type: "image",
         src: "/images/commercial-posters/jellycat-sleepover-poster.png",
         note: "围绕玩偶产品做商业化场景包装，强调产品主体、情绪氛围和电商视觉的生活方式表达。",
@@ -152,7 +152,7 @@ export const evidenceGroups: EvidenceGroup[] = [
   },
   {
     title: "推文制作",
-    subtitle: "WeChat Editorial",
+    subtitle: "公众号编辑",
     description:
       "这里展示我参与校园公众号内容生产的痕迹，包括选题、标题、封面图、正文排版和活动传播承接。",
     items: [
@@ -172,7 +172,7 @@ export const evidenceGroups: EvidenceGroup[] = [
   },
   {
     title: "小组报告PPT",
-    subtitle: "Report Deck",
+    subtitle: "汇报材料",
     description:
       "这里展示小组汇报、课程报告和商业展示类PPT，重点体现选题策划、结构化表达、视觉排版和汇报材料组织能力。",
     items: [
@@ -200,7 +200,7 @@ export const evidenceGroups: EvidenceGroup[] = [
   },
   {
     title: "拍摄剪辑能力",
-    subtitle: "Video Production",
+    subtitle: "视频生产",
     description:
       "预留展示短视频脚本、拍摄成片、剪辑节奏和活动记录影像，体现从策划到执行的内容生产能力。",
     items: [

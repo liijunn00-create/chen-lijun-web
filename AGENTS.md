@@ -83,7 +83,8 @@ Use a restrained editorial look:
 
 - Cream base background, black typography
 - Muted pink and muted blue accents
-- Large uppercase English headings
+- Main visible titles should be Chinese, with restrained scale and comfortable line height
+- English can remain in small tool tags, framework names, links, and technical labels such as Dify, RAG, Next.js, Tailwind, or Framer Motion
 - Spacious layout with a max width around 1700px
 - Real evidence images shown as complete originals, not cropped or covered
 - Cards are acceptable for repeated work/evidence items, but avoid nested card-heavy layouts

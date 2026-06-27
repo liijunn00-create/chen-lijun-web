@@ -6,7 +6,7 @@ export function Skills() {
     <section id="ai-skills" className="section-shell bg-[#dbe3ea]">
       <div className="section-grid">
         <Reveal>
-          <p className="section-kicker">AI Capability</p>
+          <p className="section-kicker">AI能力</p>
           <div className="grid gap-8 lg:grid-cols-[0.55fr_0.45fr]">
             <h2 className="section-title">我最想突出的，是用AI把运营能力系统化。</h2>
             <p className="text-xl leading-8 text-[#384049]">
@@ -21,13 +21,13 @@ export function Skills() {
                 <div>
                   <div className="mb-8 flex items-start justify-between gap-6">
                     <span className="text-xs font-semibold uppercase tracking-[0.22em] text-[#75808b]">
-                      AI 0{index + 1}
+                      能力 0{index + 1}
                     </span>
                     <span className="max-w-[12rem] text-right text-xs uppercase tracking-[0.16em] text-[#8b7585]">
                       {capability.label}
                     </span>
                   </div>
-                  <h3 className="text-[clamp(2.4rem,4vw,5.2rem)] font-black uppercase leading-[0.88] tracking-normal text-[#171513]">
+                  <h3 className="text-[clamp(1.7rem,2.5vw,3.1rem)] font-black leading-[1.08] tracking-normal text-[#171513]">
                     {capability.title}
                   </h3>
                   <p className="mt-6 text-base leading-7 text-[#46515b]">{capability.description}</p>
@@ -45,8 +45,8 @@ export function Skills() {
         </div>
         <Reveal>
           <div className="grid gap-8 border-t border-black/10 pt-12 lg:grid-cols-[0.48fr_0.52fr]">
-            <h3 className="text-[clamp(2.5rem,5vw,6.8rem)] font-black uppercase leading-[0.9] tracking-normal text-[#171513]">
-              Operation Skill Stack
+            <h3 className="text-[clamp(2rem,3.8vw,4.8rem)] font-black leading-[1.05] tracking-normal text-[#171513]">
+              运营能力栈
             </h3>
             <p className="text-xl leading-8 text-[#384049]">
               AI能力是我的加速器，底层仍然是内容策略、用户转化、产品运营和创意生产能力。下面这些能力会在作品集证据区持续补充真实材料。
@@ -59,7 +59,7 @@ export function Skills() {
               <article className="flex min-h-[360px] flex-col justify-between border border-black/10 bg-[#eef3f6] p-7">
                 <div>
                   <p className="mb-6 text-xs uppercase tracking-[0.22em] text-[#75808b]">0{index + 1}</p>
-                  <h3 className="text-4xl font-black uppercase leading-none text-[#171513]">{group.title}</h3>
+                  <h3 className="text-3xl font-black leading-tight text-[#171513]">{group.title}</h3>
                   <p className="mt-6 text-base leading-7 text-[#46515b]">{group.intro}</p>
                 </div>
                 <ul className="mt-8 space-y-3">

@@ -13,8 +13,8 @@ export type Project = {
 export const projects: Project[] = [
   {
     slug: "growth-os",
-    title: "AI Growth Decision System",
-    eyebrow: "CORE AI PROJECT",
+    title: "AI增长决策系统",
+    eyebrow: "核心AI项目",
     period: "2026",
     role: "AI运营系统设计 / Dify Workflow / RAG / Multi-Agent",
     summary:
@@ -25,8 +25,8 @@ export const projects: Project[] = [
   },
   {
     slug: "digital-park-growth",
-    title: "Digital Park B2B Content Loop",
-    eyebrow: "B2B CONTENT GROWTH",
+    title: "数字产业园内容增长闭环",
+    eyebrow: "B2B内容增长",
     period: "2025",
     role: "内容运营 & 增长策略实习生",
     summary:
@@ -37,8 +37,8 @@ export const projects: Project[] = [
   },
   {
     slug: "hard-tech-seo",
-    title: "Hard-tech SEO & Content Growth",
-    eyebrow: "SEO / INDUSTRIAL CONTENT",
+    title: "硬科技SEO内容增长",
+    eyebrow: "SEO / 工业内容",
     period: "2024",
     role: "内容运营 & SEO增长实习生",
     summary:

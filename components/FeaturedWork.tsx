@@ -7,7 +7,7 @@ export function FeaturedWork() {
     <section id="work" className="section-shell bg-[#ebe6df]">
       <div className="section-grid">
         <Reveal>
-          <p className="section-kicker">Featured Work</p>
+          <p className="section-kicker">精选项目</p>
           <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
             <h2 className="section-title max-w-5xl">先看项目，再看经历。</h2>
             <p className="max-w-md text-lg leading-8 text-[#5c5751]">
@@ -34,14 +34,14 @@ export function FeaturedWork() {
                       <span>{project.eyebrow}</span>
                       <span>{project.period}</span>
                     </div>
-                    <h3 className="max-w-4xl text-[clamp(2.6rem,5.8vw,7.8rem)] font-black uppercase leading-[0.88] tracking-normal text-[#171513]">
+                    <h3 className="max-w-4xl text-[clamp(1.8rem,3.4vw,4.4rem)] font-black leading-[1.08] tracking-normal text-[#171513]">
                       {project.title}
                     </h3>
                     <p className="mt-7 max-w-3xl text-xl leading-8 text-[#403c37]">{project.summary}</p>
                   </div>
                   <div className="mt-10 grid gap-6 lg:grid-cols-[1fr_1fr]">
                     <div>
-                      <p className="mb-3 text-xs uppercase tracking-[0.2em] text-[#8a847b]">Role</p>
+                      <p className="mb-3 text-xs uppercase tracking-[0.2em] text-[#8a847b]">职责</p>
                       <p className="text-lg font-semibold text-[#171513]">{project.role}</p>
                     </div>
                     <div className="flex flex-wrap gap-2">

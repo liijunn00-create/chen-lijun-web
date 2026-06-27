@@ -19,17 +19,17 @@ function PdfCover({ title, href }: { title: string; href: string }) {
       <div className="absolute bottom-28 left-8 h-px w-40 bg-[#171513]/20" />
       <div className="relative z-10 flex w-full flex-col justify-between border border-[#171513]/15 bg-[#f8f3ed]/48 p-6 backdrop-blur-[2px]">
         <div className="flex items-start justify-between gap-6">
-          <span className="text-xs font-semibold uppercase tracking-[0.22em] text-[#6c7681]">Full PDF</span>
-          <span className="text-right text-xs uppercase tracking-[0.18em] text-[#8d7d88]">Portfolio Archive</span>
+          <span className="text-xs font-semibold uppercase tracking-[0.22em] text-[#6c7681]">完整PDF</span>
+          <span className="text-right text-xs uppercase tracking-[0.18em] text-[#8d7d88]">作品归档</span>
         </div>
         <div>
-          <p className="mb-5 font-mono text-xs uppercase tracking-[0.18em] text-[#756f69]">Plan / Strategy / Writing</p>
-          <h4 className="max-w-[18rem] text-[clamp(2.25rem,4.2vw,4.9rem)] font-black uppercase leading-[0.92] tracking-normal text-[#171513]">
+          <p className="mb-5 font-mono text-xs uppercase tracking-[0.18em] text-[#756f69]">策划 / 商业 / 文案</p>
+          <h4 className="max-w-[18rem] text-[clamp(1.7rem,2.6vw,3.1rem)] font-black leading-[1.08] tracking-normal text-[#171513]">
             {title.replace("完整版PDF", "")}
           </h4>
         </div>
         <div className="flex items-end justify-between gap-6">
-          <span className="text-xs uppercase tracking-[0.18em] text-[#756f69]">Open document</span>
+          <span className="text-xs uppercase tracking-[0.18em] text-[#756f69]">打开文档</span>
           <span className="flex h-12 w-12 items-center justify-center border border-[#171513]/25 text-xl transition group-hover:bg-[#171513] group-hover:text-[#f8f3ed]">
             ↗
           </span>
@@ -44,7 +44,7 @@ export function EvidenceStudio() {
     <section id="evidence" className="section-shell bg-[#f6f1ec]">
       <div className="section-grid">
         <Reveal>
-          <p className="section-kicker">Evidence Studio</p>
+          <p className="section-kicker">作品证据</p>
           <h2 className="section-title max-w-6xl">我会在这里集中展示真实作品证据，而不是把素材随意堆满页面。</h2>
         </Reveal>
         <div className="space-y-14">
@@ -54,7 +54,7 @@ export function EvidenceStudio() {
                 <div className="mb-8 grid gap-6 lg:grid-cols-[0.42fr_0.58fr]">
                   <div>
                     <p className="mb-2 text-xs uppercase tracking-[0.22em] text-[#7a86a1]">{group.subtitle}</p>
-                    <h3 className="text-[clamp(2rem,4vw,5.4rem)] font-black uppercase leading-[0.92] tracking-normal text-[#171513]">
+                    <h3 className="text-[clamp(1.7rem,2.4vw,3.1rem)] font-black leading-[1.08] tracking-normal text-[#171513]">
                       {group.title}
                     </h3>
                   </div>
@@ -87,7 +87,7 @@ export function EvidenceStudio() {
                       ) : null}
                       {item.type === "placeholder" ? (
                         <div className="flex h-full min-h-[260px] flex-col justify-between">
-                          <span className="text-xs uppercase tracking-[0.2em] text-[#938b82]">Reserved Slot</span>
+                          <span className="text-xs uppercase tracking-[0.2em] text-[#938b82]">预留位置</span>
                           <p className="max-w-sm text-3xl font-semibold leading-tight text-[#292520]">{item.title}</p>
                         </div>
                       ) : null}
