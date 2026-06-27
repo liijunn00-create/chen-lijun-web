@@ -4,7 +4,7 @@ import { Reveal } from "./Reveal";
 
 export function FeaturedWork() {
   return (
-    <section id="work" className="section-shell bg-[#ebe6df]">
+    <section id="work" className="section-shell">
       <div className="section-grid">
         <Reveal>
           <p className="section-kicker">精选项目</p>
@@ -18,7 +18,7 @@ export function FeaturedWork() {
         <div className="space-y-8">
           {projects.map((project, index) => {
             const card = (
-              <article className="group grid overflow-hidden border border-black/10 bg-[#f8f5ef] transition duration-500 hover:border-[#7a86a1]/45 hover:bg-[#fbf8f2]">
+              <article className="glass-panel-strong group grid overflow-hidden transition duration-500 hover:border-[#b67f98]/45 hover:bg-[#ffe6ef]/55">
                 <div className="flex min-h-[360px] flex-col justify-between p-7 sm:p-10 lg:p-12">
                   <div>
                     <div className="mb-10 flex items-center justify-between gap-5 text-xs uppercase tracking-[0.2em] text-[#7a746d]">
@@ -30,7 +30,7 @@ export function FeaturedWork() {
                     </h3>
                     <p className="mt-7 max-w-3xl text-xl leading-8 text-[#403c37]">{project.summary}</p>
                     {project.detailHref ? (
-                      <span className="mt-8 inline-flex border border-black/15 px-4 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#171513] transition group-hover:bg-[#171513] group-hover:text-[#f8f5ef]">
+                      <span className="glass-chip mt-8 inline-flex px-4 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#171513] transition group-hover:bg-[#171513] group-hover:text-[#f8f5ef]">
                         查看项目详情
                       </span>
                     ) : null}
@@ -42,7 +42,7 @@ export function FeaturedWork() {
                     </div>
                     <div className="flex flex-wrap gap-2">
                       {project.tags.map((tag) => (
-                        <span key={tag} className="border border-black/10 bg-[#e8d8df] px-3 py-2 text-sm text-[#342e33]">
+                        <span key={tag} className="glass-chip px-3 py-2 text-sm text-[#342e33]">
                           {tag}
                         </span>
                       ))}

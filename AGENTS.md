@@ -86,7 +86,8 @@ public/videos/
 
 Use a restrained editorial look:
 
-- Cream base background, black typography
+- Frosted-glass visual system with light-pink translucent panels, fine borders, backdrop blur, and controlled shadows
+- Muted pink and muted blue background layers, black typography
 - Muted pink and muted blue accents
 - Main visible titles should be Chinese, with restrained scale and comfortable line height
 - English can remain in small tool tags, framework names, links, and technical labels such as Dify, RAG, Next.js, Tailwind, or Framer Motion
@@ -94,6 +95,7 @@ Use a restrained editorial look:
 - Real evidence images shown as complete originals, not cropped or covered
 - Cards are acceptable for repeated work/evidence items, but avoid nested card-heavy layouts
 - Avoid decorative clutter and avoid making the page look like a generic template
+- Use shared glass utility classes from `app/globals.css` (`glass-panel`, `glass-panel-strong`, `glass-chip`, `glass-dark`) for new cards and major surfaces
 
 Motion direction:
 

@@ -4,7 +4,7 @@ import { Reveal } from "./Reveal";
 
 export function About() {
   return (
-    <section id="about" className="bg-[#f6f1ec] px-5 py-24 sm:px-8">
+    <section id="about" className="px-5 py-24 sm:px-8">
       <div className="mx-auto grid max-w-[1700px] gap-12">
         <Reveal>
           <p className="section-kicker">个人概览</p>
@@ -18,7 +18,7 @@ export function About() {
           </div>
         </Reveal>
         <div className="grid gap-6 lg:grid-cols-[0.36fr_0.64fr]">
-          <Reveal className="relative min-h-[360px] overflow-hidden border border-black/10 bg-[#d7d2ca]" delay={0.05}>
+          <Reveal className="glass-panel relative min-h-[360px] overflow-hidden" delay={0.05}>
             <Image
               src="/images/portrait-abstract.svg"
               alt="Chen Lijun portrait illustration"
@@ -30,24 +30,24 @@ export function About() {
           <div className="grid gap-6">
             <Reveal className="grid gap-4 md:grid-cols-3" delay={0.1}>
               {profileHighlights.map((highlight) => (
-                <div key={highlight} className="border border-black/10 bg-[#fbf8f3] p-5 text-base leading-7 text-[#403c37]">
+                <div key={highlight} className="glass-panel p-5 text-base leading-7 text-[#403c37]">
                   {highlight}
                 </div>
               ))}
             </Reveal>
             <Reveal className="grid gap-4 md:grid-cols-2" delay={0.16}>
-              <div className="border border-black/10 bg-[#ebe6df] p-6">
+              <div className="glass-panel p-6">
                 <p className="mb-4 text-xs uppercase tracking-[0.2em] text-[#7a746d]">实习经历</p>
                 <h3 className="text-2xl font-black text-[#171513]">佛山新基地实业集团</h3>
                 <p className="mt-2 text-sm text-[#625c55]">内容运营 & 增长策略实习生 / 数字产业园B2B业务</p>
               </div>
-              <div className="border border-black/10 bg-[#ebe6df] p-6">
+              <div className="glass-panel p-6">
                 <p className="mb-4 text-xs uppercase tracking-[0.2em] text-[#7a746d]">实习经历</p>
                 <h3 className="text-2xl font-black text-[#171513]">广东佛燃科技有限公司</h3>
                 <p className="mt-2 text-sm text-[#625c55]">内容运营 & SEO增长实习生 / 硬科技B2B业务</p>
               </div>
             </Reveal>
-            <Reveal className="grid grid-cols-2 border-t border-l border-black/10 md:grid-cols-6" delay={0.22}>
+            <Reveal className="glass-panel grid grid-cols-2 overflow-hidden md:grid-cols-6" delay={0.22}>
               {stats.map((stat) => (
                 <div key={stat.label} className="border-b border-r border-black/10 p-5">
                   <div className="text-3xl font-black text-[#171513]">{stat.value}</div>

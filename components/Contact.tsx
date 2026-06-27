@@ -2,8 +2,8 @@ import { Reveal } from "./Reveal";
 
 export function Contact() {
   return (
-    <section id="contact" className="flex min-h-screen items-end bg-[#1b1917] px-5 py-10 text-[#f6f1ec] sm:px-8">
-      <div className="mx-auto grid w-full max-w-[1700px] gap-12 lg:grid-cols-[0.7fr_0.3fr] lg:items-end">
+    <section id="contact" className="flex min-h-screen items-end px-5 py-10 text-[#f6f1ec] sm:px-8">
+      <div className="glass-dark mx-auto grid w-full max-w-[1700px] gap-12 p-7 sm:p-10 lg:grid-cols-[0.7fr_0.3fr] lg:items-end lg:p-14">
         <Reveal>
           <p className="mb-7 text-xs uppercase tracking-[0.26em] text-[#c6b8c6]">联系</p>
           <h2 className="max-w-6xl text-[clamp(2.4rem,5.2vw,6.4rem)] font-black leading-[1.08] tracking-normal">

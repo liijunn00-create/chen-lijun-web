@@ -8,16 +8,16 @@ function PdfCover({ title, href }: { title: string; href: string }) {
       href={href}
       target="_blank"
       rel="noreferrer"
-      className="group relative flex h-[520px] overflow-hidden bg-[#e4dde5] p-6 transition"
+      className="glass-panel group relative flex h-[520px] overflow-hidden p-6 transition"
     >
-      <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(247,242,236,0.96),rgba(225,207,218,0.86)_46%,rgba(198,215,225,0.82))]" />
-      <div className="absolute inset-0 opacity-45 [background-image:linear-gradient(rgba(23,21,19,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(23,21,19,0.08)_1px,transparent_1px)] [background-size:34px_34px]" />
-      <div className="absolute -right-20 top-16 h-64 w-64 rounded-full border border-[#171513]/15 bg-[#d8e5ec]/60 transition duration-700 group-hover:scale-110" />
-      <div className="absolute -left-16 bottom-16 h-52 w-52 rounded-full border border-[#171513]/10 bg-[#e5c9d5]/65 transition duration-700 group-hover:translate-x-3" />
-      <div className="absolute bottom-16 right-10 h-28 w-28 rotate-12 border border-[#171513]/15 bg-[#f3eee7]/50" />
+      <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(247,242,236,0.72),rgba(225,207,218,0.54)_46%,rgba(198,215,225,0.58))]" />
+      <div className="absolute inset-0 opacity-35 [background-image:linear-gradient(rgba(23,21,19,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(23,21,19,0.08)_1px,transparent_1px)] [background-size:34px_34px]" />
+      <div className="absolute right-8 top-16 h-48 w-64 border border-[#171513]/12 bg-white/22 backdrop-blur-xl transition duration-700 group-hover:translate-x-3" />
+      <div className="absolute bottom-16 left-8 h-44 w-72 border border-[#171513]/10 bg-[#e5c9d5]/40 backdrop-blur-xl transition duration-700 group-hover:-translate-y-2" />
+      <div className="absolute bottom-16 right-10 h-28 w-28 rotate-12 border border-[#171513]/15 bg-[#f3eee7]/40 backdrop-blur-lg" />
       <div className="absolute left-8 top-24 h-px w-28 bg-[#171513]/30" />
       <div className="absolute bottom-28 left-8 h-px w-40 bg-[#171513]/20" />
-      <div className="relative z-10 flex w-full flex-col justify-between border border-[#171513]/15 bg-[#f8f3ed]/48 p-6 backdrop-blur-[2px]">
+      <div className="glass-panel-strong relative z-10 flex w-full flex-col justify-between p-6">
         <div className="flex items-start justify-between gap-6">
           <span className="text-xs font-semibold uppercase tracking-[0.22em] text-[#6c7681]">完整PDF</span>
           <span className="text-right text-xs uppercase tracking-[0.18em] text-[#8d7d88]">作品归档</span>
@@ -41,7 +41,7 @@ function PdfCover({ title, href }: { title: string; href: string }) {
 
 export function EvidenceStudio() {
   return (
-    <section id="evidence" className="section-shell bg-[#f6f1ec]">
+    <section id="evidence" className="section-shell">
       <div className="section-grid">
         <Reveal>
           <p className="section-kicker">作品证据</p>
@@ -64,14 +64,10 @@ export function EvidenceStudio() {
                   {group.items.map((item, itemIndex) => (
                     <article
                       key={`${group.title}-${item.title}`}
-                      className={
-                        item.type === "placeholder"
-                          ? "min-h-[300px] border border-dashed border-black/20 bg-[#eee7df] p-6"
-                          : "border border-black/10 bg-[#fbf8f3]"
-                      }
+                      className={item.type === "placeholder" ? "glass-panel min-h-[300px] border-dashed p-6" : "glass-panel overflow-hidden"}
                     >
                       {item.type === "image" && item.src ? (
-                        <div className="relative flex h-[520px] items-center justify-center overflow-hidden bg-[#e4dfd7] p-3">
+                        <div className="relative flex h-[520px] items-center justify-center overflow-hidden bg-white/24 p-3">
                           <Image
                             src={item.src}
                             alt={item.title}
@@ -83,7 +79,7 @@ export function EvidenceStudio() {
                         </div>
                       ) : null}
                       {item.type === "video" && item.src ? (
-                        <div className="flex h-[520px] items-center justify-center overflow-hidden bg-[#171513] p-3">
+                        <div className="flex h-[520px] items-center justify-center overflow-hidden bg-[#171513]/88 p-3">
                           <video
                             src={item.src}
                             controls
@@ -113,7 +109,7 @@ export function EvidenceStudio() {
                                 href={link.href}
                                 target="_blank"
                                 rel="noreferrer"
-                                className="border border-black/10 bg-[#ebe6df] px-3 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-[#171513] transition hover:bg-[#171513] hover:text-[#f6f1ec]"
+                                className="glass-chip px-3 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-[#171513] transition hover:bg-[#171513] hover:text-[#f6f1ec]"
                               >
                                 {link.label}
                               </a>

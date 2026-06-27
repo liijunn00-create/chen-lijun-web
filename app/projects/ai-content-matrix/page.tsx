@@ -15,20 +15,20 @@ export default function AiContentMatrixPage() {
   }
 
   return (
-    <main className="min-h-screen bg-[#f6f1ec] text-[#171513]">
+    <main className="min-h-screen text-[#171513]">
       <header className="px-5 py-5 sm:px-8">
-        <nav className="mx-auto flex max-w-[1700px] items-center justify-between border border-black/10 bg-[#f6f1ec]/80 px-4 py-3 text-[12px] uppercase tracking-[0.18em] backdrop-blur-xl">
+        <nav className="glass-panel-strong mx-auto flex max-w-[1700px] items-center justify-between px-4 py-3 text-[12px] uppercase tracking-[0.18em]">
           <Link href="/" className="font-semibold transition hover:text-[#7a86a1]">
             陈丽君作品集
           </Link>
-          <Link href="/#work" className="border border-[#1e1c1a] px-4 py-2 transition hover:bg-[#1e1c1a] hover:text-[#f6f1ec]">
+          <Link href="/#work" className="glass-chip px-4 py-2 transition hover:bg-[#1e1c1a] hover:text-[#f6f1ec]">
             返回项目
           </Link>
         </nav>
       </header>
 
       <section className="px-5 pb-16 pt-10 sm:px-8 lg:pb-24">
-        <div className="mx-auto grid max-w-[1700px] gap-10 border-b border-black/10 pb-14 lg:grid-cols-[0.58fr_0.42fr] lg:items-end">
+        <div className="glass-panel-strong mx-auto grid max-w-[1700px] gap-10 p-7 sm:p-10 lg:grid-cols-[0.58fr_0.42fr] lg:items-end lg:p-14">
           <div>
             <p className="section-kicker">{projectCase.eyebrow}</p>
             <h1 className="max-w-5xl text-[clamp(2.4rem,6vw,7rem)] font-black leading-[1.02] tracking-normal">
@@ -50,7 +50,7 @@ export default function AiContentMatrixPage() {
       <section className="px-5 py-20 sm:px-8">
         <div className="mx-auto grid max-w-[1700px] gap-8">
           {projectCase.sections.map((section) => (
-            <article key={section.title} className="grid gap-8 border border-black/10 bg-[#f8f5ef] p-7 sm:p-10 lg:grid-cols-[0.35fr_0.65fr] lg:p-12">
+            <article key={section.title} className="glass-panel grid gap-8 p-7 sm:p-10 lg:grid-cols-[0.35fr_0.65fr] lg:p-12">
               <div>
                 <p className="section-kicker">{section.kicker}</p>
                 <h2 className="text-[clamp(1.8rem,3vw,3.4rem)] font-black leading-tight">{section.title}</h2>
@@ -60,7 +60,7 @@ export default function AiContentMatrixPage() {
                 {section.points ? (
                   <div className="mt-8 grid gap-3 sm:grid-cols-2">
                     {section.points.map((point) => (
-                      <span key={point} className="border border-black/10 bg-[#efe8ee] px-4 py-3 text-sm font-semibold text-[#3b353b]">
+                      <span key={point} className="glass-chip px-4 py-3 text-sm font-semibold text-[#3b353b]">
                         {point}
                       </span>
                     ))}
@@ -72,7 +72,7 @@ export default function AiContentMatrixPage() {
         </div>
       </section>
 
-      <section className="bg-[#e7edf2] px-5 py-20 sm:px-8">
+      <section className="px-5 py-20 sm:px-8">
         <div className="mx-auto grid max-w-[1700px] gap-10 lg:grid-cols-[0.35fr_0.65fr]">
           <div>
             <p className="section-kicker">Workflow</p>
@@ -80,7 +80,7 @@ export default function AiContentMatrixPage() {
           </div>
           <div className="grid gap-3">
             {projectCase.workflow.map((step, index) => (
-              <div key={step} className="grid gap-4 border border-black/10 bg-[#f8f5ef] p-5 sm:grid-cols-[88px_1fr] sm:items-center">
+              <div key={step} className="glass-panel grid gap-4 p-5 sm:grid-cols-[88px_1fr] sm:items-center">
                 <span className="text-sm font-black uppercase tracking-[0.18em] text-[#7a86a1]">Step {index + 1}</span>
                 <p className="text-lg leading-8 text-[#342f2b]">{step}</p>
               </div>
@@ -97,7 +97,7 @@ export default function AiContentMatrixPage() {
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
             {projectCase.features.map((feature) => (
-              <div key={feature} className="min-h-[150px] border border-black/10 bg-[#f8f5ef] p-6">
+              <div key={feature} className="glass-panel min-h-[150px] p-6">
                 <p className="text-xl font-bold leading-8">{feature}</p>
               </div>
             ))}
@@ -113,7 +113,7 @@ export default function AiContentMatrixPage() {
           </div>
           <div className="flex flex-wrap content-start gap-3">
             {projectCase.tools.map((tool) => (
-              <span key={tool} className="border border-black/10 bg-[#e8d8df] px-4 py-3 text-sm font-semibold text-[#342e33]">
+              <span key={tool} className="glass-chip px-4 py-3 text-sm font-semibold text-[#342e33]">
                 {tool}
               </span>
             ))}
@@ -121,8 +121,8 @@ export default function AiContentMatrixPage() {
         </div>
       </section>
 
-      <section className="min-h-screen bg-[#171513] px-5 py-20 text-[#f6f1ec] sm:px-8">
-        <div className="mx-auto flex min-h-[72vh] max-w-[1700px] flex-col justify-between gap-16">
+      <section className="min-h-screen px-5 py-20 text-[#f6f1ec] sm:px-8">
+        <div className="glass-dark mx-auto flex min-h-[72vh] max-w-[1700px] flex-col justify-between gap-16 p-7 sm:p-10 lg:p-14">
           <div className="grid gap-10 lg:grid-cols-[0.36fr_0.64fr]">
             <div>
               <p className="mb-6 text-xs font-bold uppercase tracking-[0.24em] text-[#dcaec1]">Outcome</p>
@@ -132,7 +132,7 @@ export default function AiContentMatrixPage() {
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {projectCase.applications.map((application) => (
-              <span key={application} className="border border-white/15 bg-white/5 px-5 py-5 text-lg font-semibold">
+              <span key={application} className="border border-white/15 bg-white/[0.08] px-5 py-5 text-lg font-semibold backdrop-blur-xl">
                 {application}
               </span>
             ))}
@@ -144,14 +144,14 @@ export default function AiContentMatrixPage() {
 }
 
 function InfoPanel({ title, items, tone = "pink" }: { title: string; items: string[]; tone?: "pink" | "blue" }) {
-  const background = tone === "blue" ? "bg-[#e7edf2]" : "bg-[#efe0e7]";
+  const background = tone === "blue" ? "bg-[rgba(248,218,229,0.34)]" : "bg-[rgba(248,218,229,0.42)]";
 
   return (
-    <article className={`${background} border border-black/10 p-7 sm:p-10`}>
+    <article className={`${background} glass-panel p-7 sm:p-10`}>
       <h2 className="mb-8 text-3xl font-black">{title}</h2>
       <div className="flex flex-wrap gap-3">
         {items.map((item) => (
-          <span key={item} className="border border-black/10 bg-[#f8f5ef] px-4 py-3 text-sm font-semibold text-[#342f2b]">
+          <span key={item} className="glass-chip px-4 py-3 text-sm font-semibold text-[#342f2b]">
             {item}
           </span>
         ))}
