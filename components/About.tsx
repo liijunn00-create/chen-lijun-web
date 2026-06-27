@@ -9,7 +9,7 @@ export function About() {
         <Reveal>
           <p className="section-kicker">个人概览</p>
           <div className="grid gap-8 lg:grid-cols-[0.42fr_0.58fr] lg:items-end">
-            <h2 className="text-[clamp(1.9rem,3.4vw,4.2rem)] font-black leading-[1.08] tracking-normal text-[#171513]">
+            <h2 className="text-[clamp(1.6rem,2.7vw,3.3rem)] font-black leading-[1.08] tracking-normal text-[#171513]">
               简洁介绍，重点留给作品。
             </h2>
             <p className="max-w-3xl text-xl leading-8 text-[#4a4641]">
@@ -38,12 +38,12 @@ export function About() {
             <Reveal className="grid gap-4 md:grid-cols-2" delay={0.16}>
               <div className="glass-panel p-6">
                 <p className="mb-4 text-xs uppercase tracking-[0.2em] text-[#7a746d]">实习经历</p>
-                <h3 className="text-2xl font-black text-[#171513]">佛山新基地实业集团</h3>
+                <h3 className="text-xl font-black text-[#171513]">佛山新基地实业集团</h3>
                 <p className="mt-2 text-sm text-[#625c55]">内容运营 & 增长策略实习生 / 数字产业园B2B业务</p>
               </div>
               <div className="glass-panel p-6">
                 <p className="mb-4 text-xs uppercase tracking-[0.2em] text-[#7a746d]">实习经历</p>
-                <h3 className="text-2xl font-black text-[#171513]">广东佛燃科技有限公司</h3>
+                <h3 className="text-xl font-black text-[#171513]">广东佛燃科技有限公司</h3>
                 <p className="mt-2 text-sm text-[#625c55]">内容运营 & SEO增长实习生 / 硬科技B2B业务</p>
               </div>
             </Reveal>

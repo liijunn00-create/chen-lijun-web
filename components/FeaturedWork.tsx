@@ -25,7 +25,7 @@ export function FeaturedWork() {
                       <span>{project.eyebrow}</span>
                       <span>{project.period}</span>
                     </div>
-                    <h3 className="max-w-4xl text-[clamp(1.8rem,3.4vw,4.4rem)] font-black leading-[1.08] tracking-normal text-[#171513]">
+                    <h3 className="max-w-4xl text-[clamp(1.55rem,2.7vw,3.4rem)] font-black leading-[1.08] tracking-normal text-[#171513]">
                       {project.title}
                     </h3>
                     <p className="mt-7 max-w-3xl text-xl leading-8 text-[#403c37]">{project.summary}</p>

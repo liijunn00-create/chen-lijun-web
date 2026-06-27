@@ -24,7 +24,7 @@ function PdfCover({ title, href }: { title: string; href: string }) {
         </div>
         <div>
           <p className="mb-5 font-mono text-xs uppercase tracking-[0.18em] text-[#756f69]">策划 / 商业 / 文案</p>
-          <h4 className="max-w-[18rem] text-[clamp(1.7rem,2.6vw,3.1rem)] font-black leading-[1.08] tracking-normal text-[#171513]">
+          <h4 className="max-w-[18rem] text-[clamp(1.45rem,2.1vw,2.5rem)] font-black leading-[1.08] tracking-normal text-[#171513]">
             {title.replace("完整版PDF", "")}
           </h4>
         </div>
@@ -54,7 +54,7 @@ export function EvidenceStudio() {
                 <div className="mb-8 grid gap-6 lg:grid-cols-[0.42fr_0.58fr]">
                   <div>
                     <p className="mb-2 text-xs uppercase tracking-[0.22em] text-[#7a86a1]">{group.subtitle}</p>
-                    <h3 className="text-[clamp(1.7rem,2.4vw,3.1rem)] font-black leading-[1.08] tracking-normal text-[#171513]">
+                    <h3 className="text-[clamp(1.45rem,2vw,2.5rem)] font-black leading-[1.08] tracking-normal text-[#171513]">
                       {group.title}
                     </h3>
                   </div>
@@ -95,7 +95,7 @@ export function EvidenceStudio() {
                       {item.type === "placeholder" ? (
                         <div className="flex h-full min-h-[260px] flex-col justify-between">
                           <span className="text-xs uppercase tracking-[0.2em] text-[#938b82]">预留位置</span>
-                          <p className="max-w-sm text-3xl font-semibold leading-tight text-[#292520]">{item.title}</p>
+                          <p className="max-w-sm text-2xl font-semibold leading-tight text-[#292520]">{item.title}</p>
                         </div>
                       ) : null}
                       <div className="p-5">

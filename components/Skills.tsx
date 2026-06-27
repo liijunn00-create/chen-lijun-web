@@ -27,7 +27,7 @@ export function Skills() {
                       {capability.label}
                     </span>
                   </div>
-                  <h3 className="text-[clamp(1.7rem,2.5vw,3.1rem)] font-black leading-[1.08] tracking-normal text-[#171513]">
+                  <h3 className="text-[clamp(1.45rem,2.1vw,2.5rem)] font-black leading-[1.08] tracking-normal text-[#171513]">
                     {capability.title}
                   </h3>
                   <p className="mt-6 text-base leading-7 text-[#46515b]">{capability.description}</p>
@@ -45,7 +45,7 @@ export function Skills() {
         </div>
         <Reveal>
           <div className="grid gap-8 border-t border-black/10 pt-12 lg:grid-cols-[0.48fr_0.52fr]">
-            <h3 className="text-[clamp(2rem,3.8vw,4.8rem)] font-black leading-[1.05] tracking-normal text-[#171513]">
+            <h3 className="text-[clamp(1.7rem,3vw,3.8rem)] font-black leading-[1.05] tracking-normal text-[#171513]">
               运营能力栈
             </h3>
             <p className="text-xl leading-8 text-[#384049]">
@@ -59,7 +59,7 @@ export function Skills() {
               <article className="glass-panel flex min-h-[360px] flex-col justify-between p-7">
                 <div>
                   <p className="mb-6 text-xs uppercase tracking-[0.22em] text-[#75808b]">0{index + 1}</p>
-                  <h3 className="text-3xl font-black leading-tight text-[#171513]">{group.title}</h3>
+                  <h3 className="text-2xl font-black leading-tight text-[#171513]">{group.title}</h3>
                   <p className="mt-6 text-base leading-7 text-[#46515b]">{group.intro}</p>
                 </div>
                 <ul className="mt-8 space-y-3">

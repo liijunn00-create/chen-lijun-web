@@ -6,7 +6,7 @@ export function Contact() {
       <div className="glass-dark mx-auto grid w-full max-w-[1700px] gap-12 p-7 sm:p-10 lg:grid-cols-[0.7fr_0.3fr] lg:items-end lg:p-14">
         <Reveal>
           <p className="mb-7 text-xs uppercase tracking-[0.26em] text-[#c6b8c6]">联系</p>
-          <h2 className="max-w-6xl text-[clamp(2.4rem,5.2vw,6.4rem)] font-black leading-[1.08] tracking-normal">
+          <h2 className="max-w-6xl text-[clamp(2rem,4.2vw,5.2rem)] font-black leading-[1.08] tracking-normal">
             让内容成为增长系统。
           </h2>
         </Reveal>

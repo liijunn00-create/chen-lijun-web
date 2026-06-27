@@ -29,7 +29,7 @@ export function Hero() {
             </motion.p>
             <div className="overflow-hidden">
               <motion.h1
-                className="max-w-[1180px] text-[clamp(2.8rem,6.8vw,7.8rem)] font-black leading-[1.04] tracking-normal text-[#171513]"
+                className="max-w-[1180px] text-[clamp(2.3rem,5.4vw,6.4rem)] font-black leading-[1.04] tracking-normal text-[#171513]"
                 initial={reduceMotion ? false : { y: "110%", scaleY: 0.72 }}
                 animate={reduceMotion ? undefined : { y: 0, scaleY: 1 }}
                 transition={{ duration: 1.25, ease: [0.16, 1, 0.3, 1] }}
@@ -39,7 +39,7 @@ export function Hero() {
             </div>
             <div className="overflow-hidden">
               <motion.h1
-                className="text-[clamp(2.8rem,6.8vw,7.8rem)] font-black leading-[1.04] tracking-normal text-[#171513]"
+                className="text-[clamp(2.3rem,5.4vw,6.4rem)] font-black leading-[1.04] tracking-normal text-[#171513]"
                 initial={reduceMotion ? false : { y: "110%", scaleY: 0.72 }}
                 animate={reduceMotion ? undefined : { y: 0, scaleY: 1 }}
                 transition={{ duration: 1.25, delay: 0.16, ease: [0.16, 1, 0.3, 1] }}
