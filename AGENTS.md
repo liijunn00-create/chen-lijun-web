@@ -188,6 +188,12 @@ New categorized evidence assets:
 - `video-production/douyin-shot-breakdown-storyboard-cover.png`
 - `video-production/film-storyboard-script-cover.png`
 - `ai-projects/growth-os-workflow.png`
+- `ai-projects/growth-os/test-output/contentpilot-business-insight.png`
+- `ai-projects/growth-os/test-output/contentpilot-diagnosis.png`
+- `ai-projects/growth-os/test-output/contentpilot-experiment-design-1.png`
+- `ai-projects/growth-os/test-output/contentpilot-materials-1.png`
+- `ai-projects/growth-os/test-output/contentpilot-materials-2.png`
+- `ai-projects/growth-os/test-output/contentpilot-metrics.png`
 - `ai-projects/content-matrix/content-matrix-workflow.png`
 - `ai-projects/content-matrix/result-xiaohongshu-copy.png`
 - `ai-projects/content-matrix/result-tags-bilibili.png`

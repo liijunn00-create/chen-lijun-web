@@ -10,6 +10,39 @@ export const metadata: Metadata = {
 
 const projectCase = getProjectCase("growth-os");
 
+const outputImages = [
+  {
+    title: "业务背景与用户洞察",
+    src: "/images/ai-projects/growth-os/test-output/contentpilot-business-insight.png",
+    note: "系统将 ContentPilot AI 的产品阶段、目标、约束和用户分群整理成增长诊断前置输入。",
+  },
+  {
+    title: "关键发现与增长诊断",
+    src: "/images/ai-projects/growth-os/test-output/contentpilot-diagnosis.png",
+    note: "输出P0/P1/P2问题优先级，明确7日留存、激活率和持续生产习惯之间的核心瓶颈。",
+  },
+  {
+    title: "增长实验设计",
+    src: "/images/ai-projects/growth-os/test-output/contentpilot-experiment-design-1.png",
+    note: "围绕身份标签化模板、AI闭环保存、AI评分召回等场景设计可验证实验。",
+  },
+  {
+    title: "运营素材与触达话术",
+    src: "/images/ai-projects/growth-os/test-output/contentpilot-materials-1.png",
+    note: "生成Push文案A/B、社群话术和实验触发策略，将增长方案转化为可执行素材。",
+  },
+  {
+    title: "小红书与短视频脚本",
+    src: "/images/ai-projects/growth-os/test-output/contentpilot-materials-2.png",
+    note: "进一步输出小红书标题、正文大纲、标签、CTA和短视频分镜脚本。",
+  },
+  {
+    title: "指标体系与触发时机",
+    src: "/images/ai-projects/growth-os/test-output/contentpilot-metrics.png",
+    note: "沉淀北极星指标、漏斗指标和素材触发时机，支持后续实验监测与复盘。",
+  },
+];
+
 export default function GrowthOsPage() {
   if (!projectCase) {
     return null;
@@ -104,6 +137,40 @@ export default function GrowthOsPage() {
                 priority
               />
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-5 py-20 sm:px-8">
+        <div className="mx-auto grid max-w-[1700px] gap-10">
+          <div className="grid gap-8 lg:grid-cols-[0.36fr_0.64fr] lg:items-end">
+            <div>
+              <p className="section-kicker">Output Evidence</p>
+              <h2 className="section-title">测试输出样例</h2>
+            </div>
+            <p className="max-w-3xl text-lg leading-8 text-[#504b45]">
+              以下为AI增长实验操作系统的另一组测试结果，案例对象为 ContentPilot AI。系统围绕激活率、7日留存、首次生成后的保存与再使用行为，输出业务背景、用户洞察、增长诊断、实验设计、运营素材和指标体系。
+            </p>
+          </div>
+          <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+            {outputImages.map((item, index) => (
+              <article key={item.src} className="glass-panel overflow-hidden">
+                <div className="relative flex h-[560px] items-center justify-center overflow-hidden bg-[#171513]/88 p-3 sm:h-[620px]">
+                  <Image
+                    src={item.src}
+                    alt={item.title}
+                    fill
+                    className="object-contain"
+                    sizes="(min-width: 1280px) 30vw, (min-width: 768px) 45vw, 100vw"
+                    priority={index < 2}
+                  />
+                </div>
+                <div className="p-5">
+                  <h3 className="text-xl font-black text-[#171513]">{item.title}</h3>
+                  <p className="mt-3 text-sm leading-6 text-[#625c55]">{item.note}</p>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
