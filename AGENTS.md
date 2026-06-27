@@ -18,7 +18,7 @@ Current positioning priority:
 - Keep personal profile and internship history concise.
 - Put the strongest visual and content weight on project work, portfolio evidence, and capability proof.
 - The most important differentiator is Chen Lijun's ability to use AI tools for operations: Dify Workflow, RAG, Multi-Agent thinking, Prompt Engineering, AIGC content production, structured output, and AI-assisted growth experiments.
-- The page order should support this priority: Hero -> Featured Work -> Evidence Studio -> AI/Skill Stack -> concise About -> Contact.
+- The page order should support this priority: Hero -> Featured Work -> Evidence Studio -> concise About -> Contact. AI operation capability should be expressed through the AI project cards and detail pages, not through a separate repeated capability section.
 
 ## Tech Stack
 
@@ -61,7 +61,6 @@ components/
   About.tsx
   FeaturedWork.tsx
   EvidenceStudio.tsx
-  Skills.tsx
   Contact.tsx
   Footer.tsx
   Reveal.tsx        Framer Motion scroll reveal wrapper
@@ -140,7 +139,6 @@ Current evidence groups in `data/evidence.ts`:
 
 - 账号运营优质笔记
 - 文案写作能力
-- 运营能力展示
 - 设计排版能力
 - 推文制作
 - 小组报告PPT
@@ -230,7 +228,6 @@ Full document assets:
 
 - Replace placeholder contact email in `Navbar.tsx` and `Contact.tsx`
 - Upload missing evidence for PPT reports, shooting/editing, and deeper operation process documents
-- Add a dedicated project detail page for AI Growth Decision System if needed
 - Add mobile QA and browser screenshot verification
 - Optionally create a GitHub remote or handoff branch for collaborator workflow
 

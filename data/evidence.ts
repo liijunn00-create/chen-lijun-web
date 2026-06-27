@@ -88,19 +88,6 @@ export const evidenceGroups: EvidenceGroup[] = [
     ],
   },
   {
-    title: "ai运营能力展示",
-    subtitle: "AI运营增长实验系统｜从业务输入到增长执行的多 Agent 工作流",
-    description:
-      "通过AI重构运营增长工作流，将传统运营中的分析、策略、内容、执行、复盘转化为可自动运行的系统。",
-    items: [
-      {
-        title: "待上传：增长漏斗 / 复盘图",
-        type: "placeholder",
-        note: "围绕AI运营岗位的核心工作，搭建两个可运行的AI工作流系统：一个聚焦增长实验决策，另一个聚焦运营内容与执行落地。两个系统均基于Dify Workflow实现，通过自然语言输入、RAG知识库、多Agent协作和结构化输出，将传统运营中的分析、策略、内容、执行、指标和复盘流程自动化。",
-      },
-    ],
-  },
-  {
     title: "设计排版能力",
     subtitle: "视觉排版",
     description:

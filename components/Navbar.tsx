@@ -1,7 +1,6 @@
 const navItems = [
   { label: "项目", href: "#work" },
   { label: "作品", href: "#evidence" },
-  { label: "AI能力", href: "#ai-skills" },
   { label: "概览", href: "#about" },
   { label: "联系", href: "#contact" },
 ];

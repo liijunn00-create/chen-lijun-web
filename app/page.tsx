@@ -5,7 +5,6 @@ import { FeaturedWork } from "@/components/FeaturedWork";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
 import { Navbar } from "@/components/Navbar";
-import { Skills } from "@/components/Skills";
 
 export default function Home() {
   return (
@@ -15,7 +14,6 @@ export default function Home() {
         <Hero />
         <FeaturedWork />
         <EvidenceStudio />
-        <Skills />
         <About />
         <Contact />
       </main>
