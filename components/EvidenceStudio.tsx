@@ -2,6 +2,43 @@ import Image from "next/image";
 import { evidenceGroups } from "@/data/evidence";
 import { Reveal } from "./Reveal";
 
+function PdfCover({ title, href }: { title: string; href: string }) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noreferrer"
+      className="group relative flex h-[520px] overflow-hidden bg-[#e4dde5] p-6 transition"
+    >
+      <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(247,242,236,0.96),rgba(225,207,218,0.86)_46%,rgba(198,215,225,0.82))]" />
+      <div className="absolute inset-0 opacity-45 [background-image:linear-gradient(rgba(23,21,19,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(23,21,19,0.08)_1px,transparent_1px)] [background-size:34px_34px]" />
+      <div className="absolute -right-20 top-16 h-64 w-64 rounded-full border border-[#171513]/15 bg-[#d8e5ec]/60 transition duration-700 group-hover:scale-110" />
+      <div className="absolute -left-16 bottom-16 h-52 w-52 rounded-full border border-[#171513]/10 bg-[#e5c9d5]/65 transition duration-700 group-hover:translate-x-3" />
+      <div className="absolute bottom-16 right-10 h-28 w-28 rotate-12 border border-[#171513]/15 bg-[#f3eee7]/50" />
+      <div className="absolute left-8 top-24 h-px w-28 bg-[#171513]/30" />
+      <div className="absolute bottom-28 left-8 h-px w-40 bg-[#171513]/20" />
+      <div className="relative z-10 flex w-full flex-col justify-between border border-[#171513]/15 bg-[#f8f3ed]/48 p-6 backdrop-blur-[2px]">
+        <div className="flex items-start justify-between gap-6">
+          <span className="text-xs font-semibold uppercase tracking-[0.22em] text-[#6c7681]">Full PDF</span>
+          <span className="text-right text-xs uppercase tracking-[0.18em] text-[#8d7d88]">Portfolio Archive</span>
+        </div>
+        <div>
+          <p className="mb-5 font-mono text-xs uppercase tracking-[0.18em] text-[#756f69]">Plan / Strategy / Writing</p>
+          <h4 className="max-w-[18rem] text-[clamp(2.25rem,4.2vw,4.9rem)] font-black uppercase leading-[0.92] tracking-normal text-[#171513]">
+            {title.replace("完整版PDF", "")}
+          </h4>
+        </div>
+        <div className="flex items-end justify-between gap-6">
+          <span className="text-xs uppercase tracking-[0.18em] text-[#756f69]">Open document</span>
+          <span className="flex h-12 w-12 items-center justify-center border border-[#171513]/25 text-xl transition group-hover:bg-[#171513] group-hover:text-[#f8f3ed]">
+            ↗
+          </span>
+        </div>
+      </div>
+    </a>
+  );
+}
+
 export function EvidenceStudio() {
   return (
     <section id="evidence" className="section-shell bg-[#f6f1ec]">
@@ -46,15 +83,7 @@ export function EvidenceStudio() {
                         </div>
                       ) : null}
                       {item.type === "pdf" && item.src ? (
-                        <a
-                          href={item.src}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="flex h-[520px] flex-col justify-between bg-[#dfe7ec] p-6 transition hover:bg-[#d8e1e8]"
-                        >
-                          <span className="text-xs uppercase tracking-[0.22em] text-[#6a7580]">PDF Document</span>
-                          <span className="text-4xl font-black uppercase leading-none text-[#171513]">Open Full Plan</span>
-                        </a>
+                        <PdfCover title={item.title} href={item.src} />
                       ) : null}
                       {item.type === "placeholder" ? (
                         <div className="flex h-full min-h-[260px] flex-col justify-between">
