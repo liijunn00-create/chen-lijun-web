@@ -88,12 +88,49 @@ export const evidenceGroups: EvidenceGroup[] = [
     title: "设计排版能力",
     subtitle: "Layout Design",
     description:
-      "预留展示小组报告PPT、信息图、海报、推文头图等视觉排版作品，突出信息层级与审美控制。",
+      "这里展示我对海报、活动物料和商业视觉的排版控制能力。重点呈现标题层级、画面气质、信息组织和不同场景下的视觉表达。",
     items: [
       {
-        title: "待上传：PPT / 海报 / 信息图",
-        type: "placeholder",
-        note: "建议上传横版PPT截图、报告封面、信息图长图，方便做成画廊。",
+        title: "秋日集市活动海报",
+        type: "image",
+        src: "/images/design-layout/autumn-market-poster.jpeg",
+        note: "面向校园集市活动的视觉物料，使用柔和渐变、水彩肌理和中英文字层级，强化轻松、手作、生活方式氛围。",
+      },
+      {
+        title: "学生会招新海报",
+        type: "image",
+        src: "/images/design-layout/student-union-recruitment.jpeg",
+        note: "校园组织招新物料，核心信息包括部门、时间、地点和公众号来源，体现活动信息的清晰传达能力。",
+      },
+      {
+        title: "海边漫步音乐会海报",
+        type: "image",
+        src: "/images/design-layout/seaside-concert-poster.jpeg",
+        note: "以大标题、日期和地点为主视觉骨架，结合海边纹理背景，练习活动海报的信息优先级与视觉节奏。",
+      },
+      {
+        title: "Light in Motion 展览海报",
+        type: "image",
+        src: "/images/design-layout/light-in-motion-poster.jpg",
+        note: "黑白高对比排版练习，突出字体重量、留白比例和展览类海报的现代感。",
+      },
+      {
+        title: "Heart Dream 春日海报",
+        type: "image",
+        src: "/images/commercial-posters/spring-heart-dream-poster.jpg",
+        note: "偏梦幻风格的春日主题视觉，练习透明材质、泡泡元素和高饱和柔色画面的统一控制。",
+      },
+      {
+        title: "Jellycat 产品视觉海报",
+        type: "image",
+        src: "/images/commercial-posters/jellycat-sleepover-poster.png",
+        note: "围绕玩偶产品做商业化场景包装，强调产品主体、情绪氛围和电商视觉的生活方式表达。",
+      },
+      {
+        title: "可口可乐夏日场景海报",
+        type: "image",
+        src: "/images/commercial-posters/coca-cola-summer-poster.png",
+        note: "以夏日消费场景为核心，结合手写字与插画化人物，体现品牌情绪文案和场景视觉合成能力。",
       },
     ],
   },
@@ -101,12 +138,19 @@ export const evidenceGroups: EvidenceGroup[] = [
     title: "推文制作",
     subtitle: "WeChat Editorial",
     description:
-      "预留展示公众号推文、活动推送、标题策略和版式截图，突出选题、结构和阅读体验。",
+      "这里展示我参与校园公众号内容生产的痕迹，包括选题、标题、封面图、正文排版和活动传播承接。",
     items: [
       {
-        title: "待上传：公众号推文截图",
-        type: "placeholder",
-        note: "建议保留完整首屏、正文版式、阅读数据或后台数据截图。",
+        title: "公众号推文列表与选题呈现",
+        type: "image",
+        src: "/images/wechat-editorial/article-list-operation.png",
+        note: "展示账号内容列表、标题表达和阅读数据，用于说明我对校园公众号选题包装与内容运营节奏的参与。",
+      },
+      {
+        title: "彩色跑活动推文正文",
+        type: "image",
+        src: "/images/wechat-editorial/color-run-article.png",
+        note: "展示活动推文正文页，包含活动背景阐释、视觉头图和互动数据，体现推文结构与活动传播文案能力。",
       },
     ],
   },

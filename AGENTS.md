@@ -61,6 +61,9 @@ data/
   evidence.ts       evidence gallery and reserved slots
 public/images/
   copied portfolio evidence assets
+  design-layout/       posters, campus activity layouts, recruitment visuals
+  wechat-editorial/    WeChat account and article screenshots
+  commercial-posters/  product/brand poster experiments
 ```
 
 ## Design Direction
@@ -144,6 +147,18 @@ These assets are already copied into `public/images`:
 - `portrait-abstract.svg`
 - `hero-motion.webm`
 
+New categorized evidence assets:
+
+- `design-layout/autumn-market-poster.jpeg`
+- `design-layout/student-union-recruitment.jpeg`
+- `design-layout/seaside-concert-poster.jpeg`
+- `design-layout/light-in-motion-poster.jpg`
+- `wechat-editorial/article-list-operation.png`
+- `wechat-editorial/color-run-article.png`
+- `commercial-posters/spring-heart-dream-poster.jpg`
+- `commercial-posters/jellycat-sleepover-poster.png`
+- `commercial-posters/coca-cola-summer-poster.png`
+
 ## What Is Done
 
 - New Next.js project scaffolded at `leanne-portfolio`
@@ -157,7 +172,7 @@ These assets are already copied into `public/images`:
 ## Next Recommended Tasks
 
 - Replace placeholder contact email in `Navbar.tsx` and `Contact.tsx`
-- Upload missing evidence for design layout, WeChat articles, PPT reports, shooting/editing
+- Upload missing evidence for PPT reports, shooting/editing, and deeper operation process documents
 - Add a dedicated project detail page for AI Growth Decision System if needed
 - Add mobile QA and browser screenshot verification
 - Optionally create a GitHub remote or handoff branch for collaborator workflow

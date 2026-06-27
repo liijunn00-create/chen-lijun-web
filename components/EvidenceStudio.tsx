@@ -23,7 +23,7 @@ export function EvidenceStudio() {
                   </div>
                   <p className="max-w-3xl text-lg leading-8 text-[#504b45]">{group.description}</p>
                 </div>
-                <div className="grid gap-5 lg:grid-cols-4">
+                <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
                   {group.items.map((item, itemIndex) => (
                     <article
                       key={`${group.title}-${item.title}`}
@@ -34,7 +34,7 @@ export function EvidenceStudio() {
                       }
                     >
                       {item.type === "image" && item.src ? (
-                        <div className="relative flex h-[420px] items-center justify-center overflow-hidden bg-[#e4dfd7] p-3">
+                        <div className="relative flex h-[520px] items-center justify-center overflow-hidden bg-[#e4dfd7] p-3">
                           <Image
                             src={item.src}
                             alt={item.title}
@@ -50,7 +50,7 @@ export function EvidenceStudio() {
                           href={item.src}
                           target="_blank"
                           rel="noreferrer"
-                          className="flex h-[420px] flex-col justify-between bg-[#dfe7ec] p-6 transition hover:bg-[#d8e1e8]"
+                          className="flex h-[520px] flex-col justify-between bg-[#dfe7ec] p-6 transition hover:bg-[#d8e1e8]"
                         >
                           <span className="text-xs uppercase tracking-[0.22em] text-[#6a7580]">PDF Document</span>
                           <span className="text-4xl font-black uppercase leading-none text-[#171513]">Open Full Plan</span>
