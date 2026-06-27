@@ -20,6 +20,55 @@ export type ProjectCase = {
 
 export const projectCases: ProjectCase[] = [
   {
+    slug: "growth-os",
+    title: "AI增长决策系统",
+    subtitle: "基于Dify的多Agent增长实验操作系统",
+    eyebrow: "核心AI项目",
+    overview:
+      "面向产品增长、内容运营和用户转化场景的AI增长实验操作系统。系统将业务描述转化为结构化增长诊断、实验方案、执行清单、运营素材、指标体系、复盘模板和最终Word作战报告，体现AI工作流、RAG知识库和多Agent协作在运营决策中的落地能力。",
+    roles: ["系统架构设计", "Dify Workflow搭建", "RAG知识库配置", "多Agent职责拆解", "Prompt结构设计", "DOCX报告导出测试"],
+    tools: ["Dify Workflow", "RAG Knowledge Base", "Multi-Agent", "Prompt Engineering", "Code Node", "DOCX Export"],
+    sections: [
+      {
+        title: "增长方案难以复用和标准化",
+        kicker: "Problem",
+        body:
+          "传统增长运营方案高度依赖人工经验，常见问题包括诊断过程不透明、实验设计不成体系、输出格式不稳定、复盘难以沉淀。对于需要持续做增长实验的产品或内容业务，单次方案产出并不能形成可复用的运营系统。",
+        points: ["策略判断依赖经验", "实验方案格式不统一", "执行素材与指标脱节", "复盘结果难以沉淀为方法库"],
+      },
+      {
+        title: "用多Agent模拟增长团队决策",
+        kicker: "Solution",
+        body:
+          "系统将增长团队的工作拆解为业务信息抽取、用户洞察、增长诊断、实验设计、风险评估、作战台整合、执行清单、运营素材、指标体系、复盘报告和对抗性质量检查等节点，使AI不只是生成文本，而是按明确职责完成连续推理。",
+        points: ["业务信息结构化", "RAG增长方法论检索", "多Agent串行协作", "最终报告自动导出"],
+      },
+    ],
+    workflow: [
+      "Start节点接收产品背景、目标用户、增长目标和业务约束",
+      "业务信息抽取Agent将自然语言输入转化为结构化业务Brief",
+      "Build Query节点生成RAG检索问题和下游可用变量",
+      "Growth Playbook知识库补充AARRR、留存、激活、复盘等方法论",
+      "用户洞察Agent分析用户分层、生命周期阶段和关键流失点",
+      "增长诊断Agent输出P0/P1/P2问题、根因和指标解释",
+      "实验设计Agent生成2周内可验证的增长实验方案",
+      "风险评估、执行清单、运营素材、指标体系和复盘Agent串行生成执行资产",
+      "对抗性质量检查Agent从乐观者、批判者和裁判视角校验方案",
+      "最终输出Agent汇总成增长实验作战报告并导出Word文档",
+    ],
+    features: [
+      "从原始业务输入生成结构化增长报告",
+      "通过RAG知识库调用增长方法论",
+      "用多Agent拆分洞察、诊断、实验、执行和复盘",
+      "输出执行清单、运营素材和指标体系",
+      "引入对抗性QA检查方案风险",
+      "自动导出DOCX格式作战报告",
+    ],
+    outcome:
+      "项目将运营增长分析、策略制定、实验设计、素材生成和复盘沉淀整合到一个可运行的Dify工作流中。最终产物包括完整工作流结构图和《AI运营增长实验作战报告》Word文件，可作为AI运营系统设计能力的核心证明材料。",
+    applications: ["产品增长实验", "新用户激活", "用户留存优化", "内容增长复盘"],
+  },
+  {
     slug: "ai-content-matrix",
     title: "AI内容矩阵自动化工作流",
     subtitle: "基于Dify的多平台运营内容自动生成系统",

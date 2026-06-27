@@ -21,6 +21,7 @@ export const projects: Project[] = [
       "核心AI项目。增长团队的思考过程被拆解为Business Parser、User Insight、Diagnosis、Experiment、Execution、Evaluation等Agent链路，并通过Dify Workflow、RAG知识库和结构化Prompt，将增长策略从经验判断转化为可复用系统。",
     tags: ["Dify Workflow", "RAG Knowledge Base", "Multi-Agent", "Prompt Engineering"],
     metrics: ["8个决策模块", "输入驱动输出变化", "自动化增长报告"],
+    detailHref: "/projects/growth-os",
   },
   {
     slug: "ai-content-matrix",

@@ -53,6 +53,7 @@ app/
   page.tsx          page assembly
   globals.css       global design tokens and section utilities
   projects/
+    growth-os/page.tsx
     ai-content-matrix/page.tsx
 components/
   Navbar.tsx
@@ -74,6 +75,7 @@ public/images/
   design-layout/       posters, campus activity layouts, recruitment visuals
   wechat-editorial/    WeChat account and article screenshots
   commercial-posters/  product/brand poster experiments
+  ai-projects/         AI workflow screenshots and system evidence
   report-decks/        exported deck cover previews
 public/docs/
   full-plans/          full PDF plans converted from DOCX
@@ -181,6 +183,7 @@ New categorized evidence assets:
 - `video-production/douyin-short-video-script-cover.png`
 - `video-production/douyin-shot-breakdown-storyboard-cover.png`
 - `video-production/film-storyboard-script-cover.png`
+- `ai-projects/growth-os-workflow.png`
 
 Full document assets:
 
@@ -197,6 +200,7 @@ Full document assets:
 - `docs/video-production/douyin-shot-breakdown-storyboard.pdf`
 - `docs/video-production/film-storyboard-script.docx`
 - `docs/video-production/film-storyboard-script.pdf`
+- `docs/ai-projects/ai-growth-experiment-report.docx`
 - `videos/video-production/campus-short-video-01.mp4`
 - `videos/video-production/campus-short-video-02.mp4`
 - `videos/video-production/campus-short-video-03.mp4`
@@ -208,6 +212,7 @@ Full document assets:
 - Main portfolio homepage implemented
 - Evidence gallery implemented with clean categories
 - Added project detail page and homepage card for `AI内容矩阵自动化工作流`
+- Added project detail page, workflow screenshot, and DOCX report download for `AI增长决策系统`
 - Real uploaded evidence assets migrated into `public/images`
 - Lint passes
 - Production build passes using webpack
