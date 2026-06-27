@@ -184,6 +184,14 @@ New categorized evidence assets:
 - `video-production/douyin-shot-breakdown-storyboard-cover.png`
 - `video-production/film-storyboard-script-cover.png`
 - `ai-projects/growth-os-workflow.png`
+- `ai-projects/content-matrix/content-matrix-workflow.png`
+- `ai-projects/content-matrix/result-xiaohongshu-copy.png`
+- `ai-projects/content-matrix/result-tags-bilibili.png`
+- `ai-projects/content-matrix/result-bilibili-detail.png`
+- `ai-projects/content-matrix/result-youtube-detail.png`
+- `ai-projects/content-matrix/result-instagram-x.png`
+- `ai-projects/content-matrix/result-x-thread-1.png`
+- `ai-projects/content-matrix/result-x-thread-2.png`
 
 Full document assets:
 
@@ -213,6 +221,7 @@ Full document assets:
 - Evidence gallery implemented with clean categories
 - Added project detail page and homepage card for `AI内容矩阵自动化工作流`
 - Added project detail page, workflow screenshot, and DOCX report download for `AI增长决策系统`
+- Added Dify full-chain workflow screenshot and generated output evidence screenshots for `AI内容矩阵自动化工作流`
 - Real uploaded evidence assets migrated into `public/images`
 - Lint passes
 - Production build passes using webpack

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { getProjectCase } from "@/data/projectCases";
@@ -8,6 +9,44 @@ export const metadata: Metadata = {
 };
 
 const projectCase = getProjectCase("ai-content-matrix");
+
+const outputImages = [
+  {
+    title: "小红书正文",
+    src: "/images/ai-projects/content-matrix/result-xiaohongshu-copy.png",
+    note: "系统根据输入的课程背景和正文风格，生成适合小红书语境的口语化种草正文。",
+  },
+  {
+    title: "小红书 / 抖音 / B站标签",
+    src: "/images/ai-projects/content-matrix/result-tags-bilibili.png",
+    note: "自动拆分平台标签与视频简介结构，减少跨平台发布前的手工整理。",
+  },
+  {
+    title: "Bilibili视频简介",
+    src: "/images/ai-projects/content-matrix/result-bilibili-detail.png",
+    note: "生成包含课程亮点、适合人群、权益信息和置顶评论的B站发布素材。",
+  },
+  {
+    title: "YouTube视频简介",
+    src: "/images/ai-projects/content-matrix/result-youtube-detail.png",
+    note: "面向英文/长视频平台的描述模板，强调课程价值、学习路径和行动引导。",
+  },
+  {
+    title: "Instagram / X内容",
+    src: "/images/ai-projects/content-matrix/result-instagram-x.png",
+    note: "输出适配海外社媒平台的短内容和主题标签，支持同一主题的国际化分发。",
+  },
+  {
+    title: "X / Twitter Thread 01",
+    src: "/images/ai-projects/content-matrix/result-x-thread-1.png",
+    note: "将课程卖点拆成连续Thread结构，用编号方式承接用户阅读路径。",
+  },
+  {
+    title: "X / Twitter Thread 02",
+    src: "/images/ai-projects/content-matrix/result-x-thread-2.png",
+    note: "延续Thread内容，补充适合人群、价格锚点和转发关注引导。",
+  },
+];
 
 export default function AiContentMatrixPage() {
   if (!projectCase) {
@@ -100,6 +139,66 @@ export default function AiContentMatrixPage() {
               <div key={feature} className="glass-panel min-h-[150px] p-6">
                 <p className="text-xl font-bold leading-8">{feature}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-5 py-20 sm:px-8">
+        <div className="mx-auto grid max-w-[1700px] gap-8">
+          <div className="grid gap-8 lg:grid-cols-[0.36fr_0.64fr] lg:items-end">
+            <div>
+              <p className="section-kicker">Workflow Evidence</p>
+              <h2 className="section-title">Dify全链路模型</h2>
+            </div>
+            <p className="max-w-3xl text-lg leading-8 text-[#504b45]">
+              该工作流从基础要求、专有名词、背景信息和正文风格出发，依次完成多平台文案生成、标签生成、Bilibili/YouTube详情生成、封面图渲染请求、图片URL提取和最终Markdown汇总。
+            </p>
+          </div>
+          <div className="glass-panel overflow-hidden p-4 sm:p-6">
+            <div className="relative h-[360px] overflow-auto bg-[#171513]/90 p-3 sm:h-[520px]">
+              <Image
+                src="/images/ai-projects/content-matrix/content-matrix-workflow.png"
+                alt="AI内容矩阵自动化工作流Dify全链路模型"
+                width={8257}
+                height={1988}
+                className="h-full min-w-[1800px] object-contain"
+                priority
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-5 py-20 sm:px-8">
+        <div className="mx-auto grid max-w-[1700px] gap-10">
+          <div className="grid gap-8 lg:grid-cols-[0.36fr_0.64fr] lg:items-end">
+            <div>
+              <p className="section-kicker">Output Evidence</p>
+              <h2 className="section-title">生成结果展示</h2>
+            </div>
+            <p className="max-w-3xl text-lg leading-8 text-[#504b45]">
+              以下为工作流实际生成的多平台输出结果，包含小红书、抖音、Bilibili、YouTube、Instagram和X/Twitter等内容资产。截图保持原始比例展示，不遮盖关键信息。
+            </p>
+          </div>
+          <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+            {outputImages.map((item, index) => (
+              <article key={item.src} className="glass-panel overflow-hidden">
+                <div className="relative flex h-[620px] items-center justify-center overflow-hidden bg-[#171513]/88 p-3">
+                  <Image
+                    src={item.src}
+                    alt={item.title}
+                    fill
+                    className="object-contain"
+                    sizes="(min-width: 1280px) 30vw, (min-width: 768px) 45vw, 100vw"
+                    priority={index < 2}
+                  />
+                </div>
+                <div className="p-5">
+                  <h3 className="text-xl font-black text-[#171513]">{item.title}</h3>
+                  <p className="mt-3 text-sm leading-6 text-[#625c55]">{item.note}</p>
+                </div>
+              </article>
             ))}
           </div>
         </div>
