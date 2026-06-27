@@ -172,6 +172,9 @@ New categorized evidence assets:
 - `commercial-posters/coca-cola-summer-poster.png`
 - `report-decks/pet-paradise-deck-cover.png`
 - `report-decks/innovation-entrepreneurship-competition-cover.png`
+- `video-production/douyin-short-video-script-cover.png`
+- `video-production/douyin-shot-breakdown-storyboard-cover.png`
+- `video-production/film-storyboard-script-cover.png`
 
 Full document assets:
 
@@ -182,6 +185,12 @@ Full document assets:
 - `docs/presentations/pet-paradise-deck.pdf`
 - `docs/presentations/innovation-entrepreneurship-competition.pptx`
 - `docs/presentations/innovation-entrepreneurship-competition.pdf`
+- `docs/video-production/douyin-short-video-script.docx`
+- `docs/video-production/douyin-short-video-script.pdf`
+- `docs/video-production/douyin-shot-breakdown-storyboard.xlsx`
+- `docs/video-production/douyin-shot-breakdown-storyboard.pdf`
+- `docs/video-production/film-storyboard-script.docx`
+- `docs/video-production/film-storyboard-script.pdf`
 
 ## What Is Done
 

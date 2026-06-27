@@ -21,7 +21,7 @@ export const evidenceGroups: EvidenceGroup[] = [
     title: "账号运营优质笔记",
     subtitle: "账号运营",
     description:
-      "这里集中展示我做过的内容账号样例，包括硬科技行业科普、报告型笔记和个人小红书电商账号。图片保持原图完整展示，便于查看信息结构和互动数据。",
+      "内容账号样例，包括硬科技行业科普、报告型笔记和个人小红书电商账号。",
     items: [
       {
         title: "新能源赛道科普笔记",
@@ -53,7 +53,7 @@ export const evidenceGroups: EvidenceGroup[] = [
     title: "文案写作能力",
     subtitle: "文案策划",
     description:
-      "这里展示我对活动策划、品牌定位、传播主张和长文案结构的处理能力。重点不是单句文案，而是把目标、受众、场景和转化动作写清楚。",
+      "活动策划、品牌定位、传播主张和长文案结构的处理能力。重点不是单句文案，而是把目标、受众、场景和转化动作写清楚。",
     items: [
       {
         title: "校园文化艺术节策划书",
@@ -88,15 +88,15 @@ export const evidenceGroups: EvidenceGroup[] = [
     ],
   },
   {
-    title: "运营能力展示",
-    subtitle: "运营系统",
+    title: "ai运营能力展示",
+    subtitle: "AI运营增长实验系统｜从业务输入到增长执行的多 Agent 工作流",
     description:
-      "预留放置活动复盘、用户分层、投放A/B测试、SEO关键词库、私域转化链路等运营方法论材料。",
+      "我用 AI 重构了运营增长工作流，把传统运营里的分析、策略、内容、执行、复盘变成了可自动运行的系统。",
     items: [
       {
         title: "待上传：增长漏斗 / 复盘图",
         type: "placeholder",
-        note: "建议补充曝光-互动-留资-转化路径截图，或活动复盘看板。",
+        note: "我围绕 AI 运营岗位的核心工作，搭建了两个可运行的 AI 工作流系统：一个聚焦增长实验决策，另一个聚焦运营内容与执行落地。两个系统都基于 Dify Workflow 实现，通过自然语言输入、RAG 知识库、多 Agent 协作和结构化输出，把传统运营中的分析、策略、内容、执行、指标和复盘流程自动化。",
       },
     ],
   },
@@ -104,7 +104,7 @@ export const evidenceGroups: EvidenceGroup[] = [
     title: "设计排版能力",
     subtitle: "视觉排版",
     description:
-      "这里展示我对海报、活动物料和商业视觉的排版控制能力。重点呈现标题层级、画面气质、信息组织和不同场景下的视觉表达。",
+      "海报、活动物料和商业视觉的排版控制能力。重点呈现标题层级、画面气质、信息组织和不同场景下的视觉表达。",
     items: [
       {
         title: "秋日集市活动海报",
@@ -160,33 +160,33 @@ export const evidenceGroups: EvidenceGroup[] = [
     title: "推文制作",
     subtitle: "公众号编辑",
     description:
-      "这里展示我参与校园公众号内容生产的痕迹，包括选题、标题、封面图、正文排版和活动传播承接。",
+      "参与校园公众号内容生产的痕迹，包括选题、标题、封面图、正文排版和活动传播承接。",
     items: [
       {
         title: "公众号推文列表与选题呈现",
         type: "image",
         src: "/images/wechat-editorial/article-list-operation.png",
-        note: "展示账号内容列表、标题表达和阅读数据，用于说明我对校园公众号选题包装与内容运营节奏的参与。",
+        note: "账号内容列表、标题表达和阅读数据，参与校园公众号选题包装与内容运营节奏的参与。",
       },
       {
         title: "彩色跑活动推文正文",
         type: "image",
         src: "/images/wechat-editorial/color-run-article.png",
-        note: "展示活动推文正文页，包含活动背景阐释、视觉头图和互动数据，体现推文结构与活动传播文案能力。",
+        note: "活动推文，包含活动背景阐释、视觉头图和互动数据，体现推文结构与活动传播文案能力。",
       },
     ],
   },
   {
-    title: "小组报告PPT",
+    title: "PPT制作",
     subtitle: "汇报材料",
     description:
-      "这里展示小组汇报、课程报告和商业展示类PPT，重点体现选题策划、结构化表达、视觉排版和汇报材料组织能力。",
+      "小组汇报、课程报告和商业展示类PPT，重点体现选题策划、结构化表达、视觉排版和汇报材料组织能力。",
     items: [
       {
         title: "萌宠乐园项目PPT",
         type: "image",
         src: "/images/report-decks/pet-paradise-deck-cover.png",
-        note: "小组项目汇报型PPT，适合展示项目概念、视觉风格、商业表达和团队汇报材料的完整组织能力。",
+        note: "项目汇报型PPT，适合展示项目概念、视觉风格、商业表达和团队汇报材料的完整组织能力。",
         links: [
           { label: "查看PDF版", href: "/docs/presentations/pet-paradise-deck.pdf" },
           { label: "下载PPTX", href: "/docs/presentations/pet-paradise-deck.pptx" },
@@ -208,12 +208,37 @@ export const evidenceGroups: EvidenceGroup[] = [
     title: "拍摄剪辑能力",
     subtitle: "视频生产",
     description:
-      "预留展示短视频脚本、拍摄成片、剪辑节奏和活动记录影像，体现从策划到执行的内容生产能力。",
+      "这里展示短视频脚本、拉片分镜和电影分镜脚本材料，体现我从内容策划、镜头拆解到拍摄执行的前期制作能力。",
     items: [
       {
-        title: "待上传：短视频 / 分镜 / 成片截图",
-        type: "placeholder",
-        note: "建议补充视频封面、脚本片段、播放数据和剪辑前后对比。",
+        title: "抖音短视频拍摄脚本",
+        type: "image",
+        src: "/images/video-production/douyin-short-video-script-cover.png",
+        note: "短视频前期脚本材料，展示选题、镜头内容、口播表达和拍摄执行信息的组织能力。",
+        links: [
+          { label: "查看PDF版", href: "/docs/video-production/douyin-short-video-script.pdf" },
+          { label: "下载DOCX", href: "/docs/video-production/douyin-short-video-script.docx" },
+        ],
+      },
+      {
+        title: "抖音视频拉片分镜表",
+        type: "image",
+        src: "/images/video-production/douyin-shot-breakdown-storyboard-cover.png",
+        note: "以表格方式拆解短视频镜头、画面、节奏和执行要点，体现视频分析与分镜规划能力。",
+        links: [
+          { label: "查看PDF版", href: "/docs/video-production/douyin-shot-breakdown-storyboard.pdf" },
+          { label: "下载XLSX", href: "/docs/video-production/douyin-shot-breakdown-storyboard.xlsx" },
+        ],
+      },
+      {
+        title: "视频拍摄电影分镜脚本",
+        type: "image",
+        src: "/images/video-production/film-storyboard-script-cover.png",
+        note: "偏电影化叙事的分镜脚本材料，展示镜头规划、场景组织和拍摄前脚本拆解能力。",
+        links: [
+          { label: "查看PDF版", href: "/docs/video-production/film-storyboard-script.pdf" },
+          { label: "下载DOCX", href: "/docs/video-production/film-storyboard-script.docx" },
+        ],
       },
     ],
   },
