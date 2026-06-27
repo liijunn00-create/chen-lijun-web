@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { projects } from "@/data/projects";
 import { Reveal } from "./Reveal";
 
@@ -15,9 +16,9 @@ export function FeaturedWork() {
           </div>
         </Reveal>
         <div className="space-y-8">
-          {projects.map((project, index) => (
-            <Reveal key={project.slug} delay={index * 0.08}>
-              <article className="grid overflow-hidden border border-black/10 bg-[#f8f5ef]">
+          {projects.map((project, index) => {
+            const card = (
+              <article className="group grid overflow-hidden border border-black/10 bg-[#f8f5ef] transition duration-500 hover:border-[#7a86a1]/45 hover:bg-[#fbf8f2]">
                 <div className="flex min-h-[360px] flex-col justify-between p-7 sm:p-10 lg:p-12">
                   <div>
                     <div className="mb-10 flex items-center justify-between gap-5 text-xs uppercase tracking-[0.2em] text-[#7a746d]">
@@ -28,6 +29,11 @@ export function FeaturedWork() {
                       {project.title}
                     </h3>
                     <p className="mt-7 max-w-3xl text-xl leading-8 text-[#403c37]">{project.summary}</p>
+                    {project.detailHref ? (
+                      <span className="mt-8 inline-flex border border-black/15 px-4 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#171513] transition group-hover:bg-[#171513] group-hover:text-[#f8f5ef]">
+                        查看项目详情
+                      </span>
+                    ) : null}
                   </div>
                   <div className="mt-10 grid gap-6 lg:grid-cols-[0.45fr_0.55fr]">
                     <div>
@@ -51,8 +57,20 @@ export function FeaturedWork() {
                   </div>
                 </div>
               </article>
-            </Reveal>
-          ))}
+            );
+
+            return (
+              <Reveal key={project.slug} delay={index * 0.08}>
+                {project.detailHref ? (
+                  <Link href={project.detailHref} className="block text-inherit">
+                    {card}
+                  </Link>
+                ) : (
+                  card
+                )}
+              </Reveal>
+            );
+          })}
         </div>
       </div>
     </section>

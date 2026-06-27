@@ -52,6 +52,8 @@ app/
   layout.tsx        metadata and root layout
   page.tsx          page assembly
   globals.css       global design tokens and section utilities
+  projects/
+    ai-content-matrix/page.tsx
 components/
   Navbar.tsx
   Hero.tsx
@@ -64,6 +66,7 @@ components/
   Reveal.tsx        Framer Motion scroll reveal wrapper
 data/
   projects.ts       selected project data
+  projectCases.ts   project detail page case data
   skills.ts         capability groups and metrics
   evidence.ts       evidence gallery and reserved slots
 public/images/
@@ -202,6 +205,7 @@ Full document assets:
 - Framer Motion installed
 - Main portfolio homepage implemented
 - Evidence gallery implemented with clean categories
+- Added project detail page and homepage card for `AI内容矩阵自动化工作流`
 - Real uploaded evidence assets migrated into `public/images`
 - Lint passes
 - Production build passes using webpack
