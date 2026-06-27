@@ -186,6 +186,16 @@ export const evidenceGroups: EvidenceGroup[] = [
           { label: "下载PPTX", href: "/docs/presentations/pet-paradise-deck.pptx" },
         ],
       },
+      {
+        title: "创新创业大赛PPT",
+        type: "image",
+        src: "/images/report-decks/innovation-entrepreneurship-competition-cover.png",
+        note: "比赛路演型PPT，适合展示项目叙事、商业模式表达、视觉包装和面向评委的结构化汇报能力。",
+        links: [
+          { label: "查看PDF版", href: "/docs/presentations/innovation-entrepreneurship-competition.pdf" },
+          { label: "下载PPTX", href: "/docs/presentations/innovation-entrepreneurship-competition.pptx" },
+        ],
+      },
     ],
   },
   {

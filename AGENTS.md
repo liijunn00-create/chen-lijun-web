@@ -162,6 +162,7 @@ New categorized evidence assets:
 - `commercial-posters/jellycat-sleepover-poster.png`
 - `commercial-posters/coca-cola-summer-poster.png`
 - `report-decks/pet-paradise-deck-cover.png`
+- `report-decks/innovation-entrepreneurship-competition-cover.png`
 
 Full document assets:
 
@@ -170,6 +171,8 @@ Full document assets:
 - `docs/full-plans/color-run-plan.pdf`
 - `docs/presentations/pet-paradise-deck.pptx`
 - `docs/presentations/pet-paradise-deck.pdf`
+- `docs/presentations/innovation-entrepreneurship-competition.pptx`
+- `docs/presentations/innovation-entrepreneurship-competition.pdf`
 
 ## What Is Done
 
