@@ -70,7 +70,7 @@ export default function AiContentMatrixPage() {
         <div className="glass-panel-strong mx-auto grid max-w-[1700px] gap-10 p-7 sm:p-10 lg:grid-cols-[0.58fr_0.42fr] lg:items-end lg:p-14">
           <div>
             <p className="section-kicker">{projectCase.eyebrow}</p>
-            <h1 className="max-w-5xl text-[clamp(2.1rem,4.8vw,5.8rem)] font-black leading-[1.02] tracking-normal">
+            <h1 className="single-line-title max-w-5xl text-[clamp(2rem,4vw,4.8rem)] font-black leading-[1.02] tracking-normal">
               {projectCase.title}
             </h1>
             <p className="mt-6 max-w-3xl text-2xl leading-9 text-[#3f3a35]">{projectCase.subtitle}</p>
@@ -92,7 +92,7 @@ export default function AiContentMatrixPage() {
             <article key={section.title} className="glass-panel grid gap-8 p-7 sm:p-10 lg:grid-cols-[0.35fr_0.65fr] lg:p-12">
               <div>
                 <p className="section-kicker">{section.kicker}</p>
-                <h2 className="text-[clamp(1.55rem,2.4vw,2.8rem)] font-black leading-tight">{section.title}</h2>
+                <h2 className="single-line-title text-[clamp(1.25rem,1.7vw,2.15rem)] font-black leading-tight">{section.title}</h2>
               </div>
               <div>
                 <p className="text-xl leading-9 text-[#403c37]">{section.body}</p>
@@ -195,7 +195,7 @@ export default function AiContentMatrixPage() {
                   />
                 </div>
                 <div className="p-5">
-                  <h3 className="text-xl font-black text-[#171513]">{item.title}</h3>
+                  <h3 className="single-line-title text-xl font-black text-[#171513]">{item.title}</h3>
                   <p className="mt-3 text-sm leading-6 text-[#625c55]">{item.note}</p>
                 </div>
               </article>
@@ -225,7 +225,7 @@ export default function AiContentMatrixPage() {
           <div className="grid gap-10 lg:grid-cols-[0.36fr_0.64fr]">
             <div>
               <p className="mb-6 text-xs font-bold uppercase tracking-[0.24em] text-[#dcaec1]">Outcome</p>
-              <h2 className="text-[clamp(1.7rem,3.2vw,4.2rem)] font-black leading-[1.08]">项目成果</h2>
+              <h2 className="single-line-title text-[clamp(1.55rem,2.55vw,3.35rem)] font-black leading-[1.08]">项目成果</h2>
             </div>
             <p className="max-w-4xl text-2xl leading-10 text-[#e9e0d8]">{projectCase.outcome}</p>
           </div>
@@ -247,7 +247,7 @@ function InfoPanel({ title, items, tone = "pink" }: { title: string; items: stri
 
   return (
     <article className={`${background} glass-panel p-7 sm:p-10`}>
-      <h2 className="mb-8 text-2xl font-black">{title}</h2>
+      <h2 className="single-line-title mb-8 text-2xl font-black">{title}</h2>
       <div className="flex flex-wrap gap-3">
         {items.map((item) => (
           <span key={item} className="glass-chip px-4 py-3 text-sm font-semibold text-[#342f2b]">

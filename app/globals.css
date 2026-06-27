@@ -94,10 +94,23 @@ video {
 
 .section-title {
   color: #171513;
-  font-size: clamp(1.7rem, 3.2vw, 4.2rem);
+  font-size: clamp(1.55rem, 2.55vw, 3.35rem);
   font-weight: 900;
   line-height: 1.08;
   letter-spacing: 0;
+  white-space: nowrap;
+}
+
+.soft-mark {
+  border-radius: 0.25rem;
+  background: rgba(231, 184, 203, 0.3);
+  box-shadow: inset 0 -0.42em 0 rgba(231, 184, 203, 0.2);
+  color: #24201d;
+  font-weight: 700;
+}
+
+.single-line-title {
+  white-space: nowrap;
 }
 
 .glass-panel {

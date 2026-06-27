@@ -6,13 +6,13 @@ export function Contact() {
       <div className="glass-dark mx-auto grid w-full max-w-[1700px] gap-12 p-7 sm:p-10 lg:grid-cols-[0.7fr_0.3fr] lg:items-end lg:p-14">
         <Reveal>
           <p className="mb-7 text-xs uppercase tracking-[0.26em] text-[#c6b8c6]">联系</p>
-          <h2 className="max-w-6xl text-[clamp(2rem,4.2vw,5.2rem)] font-black leading-[1.08] tracking-normal">
-            让内容成为增长系统。
+          <h2 className="single-line-title max-w-6xl text-[clamp(1.8rem,3.4vw,4.4rem)] font-black leading-[1.08] tracking-normal">
+            让内容成为增长系统
           </h2>
         </Reveal>
         <Reveal className="space-y-8" delay={0.12}>
           <p className="text-2xl leading-snug text-[#ded6cf]">
-            面向新媒体运营、内容增长、产品运营、AI运营方向，期待将内容能力与系统化思维应用于真实业务场景。
+            面向新媒体运营、内容增长、产品运营、AI运营方向，期待将<span className="soft-mark px-1 text-[#f6f1ec]">内容能力</span>与<span className="soft-mark px-1 text-[#f6f1ec]">系统化思维</span>应用于真实业务场景
           </p>
           <div className="space-y-3 text-lg">
             <a className="block border-t border-white/15 pt-4 transition hover:text-[#e7b8cb]" href="mailto:hello@example.com">

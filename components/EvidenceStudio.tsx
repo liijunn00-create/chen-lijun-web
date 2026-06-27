@@ -2,6 +2,48 @@ import Image from "next/image";
 import { evidenceGroups } from "@/data/evidence";
 import { Reveal } from "./Reveal";
 
+const highlightTerms = [
+  "AI",
+  "Dify",
+  "RAG",
+  "Multi-Agent",
+  "内容矩阵",
+  "增长闭环",
+  "线索转化",
+  "平台策略",
+  "结构化表达",
+  "视觉排版",
+  "前期制作能力",
+  "拍摄执行",
+  "长文案组织能力",
+  "品牌营销策划",
+  "月销量60+",
+  "B端用户",
+  "小红书",
+  "短视频脚本",
+  "拉片分镜",
+  "电影分镜脚本",
+];
+
+function HighlightText({ text, className }: { text: string; className: string }) {
+  const pattern = new RegExp(`(${highlightTerms.map((term) => term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|")})`, "g");
+  const parts = text.replace(/[。.]$/g, "").split(pattern);
+
+  return (
+    <p className={className}>
+      {parts.map((part, index) =>
+        highlightTerms.includes(part) ? (
+          <span key={`${part}-${index}`} className="soft-mark px-1">
+            {part}
+          </span>
+        ) : (
+          part
+        )
+      )}
+    </p>
+  );
+}
+
 function PdfCover({ title, href }: { title: string; href: string }) {
   return (
     <a
@@ -24,7 +66,7 @@ function PdfCover({ title, href }: { title: string; href: string }) {
         </div>
         <div>
           <p className="mb-5 font-mono text-xs uppercase tracking-[0.18em] text-[#756f69]">策划 / 商业 / 文案</p>
-          <h4 className="max-w-[18rem] text-[clamp(1.45rem,2.1vw,2.5rem)] font-black leading-[1.08] tracking-normal text-[#171513]">
+          <h4 className="single-line-title max-w-[18rem] text-[clamp(1.15rem,1.45vw,1.8rem)] font-black leading-[1.08] tracking-normal text-[#171513]">
             {title.replace("完整版PDF", "")}
           </h4>
         </div>
@@ -45,7 +87,7 @@ export function EvidenceStudio() {
       <div className="section-grid">
         <Reveal>
           <p className="section-kicker">作品证据</p>
-          <h2 className="section-title max-w-6xl">集中展示真实作品证据，避免素材无序堆叠。</h2>
+          <h2 className="section-title max-w-6xl">集中展示真实作品证据，避免素材无序堆叠</h2>
         </Reveal>
         <div className="space-y-14">
           {evidenceGroups.map((group, groupIndex) => (
@@ -54,11 +96,11 @@ export function EvidenceStudio() {
                 <div className="mb-8 grid gap-6 lg:grid-cols-[0.42fr_0.58fr]">
                   <div>
                     <p className="mb-2 text-xs uppercase tracking-[0.22em] text-[#7a86a1]">{group.subtitle}</p>
-                    <h3 className="text-[clamp(1.45rem,2vw,2.5rem)] font-black leading-[1.08] tracking-normal text-[#171513]">
+                    <h3 className="single-line-title text-[clamp(1.35rem,1.8vw,2.15rem)] font-black leading-[1.08] tracking-normal text-[#171513]">
                       {group.title}
                     </h3>
                   </div>
-                  <p className="max-w-3xl text-lg leading-8 text-[#504b45]">{group.description}</p>
+                  <HighlightText text={group.description} className="max-w-3xl text-lg leading-8 text-[#504b45]" />
                 </div>
                 <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
                   {group.items.map((item, itemIndex) => (
@@ -99,8 +141,8 @@ export function EvidenceStudio() {
                         </div>
                       ) : null}
                       <div className="p-5">
-                        <h4 className="text-xl font-semibold text-[#171513]">{item.title}</h4>
-                        <p className="mt-3 text-sm leading-6 text-[#625c55]">{item.note}</p>
+                        <h4 className="single-line-title text-lg font-semibold text-[#171513] sm:text-xl">{item.title}</h4>
+                        <HighlightText text={item.note} className="mt-3 text-sm leading-6 text-[#625c55]" />
                         {item.links ? (
                           <div className="mt-5 flex flex-wrap gap-2">
                             {item.links.map((link) => (

@@ -10,7 +10,7 @@ export function About() {
         <Reveal>
           <p className="section-kicker">个人概览</p>
           <div className="grid gap-8 lg:grid-cols-[0.42fr_0.58fr] lg:items-end">
-            <h2 className="text-[clamp(1.6rem,2.7vw,3.3rem)] font-black leading-[1.08] tracking-normal text-[#171513]">
+            <h2 className="single-line-title text-[clamp(1.45rem,2.25vw,2.9rem)] font-black leading-[1.08] tracking-normal text-[#171513]">
               {aboutCopy.title}
             </h2>
             <p className="max-w-3xl text-xl leading-8 text-[#4a4641]">

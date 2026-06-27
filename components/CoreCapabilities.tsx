@@ -8,7 +8,7 @@ export function CoreCapabilities() {
         <Reveal>
           <p className="section-kicker">核心能力证明</p>
           <div className="grid gap-6 lg:grid-cols-[0.44fr_0.56fr] lg:items-end">
-            <h2 className="section-title">能力不是罗列，是被项目验证。</h2>
+            <h2 className="section-title">能力不是罗列，是被项目验证</h2>
             <p className="max-w-2xl text-lg leading-8 text-[#5c5751]">
               网站内容按能力证据组织：AI系统、内容增长、业务转化、活动执行、视觉表达和视频脚本都落到可查看的项目与作品材料中。
             </p>
@@ -26,7 +26,7 @@ export function CoreCapabilities() {
                 <p className="mb-5 text-xs font-semibold uppercase tracking-[0.2em] text-[#7a86a1]">
                   {String(index + 1).padStart(2, "0")}
                 </p>
-                <h3 className="text-[clamp(1.25rem,1.8vw,1.75rem)] font-black leading-tight text-[#171513]">
+                <h3 className="single-line-title text-[clamp(1.18rem,1.55vw,1.55rem)] font-black leading-tight text-[#171513]">
                   {capability.title}
                 </h3>
                 <p className="mt-5 text-base leading-7 text-[#4d4842]">{capability.summary}</p>

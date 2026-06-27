@@ -9,9 +9,9 @@ export function FeaturedWork() {
         <Reveal>
           <p className="section-kicker">精选项目</p>
           <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
-            <h2 className="section-title max-w-5xl">先看项目，再看经历。</h2>
+            <h2 className="section-title max-w-5xl">先看项目，再看经历</h2>
             <p className="max-w-md text-lg leading-8 text-[#5c5751]">
-              AI项目被拆成决策层与执行层：增长实验系统负责判断问题与设计方案，内容矩阵系统负责生成多平台运营素材。
+              AI项目被拆成<span className="soft-mark px-1">决策层</span>与<span className="soft-mark px-1">执行层</span>：增长实验系统负责判断问题与设计方案，内容矩阵系统负责生成多平台运营素材
             </p>
           </div>
         </Reveal>
@@ -25,7 +25,7 @@ export function FeaturedWork() {
                       <span>{project.eyebrow}</span>
                       <span>{project.period}</span>
                     </div>
-                    <h3 className="max-w-4xl text-[clamp(1.55rem,2.7vw,3.4rem)] font-black leading-[1.08] tracking-normal text-[#171513]">
+                    <h3 className="single-line-title max-w-4xl text-[clamp(1.5rem,2.25vw,2.95rem)] font-black leading-[1.08] tracking-normal text-[#171513]">
                       {project.title}
                     </h3>
                     <p className="mt-7 max-w-3xl text-xl leading-8 text-[#403c37]">{project.summary}</p>
