@@ -19,6 +19,7 @@ Current positioning priority:
 - Put the strongest visual and content weight on project work, portfolio evidence, and capability proof.
 - The most important differentiator is Chen Lijun's ability to use AI tools for operations: Dify Workflow, RAG, Multi-Agent thinking, Prompt Engineering, AIGC content production, structured output, and AI-assisted growth experiments.
 - The page order should support this priority: Hero -> Featured Work -> Evidence Studio -> concise About -> Contact. AI operation capability should be expressed through the AI project cards and detail pages, not through a separate repeated capability section.
+- The two AI projects should be framed as one AI Native operation system portfolio: `AI增长决策系统` represents the strategy/decision layer, while `AI内容矩阵自动化工作流` represents the execution/content-production layer.
 
 ## Tech Stack
 

@@ -11,7 +11,7 @@ export function FeaturedWork() {
           <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
             <h2 className="section-title max-w-5xl">先看项目，再看经历。</h2>
             <p className="max-w-md text-lg leading-8 text-[#5c5751]">
-              作品集重点聚焦项目方法、AI系统设计、运营成果和真实作品证据，而非传统线上简历式呈现。
+              AI项目被拆成决策层与执行层：增长实验系统负责判断问题与设计方案，内容矩阵系统负责生成多平台运营素材。
             </p>
           </div>
         </Reveal>
