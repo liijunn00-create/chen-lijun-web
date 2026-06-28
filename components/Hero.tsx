@@ -31,6 +31,8 @@ export function Hero() {
       <div className="hero-cover-field" />
       <div className="relative z-10 mx-auto flex max-w-[1700px] flex-col justify-end pb-8 lg:min-h-[calc(100vh-6rem)] lg:pb-10">
         <div className="glass-panel-strong hero-stage mb-6 grid gap-6 overflow-hidden p-6 sm:p-9 lg:mb-8 lg:grid-cols-[0.55fr_0.45fr] lg:items-stretch lg:p-10">
+          <div className="hero-sphere hero-sphere-a" />
+          <div className="hero-sphere hero-sphere-b" />
           <div className="flex min-h-[390px] flex-col justify-between sm:min-h-[620px] lg:min-h-[600px]">
             <div>
               <p className="hero-soft-in mb-6 text-[12px] font-semibold uppercase tracking-[0.28em] text-[#6c6b66]">

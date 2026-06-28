@@ -87,13 +87,18 @@ export function EvidenceStudio() {
       <div className="section-grid">
         <Reveal>
           <p className="section-kicker">作品证据</p>
-          <h2 className="section-title max-w-6xl">集中展示真实作品证据，避免素材无序堆叠</h2>
+          <div className="grid gap-6 lg:grid-cols-[0.58fr_0.42fr] lg:items-end">
+            <h2 className="section-title max-w-6xl">真实作品按能力场景展开</h2>
+            <p className="max-w-2xl text-lg leading-8 text-[#5c5751]">
+              每组保留一件重点作品作为主证据，其余材料作为辅助证据，既展示完整作品，也避免素材无序堆叠。
+            </p>
+          </div>
         </Reveal>
         <div className="space-y-14">
           {evidenceGroups.map((group, groupIndex) => (
             <Reveal key={group.title} delay={groupIndex * 0.05}>
-              <section className="border-t border-black/12 pt-7">
-                <div className="mb-8 grid gap-6 lg:grid-cols-[0.42fr_0.58fr]">
+              <section className="evidence-set border-t border-black/12 pt-7">
+                <div className="mb-8 grid gap-6 lg:grid-cols-[0.36fr_0.64fr]">
                   <div>
                     <p className="mb-2 text-xs uppercase tracking-[0.22em] text-[#7a86a1]">{group.subtitle}</p>
                     <h3 className="single-line-title text-[clamp(1.35rem,1.8vw,2.15rem)] font-black leading-[1.08] tracking-normal text-[#171513]">
@@ -102,14 +107,16 @@ export function EvidenceStudio() {
                   </div>
                   <HighlightText text={group.description} className="max-w-3xl text-lg leading-8 text-[#504b45]" />
                 </div>
-                <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+                <div className="evidence-grid grid gap-5 md:grid-cols-2 xl:grid-cols-4">
                   {group.items.map((item, itemIndex) => (
                     <article
                       key={`${group.title}-${item.title}`}
-                      className={item.type === "placeholder" ? "glass-panel min-h-[300px] border-dashed p-6" : "glass-panel overflow-hidden"}
+                      className={`${itemIndex === 0 ? "evidence-feature" : "evidence-support"} ${
+                        item.type === "placeholder" ? "glass-panel min-h-[300px] border-dashed p-6" : "glass-panel overflow-hidden"
+                      }`}
                     >
                       {item.type === "image" && item.src ? (
-                        <div className="relative flex h-[520px] items-center justify-center overflow-hidden bg-white/24 p-3">
+                        <div className={`${itemIndex === 0 ? "h-[620px]" : "h-[430px]"} relative flex items-center justify-center overflow-hidden bg-white/28 p-3`}>
                           <Image
                             src={item.src}
                             alt={item.title}
@@ -121,7 +128,7 @@ export function EvidenceStudio() {
                         </div>
                       ) : null}
                       {item.type === "video" && item.src ? (
-                        <div className="flex h-[520px] items-center justify-center overflow-hidden bg-[#171513]/88 p-3">
+                        <div className={`${itemIndex === 0 ? "h-[620px]" : "h-[430px]"} flex items-center justify-center overflow-hidden bg-[#171513]/88 p-3`}>
                           <video
                             src={item.src}
                             controls
@@ -141,6 +148,9 @@ export function EvidenceStudio() {
                         </div>
                       ) : null}
                       <div className="p-5">
+                        <p className="mb-3 text-[11px] font-bold uppercase tracking-[0.18em] text-[#7a86a1]">
+                          {itemIndex === 0 ? "重点作品" : "辅助证据"}
+                        </p>
                         <h4 className="single-line-title text-lg font-semibold text-[#171513] sm:text-xl">{item.title}</h4>
                         <HighlightText text={item.note} className="mt-3 text-sm leading-6 text-[#625c55]" />
                         {item.links ? (

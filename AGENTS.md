@@ -97,7 +97,10 @@ Use a restrained editorial look:
 - Muted pink and muted blue background layers, black typography
 - Muted pink and muted blue accents
 - Current frontend-design direction: position the homepage as an `AI Native operation system portfolio`, with the hero signature element as a `Growth OS Board` signal panel. This is the memorable visual risk; keep surrounding sections calmer and more editorial.
+- Latest visual direction after Awwwards reference discussion: learn only the interaction atmosphere, not copyrighted images/copy/logo/layout. The intended language is a light spatial portfolio with soft pink/blue atmosphere, slow system-map motion, case-study exhibit blocks, and curated evidence hierarchy.
 - Project cards should read as system modules or operating dossiers, not generic portfolio cards.
+- Featured projects now use larger case-exhibit surfaces with abstract system visuals and metrics, so future edits should avoid reverting them to ordinary list cards.
+- Evidence Studio now treats each group as `one primary proof + supporting proof`, so new assets should be inserted with the strongest item first.
 - Capability cards should be a matrix of ability proof; avoid arbitrary numbering unless the content is a real sequence.
 - Main visible titles should be Chinese, with restrained scale and comfortable line height
 - Visible titles should stay on one line when possible and should not end with punctuation such as `。`
