@@ -15,31 +15,30 @@ export function FeaturedWork() {
             </p>
           </div>
         </Reveal>
-        <div className="space-y-8">
+        <div className="space-y-5">
           {projects.map((project, index) => {
             const card = (
-              <article className="glass-panel-strong group grid overflow-hidden transition duration-500 hover:border-[#b67f98]/45 hover:bg-[#ffe6ef]/55">
-                <div className="flex min-h-[360px] flex-col justify-between p-7 sm:p-10 lg:p-12">
+              <article className="glass-panel-strong group grid overflow-hidden transition duration-500 hover:border-[#b67f98]/45 hover:bg-[#fff0f7]/64 lg:grid-cols-[0.34fr_0.66fr]">
+                <div className="flex min-h-[300px] flex-col justify-between border-b border-black/10 p-7 sm:p-9 lg:border-b-0 lg:border-r">
                   <div>
-                    <div className="mb-10 flex items-center justify-between gap-5 text-xs uppercase tracking-[0.2em] text-[#7a746d]">
-                      <span>{project.eyebrow}</span>
-                      <span>{project.period}</span>
+                    <div className="flex items-center justify-between gap-4">
+                      <span className="text-[11px] font-bold uppercase tracking-[0.24em] text-[#7a86a1]">{project.eyebrow}</span>
+                      <span className="glass-chip px-3 py-2 text-xs font-semibold text-[#6f6770]">{project.period}</span>
                     </div>
-                    <h3 className="single-line-title max-w-4xl text-[clamp(1.5rem,2.25vw,2.95rem)] font-black leading-[1.08] tracking-normal text-[#171513]">
+                    <p className="mt-8 font-mono text-sm uppercase tracking-[0.18em] text-[#b66f91]">
+                      Module {String(index + 1).padStart(2, "0")}
+                    </p>
+                  </div>
+                  <div>
+                    <h3 className="single-line-title text-[clamp(1.45rem,2.1vw,2.75rem)] font-black leading-[1.02] tracking-normal text-[#17151a]">
                       {project.title}
                     </h3>
-                    <p className="mt-7 max-w-3xl text-xl leading-8 text-[#403c37]">{project.summary}</p>
-                    {project.detailHref ? (
-                      <span className="glass-chip mt-8 inline-flex px-4 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#171513] transition group-hover:bg-[#171513] group-hover:text-[#f8f5ef]">
-                        查看项目详情
-                      </span>
-                    ) : null}
+                    <p className="mt-5 text-base font-semibold leading-7 text-[#4b454d]">{project.role}</p>
                   </div>
-                  <div className="mt-10 grid gap-6 lg:grid-cols-[0.45fr_0.55fr]">
-                    <div>
-                      <p className="mb-3 text-xs uppercase tracking-[0.2em] text-[#8a847b]">职责</p>
-                      <p className="text-lg font-semibold text-[#171513]">{project.role}</p>
-                    </div>
+                </div>
+                <div className="flex min-h-[300px] flex-col justify-between p-7 sm:p-9">
+                  <p className="max-w-5xl text-[clamp(1.05rem,1.45vw,1.45rem)] leading-9 text-[#403c37]">{project.summary}</p>
+                  <div className="mt-9 grid gap-6 lg:grid-cols-[1fr_auto] lg:items-end">
                     <div className="flex flex-wrap gap-2">
                       {project.tags.map((tag) => (
                         <span key={tag} className="glass-chip px-3 py-2 text-sm text-[#342e33]">
@@ -47,10 +46,15 @@ export function FeaturedWork() {
                         </span>
                       ))}
                     </div>
+                    {project.detailHref ? (
+                      <span className="glass-chip inline-flex px-4 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#171513] transition group-hover:bg-[#171513] group-hover:text-[#f8f5ef]">
+                        查看项目详情
+                      </span>
+                    ) : null}
                   </div>
                   <div className="mt-8 grid gap-2 sm:grid-cols-3">
                     {project.metrics.map((metric) => (
-                      <span key={metric} className="border-t border-black/10 pt-4 text-sm text-[#5c5751]">
+                      <span key={metric} className="border-t border-black/10 pt-4 text-sm font-semibold text-[#5c5751]">
                         {metric}
                       </span>
                     ))}

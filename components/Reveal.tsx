@@ -1,7 +1,6 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
-import type { ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
 
 type RevealProps = {
   children: ReactNode;
@@ -11,17 +10,12 @@ type RevealProps = {
 };
 
 export function Reveal({ children, className, delay = 0, y = 40 }: RevealProps) {
-  const reduceMotion = useReducedMotion();
-
   return (
-    <motion.div
-      className={className}
-      initial={reduceMotion ? false : { opacity: 0, y, clipPath: "inset(0 0 18% 0)" }}
-      whileInView={reduceMotion ? undefined : { opacity: 1, y: 0, clipPath: "inset(0 0 0% 0)" }}
-      viewport={{ once: true, margin: "-12% 0px" }}
-      transition={{ duration: 0.9, delay, ease: [0.16, 1, 0.3, 1] }}
+    <div
+      className={`reveal-safe ${className ?? ""}`}
+      style={{ animationDelay: `${delay}s`, "--reveal-y": `${y}px` } as CSSProperties}
     >
       {children}
-    </motion.div>
+    </div>
   );
 }

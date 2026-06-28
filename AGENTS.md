@@ -96,6 +96,9 @@ Use a restrained editorial look:
 - Frosted-glass visual system with light-pink translucent panels, fine borders, backdrop blur, and controlled shadows
 - Muted pink and muted blue background layers, black typography
 - Muted pink and muted blue accents
+- Current frontend-design direction: position the homepage as an `AI Native operation system portfolio`, with the hero signature element as a `Growth OS Board` signal panel. This is the memorable visual risk; keep surrounding sections calmer and more editorial.
+- Project cards should read as system modules or operating dossiers, not generic portfolio cards.
+- Capability cards should be a matrix of ability proof; avoid arbitrary numbering unless the content is a real sequence.
 - Main visible titles should be Chinese, with restrained scale and comfortable line height
 - Visible titles should stay on one line when possible and should not end with punctuation such as `。`
 - Use subtle emphasis for key terms with the shared `soft-mark` style; avoid loud highlight blocks or heavy badges inside body copy
@@ -108,8 +111,8 @@ Use a restrained editorial look:
 
 Motion direction:
 
-- Hero title uses mask-like strong entrance through Framer Motion
-- Section content reveals with slow, smooth easing
+- Hero title uses CSS-based mask-like entrance with visible-by-default fallback
+- Section content reveals use visible-by-default CSS motion, not Framer initial opacity hiding
 - No cheap bounce effects
 - Respect `prefers-reduced-motion`
 

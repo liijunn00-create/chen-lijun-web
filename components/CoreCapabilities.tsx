@@ -19,30 +19,26 @@ export function CoreCapabilities() {
           {capabilityCards.map((capability, index) => (
             <Reveal
               key={capability.title}
-              className="glass-panel-strong flex min-h-[330px] flex-col justify-between p-6 sm:p-7"
+              className="glass-panel-strong group flex min-h-[330px] flex-col justify-between overflow-hidden p-0 transition hover:-translate-y-1 hover:border-[#b66f91]/40"
               delay={index * 0.05}
             >
-              <div>
-                <p className="mb-5 text-xs font-semibold uppercase tracking-[0.2em] text-[#7a86a1]">
-                  {String(index + 1).padStart(2, "0")}
-                </p>
-                <h3 className="single-line-title text-[clamp(1.18rem,1.55vw,1.55rem)] font-black leading-tight text-[#171513]">
-                  {capability.title}
-                </h3>
-                <p className="mt-5 text-base leading-7 text-[#4d4842]">{capability.summary}</p>
-              </div>
-
-              <div className="mt-8 space-y-5">
-                <div>
-                  <p className="mb-3 text-xs uppercase tracking-[0.18em] text-[#8a847b]">对应证据</p>
-                  <div className="flex flex-wrap gap-2">
-                    {capability.proof.map((item) => (
-                      <span key={item} className="glass-chip px-3 py-2 text-sm text-[#342e33]">
-                        {item}
-                      </span>
-                    ))}
-                  </div>
+              <div className="p-6 sm:p-7">
+                <div className="mb-6 flex items-center justify-between gap-4">
+                  <span className="h-2 w-10 bg-[#b66f91]/70 transition group-hover:w-16" />
+                  <span className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#7a86a1]">Capability</span>
                 </div>
+                <h3 className="single-line-title text-[clamp(1.18rem,1.55vw,1.55rem)] font-black leading-tight text-[#171513]">{capability.title}</h3>
+                <p className="mt-5 text-base leading-7 text-[#4d4842]">{capability.summary}</p>
+
+                <div className="mt-8 flex flex-wrap gap-2">
+                  {capability.proof.map((item) => (
+                    <span key={item} className="glass-chip px-3 py-2 text-sm text-[#342e33]">
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <div className="border-t border-black/10 bg-white/12 p-5">
                 <div className="flex flex-wrap gap-2">
                   {capability.tags.map((tag) => (
                     <span key={tag} className="text-xs uppercase tracking-[0.12em] text-[#6d6870]">
