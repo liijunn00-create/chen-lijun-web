@@ -268,3 +268,44 @@ npm run lint
 npm run build
 git status
 ```
+
+## Hero 改版记录(2026-06-29)
+
+目的:把单屏 13 节点的拥挤 Hero 拆为「屏 1 封面 + 屏 2 状态板」两屏,采用 5 段 2.4s 入场编排,营造「录屏感」开场。
+
+改动文件:
+- `components/Hero.tsx`:重写为两屏结构。屏 1 保留 chip / 大标题 2 行 / 副标题 / 中心核 / 4 浮动信号点 / 底部状态条;屏 2 渲染「系统状态 / 运营系统的运行证据」+ 3 张数据卡(`stats.slice(0,3)`)+ 3 张能力卡(`capabilityCards.slice(0,3)`),`id="status"`。
+- `app/globals.css`:删除 11 个老装饰类(`.hero-ghost-word` / `.hero-sphere-*` / `.cover-board` / `.unlock-ring` / `.floating-module` / `.cover-paths` / `.cover-node` / `.cover-core` / `.hero-status-chip` / `.hero-mini-card` / `.workflow-token` 等)与对应 keyframes(`hero-rise` / `hero-soft-in` / `path-drift` / `field-drift` / `ghost-drift` / `slow-spin` / `ambient-float` / `node-float` / `core-breathe`)。新增 `.cover-opening` / `.cover-video` / `.cover-field` / `.cover-stage-wrap` / `.cover-chip` / `.cover-title` / `.cover-clip-line` / `.cover-subline` / `.cover-core` / `.cover-core-ring` / `.cover-core-text` / `.cover-signal-layer` / `.cover-signal-dot` / `.cover-signal-text` / `.cover-status-line` / `.cover-status-dot` / `.cover-section-title` / `.cover-stat-grid` / `.cover-stat` / `.cover-capability-grid` / `.cover-capability` 等。新增 keyframes:`cover-clip-rise` / `cover-core-bloom` / `cover-signal-fade-in` / `cover-status-fade` / `cover-field-drift` / `cover-ring-spin` / `cover-fade-in-soft`。
+
+5 段编排:
+- 0–0.4s:L1 标题 `clip-path: inset(0 0 100% 0 → 0)` 从底部揭开
+- 0.4–0.9s:L2 副标题同上
+- 0.9–1.3s:停帧(关键节奏)
+- 1.3–1.7s:中心核 `scale(0.88 → 1)` + opacity 0→1
+- 1.7–2.4s:4 个浮动信号点 stagger(0.15s 间隔)+ 状态条 fade
+
+屏 2 stagger:
+- kicker 2.4s
+- title 2.45s
+- desc 2.5s
+- 3 数据卡 2.5 / 2.6 / 2.7s
+- 3 能力卡 2.8 / 2.9 / 3.0s
+
+响应式:
+- `< 1023px`:隐藏 `.cover-signal-dot-2` 和 `.cover-signal-dot-4`,只留 Knowledge / Workflow
+- `< 639px`:3 张数据卡 / 3 张能力卡 stack 为单列
+- `prefers-reduced-motion`:全局降级到 0.01ms(原站既有)
+
+数据源:
+- `data/siteContent.ts` → `heroContent`(kicker / titleLines / subtitle)、`capabilityCards`(取前 3)
+- `data/skills.ts` → `stats`(取前 3)
+
+已知约束:
+- 沿用项目内统一的 CSS + framer-motion 12,不引入 GSAP
+- 沿用 `--font-sans`,不引入新字体
+- 沿用 root tokens 配色,不动 `:root` 段
+- 屏 2 stagger 当前为「首屏 2.4s 后入场」,与项目内 60+ 个 `<Reveal>` 的「即时进场」传统一致;若未来要做「滚动到 60% 触发」,需要扩展 `<Reveal>` 增加 `useInView` 行为,不可只在 Hero 内改
+
+不要轻易删除这些类(后续如果有人觉得 cover 装饰太轻):
+- `.cover-core` / `.cover-core-ring` 是「AI 系统 / 知识解锁 / 工作流智能」语义的可视化锚点
+- `.cover-signal-dot` 与屏 2 3 张能力卡(AI 运营系统设计 / 内容运营与平台策略 / 增长实验与指标意识)的能力来源对齐,删了之后视觉上 4 个核心词会失去支撑
