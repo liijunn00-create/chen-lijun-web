@@ -19,12 +19,12 @@ export function CoreCapabilities() {
           {capabilityCards.map((capability, index) => (
             <Reveal
               key={capability.title}
-              className="glass-panel-strong group flex min-h-[330px] flex-col justify-between overflow-hidden p-0 transition hover:-translate-y-1 hover:border-[#b66f91]/40"
+              className="glass-panel-strong group flex min-h-[330px] flex-col justify-between overflow-hidden p-0 transition hover:-translate-y-1 hover:border-[#9b84b4]/40"
               delay={index * 0.05}
             >
               <div className="p-6 sm:p-7">
                 <div className="mb-6 flex items-center justify-between gap-4">
-                  <span className="h-2 w-10 bg-[#b66f91]/70 transition group-hover:w-16" />
+                  <span className="h-2 w-10 bg-[#9b84b4]/70 transition group-hover:w-16" />
                   <span className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#7a86a1]">Capability</span>
                 </div>
                 <h3 className="single-line-title text-[clamp(1.18rem,1.55vw,1.55rem)] font-black leading-tight text-[#171513]">{capability.title}</h3>

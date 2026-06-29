@@ -93,11 +93,12 @@ public/videos/
 
 Use a restrained editorial look:
 
-- Frosted-glass visual system with light-pink translucent panels, fine borders, backdrop blur, and controlled shadows
-- Muted pink and muted blue background layers, black typography
-- Muted pink and muted blue accents
+- Frosted-glass visual system with light silver-gray translucent panels, fine borders, backdrop blur, and controlled shadows
+- Soft mixed background layers: silver gray, mist blue, pale lavender, and restrained warm orange glow
+- Accent system uses pale lavender signal color, mist-blue metadata, and warm-orange light only as atmosphere
 - Current frontend-design direction: position the homepage as an `AI Native operation system portfolio`, with the hero signature element as a `Growth OS Board` signal panel. This is the memorable visual risk; keep surrounding sections calmer and more editorial.
-- Latest visual direction after Awwwards reference discussion: learn only the interaction atmosphere, not copyrighted images/copy/logo/layout. The intended language is a light spatial portfolio with soft pink/blue atmosphere, slow system-map motion, case-study exhibit blocks, and curated evidence hierarchy.
+- Latest visual direction after Awwwards/reference-recording discussion: learn only the interaction atmosphere, not copyrighted images/copy/logo/layout/3D assets/code. The intended language is a light spatial portfolio with silver-gray, mist-blue, pale-lavender and warm-orange atmospheric gradients, large low-contrast ghost typography, slow system-map motion, case-study exhibit blocks, and curated evidence hierarchy.
+- The homepage Hero should feel like an immersive AI Operations Portfolio cover: large whitespace, subtle experimental technology mood, System 01 / Workflow Intelligence language, original abstract nodes and linework, and slow blur-to-clear entrance motion.
 - Project cards should read as system modules or operating dossiers, not generic portfolio cards.
 - Featured projects now use larger case-exhibit surfaces with abstract system visuals and metrics, so future edits should avoid reverting them to ordinary list cards.
 - Evidence Studio now treats each group as `one primary proof + supporting proof`, so new assets should be inserted with the strongest item first.

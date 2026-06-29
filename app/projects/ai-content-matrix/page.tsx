@@ -224,7 +224,7 @@ export default function AiContentMatrixPage() {
         <div className="glass-dark mx-auto flex min-h-[72vh] max-w-[1700px] flex-col justify-between gap-16 p-7 sm:p-10 lg:p-14">
           <div className="grid gap-10 lg:grid-cols-[0.36fr_0.64fr]">
             <div>
-              <p className="mb-6 text-xs font-bold uppercase tracking-[0.24em] text-[#dcaec1]">Outcome</p>
+              <p className="mb-6 text-xs font-bold uppercase tracking-[0.24em] text-[#dcd7ed]">Outcome</p>
               <h2 className="single-line-title text-[clamp(1.55rem,2.55vw,3.35rem)] font-black leading-[1.08]">项目成果</h2>
             </div>
             <p className="max-w-4xl text-2xl leading-10 text-[#e9e0d8]">{projectCase.outcome}</p>
@@ -242,8 +242,8 @@ export default function AiContentMatrixPage() {
   );
 }
 
-function InfoPanel({ title, items, tone = "pink" }: { title: string; items: string[]; tone?: "pink" | "blue" }) {
-  const background = tone === "blue" ? "bg-[rgba(248,218,229,0.34)]" : "bg-[rgba(248,218,229,0.42)]";
+function InfoPanel({ title, items, tone = "lavender" }: { title: string; items: string[]; tone?: "lavender" | "blue" }) {
+  const background = tone === "blue" ? "bg-[rgba(216,230,239,0.42)]" : "bg-[rgba(220,215,237,0.38)]";
 
   return (
     <article className={`${background} glass-panel p-7 sm:p-10`}>

@@ -18,8 +18,8 @@ export function FeaturedWork() {
         <div className="case-gallery space-y-8">
           {projects.map((project, index) => {
             const card = (
-              <article className={`case-exhibit group grid overflow-hidden transition duration-700 hover:border-[#b67f98]/45 ${index % 2 === 1 ? "lg:grid-cols-[0.52fr_0.48fr]" : "lg:grid-cols-[0.48fr_0.52fr]"}`}>
-                <div className={`case-visual relative min-h-[320px] overflow-hidden ${index % 2 === 1 ? "lg:order-2" : ""}`}>
+              <article className={`case-exhibit case-study-card group grid overflow-hidden ${index % 2 === 1 ? "lg:grid-cols-[0.5fr_0.5fr]" : "lg:grid-cols-[0.46fr_0.54fr]"}`}>
+                <div className={`case-visual relative min-h-[340px] overflow-hidden ${index % 2 === 1 ? "lg:order-2" : ""}`}>
                   <div className="case-visual-grid" />
                   <div className="case-orbit case-orbit-a" />
                   <div className="case-orbit case-orbit-b" />
@@ -33,10 +33,10 @@ export function FeaturedWork() {
                     ))}
                   </div>
                 </div>
-                <div className="flex min-h-[360px] flex-col justify-between p-7 sm:p-9 lg:p-10">
+                <div className="case-study-body flex min-h-[390px] flex-col justify-between p-7 sm:p-9 lg:p-10">
                   <div>
                     <div className="flex items-center justify-between gap-4">
-                      <span className="text-[11px] font-bold uppercase tracking-[0.24em] text-[#7a86a1]">{project.eyebrow}</span>
+                      <span className="case-type-label">{project.eyebrow}</span>
                       <span className="glass-chip px-3 py-2 text-xs font-semibold text-[#6f6770]">{project.period}</span>
                     </div>
                     <div className="studio-rule mt-6" />
@@ -45,10 +45,27 @@ export function FeaturedWork() {
                     <h3 className="single-line-title text-[clamp(1.45rem,2.05vw,2.55rem)] font-black leading-[1.04] tracking-normal text-[#17151a]">
                       {project.title}
                     </h3>
-                    <p className="mt-5 text-base font-semibold leading-7 text-[#4b454d]">{project.role}</p>
+                    <div className="case-meta-grid mt-7">
+                      <div>
+                        <span>我的角色</span>
+                        <strong>{project.role}</strong>
+                      </div>
+                      <div>
+                        <span>使用工具</span>
+                        <strong>{project.tags.slice(0, 3).join(" / ")}</strong>
+                      </div>
+                    </div>
                   </div>
                   <p className="mt-8 max-w-5xl text-[clamp(1rem,1.25vw,1.28rem)] leading-8 text-[#403c37]">{project.summary}</p>
-                  <div className="mt-9 flex flex-wrap gap-2">
+                  <div className="case-outcome-row mt-9">
+                    <span>成果 / 亮点</span>
+                    <div>
+                      {project.metrics.map((metric) => (
+                        <strong key={metric}>{metric}</strong>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="mt-7 flex flex-wrap gap-2">
                     {project.tags.map((tag) => (
                       <span key={tag} className="glass-chip px-3 py-2 text-sm text-[#342e33]">
                         {tag}

@@ -212,7 +212,7 @@ export default function GrowthOsPage() {
         <div className="glass-dark mx-auto flex min-h-[72vh] max-w-[1700px] flex-col justify-between gap-16 p-7 sm:p-10 lg:p-14">
           <div className="grid gap-10 lg:grid-cols-[0.36fr_0.64fr]">
             <div>
-              <p className="mb-6 text-xs font-bold uppercase tracking-[0.24em] text-[#dcaec1]">Outcome</p>
+              <p className="mb-6 text-xs font-bold uppercase tracking-[0.24em] text-[#dcd7ed]">Outcome</p>
               <h2 className="single-line-title text-[clamp(1.55rem,2.55vw,3.35rem)] font-black leading-[1.08]">项目成果</h2>
             </div>
             <div>
@@ -241,7 +241,7 @@ export default function GrowthOsPage() {
 
 function InfoPanel({ title, items }: { title: string; items: string[] }) {
   return (
-    <article className="glass-panel bg-[rgba(248,218,229,0.38)] p-7 sm:p-10">
+    <article className="glass-panel bg-[rgba(220,215,237,0.38)] p-7 sm:p-10">
       <h2 className="single-line-title mb-8 text-2xl font-black">{title}</h2>
       <div className="flex flex-wrap gap-3">
         {items.map((item) => (
