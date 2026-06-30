@@ -522,13 +522,18 @@ video {
   transition:
     color 220ms ease,
     opacity 180ms ease,
+    transform 180ms ease,
+    text-shadow 180ms ease,
     -webkit-text-stroke-color 220ms ease;
-  will-change: font-variation-settings, opacity;
+  transform-origin: center 58%;
+  will-change: font-variation-settings, opacity, transform;
 }
 
 @media (prefers-reduced-motion: reduce) {
   .text-pressure-char {
     transition: none;
+    transform: none !important;
+    text-shadow: none !important;
     will-change: auto;
   }
 }

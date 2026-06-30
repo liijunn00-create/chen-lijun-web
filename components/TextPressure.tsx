@@ -106,6 +106,8 @@ export function TextPressure({
       charRefs.current.forEach((char) => {
         if (!char) return;
         char.style.fontVariationSettings = `'wght' 680, 'wdth' 100, 'ital' 0`;
+        char.style.transform = "none";
+        char.style.textShadow = "none";
         char.style.setProperty("--opacity", "1");
       });
       return;
@@ -129,8 +131,16 @@ export function TextPressure({
         const widthValue = width ? Math.round(88 + proximity * 55) : 100;
         const italicValue = italic ? proximity.toFixed(2) : "0";
         const opacityValue = alpha ? 0.62 + proximity * 0.38 : 1;
+        const stretchX = 1 + proximity * 0.11;
+        const stretchY = 1 + proximity * 0.07;
+        const lift = -proximity * 2.8;
+        const glowAlpha = proximity * 0.2;
+        const glowDrop = Math.round(proximity * 9);
+        const glowBlur = Math.round(proximity * 20);
 
         char.style.fontVariationSettings = `'wght' ${weightValue}, 'wdth' ${widthValue}, 'ital' ${italicValue}`;
+        char.style.transform = `translate3d(0, ${lift.toFixed(2)}px, 0) scale(${stretchX.toFixed(3)}, ${stretchY.toFixed(3)})`;
+        char.style.textShadow = `0 ${glowDrop}px ${glowBlur}px rgba(133, 108, 164, ${glowAlpha.toFixed(3)})`;
         char.style.setProperty("--opacity", opacityValue.toString());
       });
 
