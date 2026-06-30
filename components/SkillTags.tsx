@@ -17,40 +17,26 @@ export function SkillTags() {
           </div>
         </Reveal>
 
-        <Reveal delay={0.08}>
-          <article className="case-exhibit case-study-card skill-stack-card overflow-hidden">
-            <div className="case-study-body case-study-body-solo p-7 sm:p-10 lg:p-12">
-              <div className="case-study-layout skill-stack-layout">
-                <div className="skill-stack-grid">
-                  {skillTagGroups.map((group) => (
-                    <div key={group.title} className="skill-stack-group">
-                      <h3 className="single-line-title text-lg font-black text-[#171513]">{group.title}</h3>
-                      <div className="mt-5 flex flex-wrap gap-2">
-                        {group.tags.map((tag) => (
-                          <span key={tag} className="glass-chip px-3 py-2 text-sm text-[#342e33]">
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
+        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          {skillTagGroups.map((group, index) => (
+            <Reveal
+              key={group.title}
+              className="liquid-clear-panel skill-tag-card flex min-h-[260px] flex-col justify-between overflow-hidden p-6 transition hover:-translate-y-1 hover:border-[#9b84b4]/40 sm:p-7"
+              delay={index * 0.05}
+            >
+              <div>
+                <h3 className="single-line-title text-lg font-black text-[#171513]">{group.title}</h3>
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {group.tags.map((tag) => (
+                    <span key={tag} className="liquid-clear-chip px-3 py-2 text-sm text-[#342e33]">
+                      {tag}
+                    </span>
                   ))}
                 </div>
-
-                <div className="case-liquid-visual skill-liquid-visual" aria-hidden="true">
-                  <div className="case-liquid-orb case-liquid-orb-a" />
-                  <div className="case-liquid-orb case-liquid-orb-b" />
-                  <div className="case-liquid-capsule case-liquid-capsule-eyebrow">Toolkit</div>
-                  <div className="case-liquid-capsule case-liquid-capsule-title">AI运营工具链</div>
-                  <div className="case-liquid-metrics">
-                    <span>AI Workflow</span>
-                    <span>Growth Ops</span>
-                    <span>Visual Delivery</span>
-                  </div>
-                </div>
               </div>
-            </div>
-          </article>
-        </Reveal>
+            </Reveal>
+          ))}
+        </div>
       </div>
     </section>
   );
