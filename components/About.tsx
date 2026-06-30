@@ -2,16 +2,19 @@ import Image from "next/image";
 import { profileHighlights, stats } from "@/data/skills";
 import { aboutCopy } from "@/data/siteContent";
 import { Reveal } from "./Reveal";
+import { TextPressure } from "./TextPressure";
 
 export function About() {
   return (
     <section id="about" className="px-5 py-24 sm:px-8">
       <div className="mx-auto grid max-w-[1700px] gap-12">
         <Reveal>
-          <p className="section-kicker">个人概览</p>
+          <p className="section-kicker">
+            <TextPressure text="个人概览" />
+          </p>
           <div className="grid gap-8 lg:grid-cols-[0.42fr_0.58fr] lg:items-end">
             <h2 className="single-line-title text-[clamp(1.45rem,2.25vw,2.9rem)] font-black leading-[1.08] tracking-normal text-[#171513]">
-              {aboutCopy.title}
+              <TextPressure text={aboutCopy.title} />
             </h2>
             <p className="max-w-3xl text-xl leading-8 text-[#4a4641]">
               {aboutCopy.description}
@@ -32,27 +35,43 @@ export function About() {
             <Reveal className="grid gap-4 md:grid-cols-3" delay={0.1}>
               {profileHighlights.map((highlight) => (
                 <div key={highlight} className="glass-panel p-5 text-base leading-7 text-[#403c37]">
-                  {highlight}
+                  <TextPressure text={highlight} />
                 </div>
               ))}
             </Reveal>
             <Reveal className="grid gap-4 md:grid-cols-2" delay={0.16}>
               <div className="glass-panel p-6">
-                <p className="mb-4 text-xs uppercase tracking-[0.2em] text-[#7a746d]">实习经历</p>
-                <h3 className="text-xl font-black text-[#171513]">佛山新基地实业集团</h3>
-                <p className="mt-2 text-sm text-[#625c55]">内容运营 & 增长策略实习生 / 数字产业园B2B业务</p>
+                <p className="mb-4 text-xs uppercase tracking-[0.2em] text-[#7a746d]">
+                  <TextPressure text="实习经历" />
+                </p>
+                <h3 className="text-xl font-black text-[#171513]">
+                  <TextPressure text="佛山新基地实业集团" />
+                </h3>
+                <p className="mt-2 text-sm text-[#625c55]">
+                  <TextPressure text="内容运营 & 增长策略实习生 / 数字产业园B2B业务" />
+                </p>
               </div>
               <div className="glass-panel p-6">
-                <p className="mb-4 text-xs uppercase tracking-[0.2em] text-[#7a746d]">实习经历</p>
-                <h3 className="text-xl font-black text-[#171513]">广东佛燃科技有限公司</h3>
-                <p className="mt-2 text-sm text-[#625c55]">内容运营 & SEO增长实习生 / 硬科技B2B业务</p>
+                <p className="mb-4 text-xs uppercase tracking-[0.2em] text-[#7a746d]">
+                  <TextPressure text="实习经历" />
+                </p>
+                <h3 className="text-xl font-black text-[#171513]">
+                  <TextPressure text="广东佛燃科技有限公司" />
+                </h3>
+                <p className="mt-2 text-sm text-[#625c55]">
+                  <TextPressure text="内容运营 & SEO增长实习生 / 硬科技B2B业务" />
+                </p>
               </div>
             </Reveal>
             <Reveal className="glass-panel grid grid-cols-2 overflow-hidden md:grid-cols-6" delay={0.22}>
               {stats.map((stat) => (
                 <div key={stat.label} className="border-b border-r border-black/10 p-5">
-                  <div className="text-3xl font-black text-[#171513]">{stat.value}</div>
-                  <div className="mt-2 text-xs uppercase tracking-[0.12em] text-[#77716a]">{stat.label}</div>
+                  <div className="text-3xl font-black text-[#171513]">
+                    <TextPressure text={stat.value} />
+                  </div>
+                  <div className="mt-2 text-xs uppercase tracking-[0.12em] text-[#77716a]">
+                    <TextPressure text={stat.label} />
+                  </div>
                 </div>
               ))}
             </Reveal>

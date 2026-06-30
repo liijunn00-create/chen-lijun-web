@@ -1,13 +1,16 @@
 import { Reveal } from "./Reveal";
+import { TextPressure } from "./TextPressure";
 
 export function Contact() {
   return (
     <section id="contact" className="flex min-h-screen items-end px-5 py-10 text-[#f6f1ec] sm:px-8">
       <div className="glass-dark mx-auto grid w-full max-w-[1700px] gap-12 p-7 sm:p-10 lg:grid-cols-[0.7fr_0.3fr] lg:items-end lg:p-14">
         <Reveal>
-          <p className="mb-7 text-xs uppercase tracking-[0.26em] text-[#c6b8c6]">联系</p>
+          <p className="mb-7 text-xs uppercase tracking-[0.26em] text-[#c6b8c6]">
+            <TextPressure text="联系" />
+          </p>
           <h2 className="single-line-title max-w-6xl text-[clamp(1.8rem,3.4vw,4.4rem)] font-black leading-[1.08] tracking-normal">
-            让内容成为增长系统
+            <TextPressure text="让内容成为增长系统" />
           </h2>
         </Reveal>
         <Reveal className="space-y-8" delay={0.12}>
@@ -16,9 +19,11 @@ export function Contact() {
           </p>
           <div className="space-y-3 text-lg">
             <a className="block border-t border-white/15 pt-4 transition hover:text-[#e7b8cb]" href="mailto:hello@example.com">
-              hello@example.com
+              <TextPressure text="hello@example.com" />
             </a>
-            <span className="block border-t border-white/15 pt-4 text-[#aaa19a]">广东 / 可远程协作</span>
+            <span className="block border-t border-white/15 pt-4 text-[#aaa19a]">
+              <TextPressure text="广东 / 可远程协作" />
+            </span>
           </div>
         </Reveal>
       </div>

@@ -2,6 +2,7 @@ import Image from "next/image";
 import { evidenceGroups, type EvidenceItem } from "@/data/evidence";
 import { CircularGallery } from "./CircularGallery";
 import { Reveal } from "./Reveal";
+import { TextPressure } from "./TextPressure";
 
 const highlightTerms = [
   "AI",
@@ -88,17 +89,25 @@ function PdfCover({ title, href }: { title: string; href: string }) {
       <div className="absolute bottom-28 left-8 h-px w-40 bg-[#171513]/20" />
       <div className="glass-panel-strong relative z-10 flex w-full flex-col justify-between p-6">
         <div className="flex items-start justify-between gap-6">
-          <span className="text-xs font-semibold uppercase tracking-[0.22em] text-[#6c7681]">完整PDF</span>
-          <span className="text-right text-xs uppercase tracking-[0.18em] text-[#8d7d88]">作品归档</span>
+          <span className="text-xs font-semibold uppercase tracking-[0.22em] text-[#6c7681]">
+            <TextPressure text="完整PDF" />
+          </span>
+          <span className="text-right text-xs uppercase tracking-[0.18em] text-[#8d7d88]">
+            <TextPressure text="作品归档" />
+          </span>
         </div>
         <div>
-          <p className="mb-5 font-mono text-xs uppercase tracking-[0.18em] text-[#756f69]">策划 / 商业 / 文案</p>
+          <p className="mb-5 font-mono text-xs uppercase tracking-[0.18em] text-[#756f69]">
+            <TextPressure text="策划 / 商业 / 文案" />
+          </p>
           <h4 className="single-line-title max-w-[18rem] text-[clamp(1.15rem,1.45vw,1.8rem)] font-black leading-[1.08] tracking-normal text-[#171513]">
-            {title.replace("完整版PDF", "")}
+            <TextPressure text={title.replace("完整版PDF", "")} />
           </h4>
         </div>
         <div className="flex items-end justify-between gap-6">
-          <span className="text-xs uppercase tracking-[0.18em] text-[#756f69]">打开文档</span>
+          <span className="text-xs uppercase tracking-[0.18em] text-[#756f69]">
+            <TextPressure text="打开文档" />
+          </span>
           <span className="flex h-12 w-12 items-center justify-center border border-[#171513]/25 text-xl transition group-hover:bg-[#171513] group-hover:text-[#f8f3ed]">
             ↗
           </span>
@@ -113,9 +122,13 @@ export function EvidenceStudio() {
     <section id="evidence" className="section-shell">
       <div className="section-grid">
         <Reveal>
-          <p className="section-kicker">作品证据</p>
+          <p className="section-kicker">
+            <TextPressure text="作品证据" />
+          </p>
           <div className="grid gap-6 lg:grid-cols-[0.58fr_0.42fr] lg:items-end">
-            <h2 className="section-title max-w-6xl">真实作品按能力场景展开</h2>
+            <h2 className="section-title max-w-6xl">
+              <TextPressure text="真实作品按能力场景展开" />
+            </h2>
             <p className="max-w-2xl text-lg leading-8 text-[#5c5751]">
               每组保留一件重点作品作为主证据，其余材料作为辅助证据，既展示完整作品，也避免素材无序堆叠。
             </p>
@@ -127,9 +140,11 @@ export function EvidenceStudio() {
               <section className="evidence-set border-t border-black/12 pt-7">
                 <div className="mb-8 grid gap-6 lg:grid-cols-[0.36fr_0.64fr]">
                   <div>
-                    <p className="mb-2 text-xs uppercase tracking-[0.22em] text-[#7a86a1]">{group.subtitle}</p>
+                    <p className="mb-2 text-xs uppercase tracking-[0.22em] text-[#7a86a1]">
+                      <TextPressure text={group.subtitle} />
+                    </p>
                     <h3 className="single-line-title text-[clamp(1.35rem,1.8vw,2.15rem)] font-black leading-[1.08] tracking-normal text-[#171513]">
-                      {group.title}
+                      <TextPressure text={group.title} />
                     </h3>
                   </div>
                   <HighlightText text={group.description} className="max-w-3xl text-lg leading-8 text-[#504b45]" />
@@ -173,15 +188,21 @@ export function EvidenceStudio() {
                         ) : null}
                         {item.type === "placeholder" ? (
                           <div className="flex h-full min-h-[260px] flex-col justify-between">
-                            <span className="text-xs uppercase tracking-[0.2em] text-[#938b82]">预留位置</span>
-                            <p className="max-w-sm text-2xl font-semibold leading-tight text-[#292520]">{item.title}</p>
+                            <span className="text-xs uppercase tracking-[0.2em] text-[#938b82]">
+                              <TextPressure text="预留位置" />
+                            </span>
+                            <p className="max-w-sm text-2xl font-semibold leading-tight text-[#292520]">
+                              <TextPressure text={item.title} />
+                            </p>
                           </div>
                         ) : null}
                         <div className="p-5">
                           <p className="mb-3 text-[11px] font-bold uppercase tracking-[0.18em] text-[#7a86a1]">
-                            {itemIndex === 0 ? "重点作品" : "辅助证据"}
+                            <TextPressure text={itemIndex === 0 ? "重点作品" : "辅助证据"} />
                           </p>
-                          <h4 className="single-line-title text-lg font-semibold text-[#171513] sm:text-xl">{item.title}</h4>
+                          <h4 className="single-line-title text-lg font-semibold text-[#171513] sm:text-xl">
+                            <TextPressure text={item.title} />
+                          </h4>
                           <HighlightText text={item.note} className="mt-3 text-sm leading-6 text-[#625c55]" />
                           {item.links ? (
                             <div className="mt-5 flex flex-wrap gap-2">
@@ -193,7 +214,7 @@ export function EvidenceStudio() {
                                   rel="noreferrer"
                                   className="glass-chip px-3 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-[#171513] transition hover:bg-[#171513] hover:text-[#f6f1ec]"
                                 >
-                                  {link.label}
+                                  <TextPressure text={link.label} />
                                 </a>
                               ))}
                             </div>

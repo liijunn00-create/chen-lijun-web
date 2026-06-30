@@ -435,6 +435,104 @@ video {
   -webkit-backdrop-filter: var(--glass-filter-chip);
 }
 
+.liquid-clear-panel {
+  position: relative;
+  isolation: isolate;
+  border: 1px solid rgba(255, 255, 255, 0.54);
+  border-radius: 1.85rem;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.028) 45%, rgba(255, 255, 255, 0.1)),
+    radial-gradient(circle at 14% 18%, rgba(255, 255, 255, 0.24), transparent 15rem),
+    radial-gradient(circle at 88% 16%, rgba(190, 229, 244, 0.13), transparent 20rem),
+    radial-gradient(circle at 76% 86%, rgba(246, 205, 226, 0.11), transparent 18rem),
+    rgba(255, 255, 255, 0.048);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.76),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.15),
+    inset 14px 0 26px rgba(255, 255, 255, 0.095),
+    inset -14px 0 26px rgba(111, 143, 160, 0.04),
+    0 16px 42px rgba(88, 69, 92, 0.05);
+  backdrop-filter: blur(18px) saturate(1.12);
+  -webkit-backdrop-filter: blur(18px) saturate(1.12);
+}
+
+.liquid-clear-panel::before,
+.liquid-clear-panel::after {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  content: "";
+}
+
+.liquid-clear-panel::before {
+  z-index: -1;
+  background:
+    radial-gradient(circle at 8% 11%, rgba(255, 255, 255, 0.4), transparent 0.22rem),
+    radial-gradient(circle at 92% 16%, rgba(255, 255, 255, 0.34), transparent 0.28rem),
+    linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.28) 47%, transparent 68%);
+  opacity: 0.55;
+  filter: blur(0.5px);
+}
+
+.liquid-clear-panel::after {
+  border: 1px solid rgba(23, 21, 19, 0.045);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.36),
+    inset 10px 10px 28px rgba(255, 255, 255, 0.08),
+    inset -12px -12px 28px rgba(102, 126, 137, 0.045);
+}
+
+.liquid-clear-chip {
+  border: 1px solid rgba(255, 255, 255, 0.48);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.52),
+    0 8px 18px rgba(88, 69, 92, 0.04);
+  backdrop-filter: blur(14px) saturate(1.1);
+  -webkit-backdrop-filter: blur(14px) saturate(1.1);
+}
+
+.text-pressure {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  font-variation-settings: "wght" 680, "wdth" 100, "ital" 0;
+  font-optical-sizing: auto;
+}
+
+.text-pressure-flex {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.text-pressure-fit {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.text-pressure-char {
+  display: inline-block;
+  opacity: var(--opacity);
+  transition:
+    color 220ms ease,
+    opacity 180ms ease,
+    -webkit-text-stroke-color 220ms ease;
+  will-change: font-variation-settings, opacity;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .text-pressure-char {
+    transition: none;
+    will-change: auto;
+  }
+}
+
 .glass-dark {
   border: 1px solid rgba(255, 255, 255, 0.14);
   background: rgba(23, 21, 26, 0.6);
