@@ -1,3 +1,4 @@
+import { TextPressure } from "./TextPressure";
 import Link from "next/link";
 import { projects } from "@/data/projects";
 import { featuredWorkContent } from "@/data/siteContent";
@@ -10,7 +11,7 @@ export function FeaturedWork() {
         <Reveal>
           <p className="section-kicker">精选项目</p>
           <div className="grid gap-6 lg:grid-cols-[0.58fr_0.42fr] lg:items-end">
-            <h2 className="section-title max-w-5xl">{featuredWorkContent.title}</h2>
+            <h2 className="section-title max-w-5xl"><TextPressure text={featuredWorkContent.title} /></h2>
             <p className="max-w-2xl text-lg leading-8 text-[#5c5751]">
               AI项目被拆成<span className="soft-mark px-1">决策层</span>与<span className="soft-mark px-1">执行层</span>：增长实验系统负责判断问题与设计方案，内容矩阵系统负责生成多平台运营素材
             </p>

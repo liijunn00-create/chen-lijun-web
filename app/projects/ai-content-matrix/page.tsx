@@ -220,18 +220,18 @@ export default function AiContentMatrixPage() {
         </div>
       </section>
 
-      <section className="min-h-screen px-5 py-20 text-[#f6f1ec] sm:px-8">
-        <div className="glass-dark mx-auto flex min-h-[72vh] max-w-[1700px] flex-col justify-between gap-16 p-7 sm:p-10 lg:p-14">
+      <section className="min-h-screen px-5 py-20 text-[#171513] sm:px-8">
+        <div className="contact-glass-panel mx-auto flex min-h-[72vh] max-w-[1700px] flex-col justify-between gap-16 p-7 sm:p-10 lg:p-14">
           <div className="grid gap-10 lg:grid-cols-[0.36fr_0.64fr]">
             <div>
-              <p className="mb-6 text-xs font-bold uppercase tracking-[0.24em] text-[#dcd7ed]">Outcome</p>
+              <p className="mb-6 text-xs font-bold uppercase tracking-[0.24em] text-[#7a86a1]">Outcome</p>
               <h2 className="single-line-title text-[clamp(1.55rem,2.55vw,3.35rem)] font-black leading-[1.08]">项目成果</h2>
             </div>
-            <p className="max-w-4xl text-2xl leading-10 text-[#e9e0d8]">{projectCase.outcome}</p>
+            <p className="max-w-4xl text-2xl leading-10 text-[#403c37]">{projectCase.outcome}</p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {projectCase.applications.map((application) => (
-              <span key={application} className="border border-white/15 bg-white/[0.08] px-5 py-5 text-lg font-semibold backdrop-blur-xl">
+              <span key={application} className="glass-chip px-5 py-5 text-lg font-semibold text-[#342e33]">
                 {application}
               </span>
             ))}

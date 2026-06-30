@@ -123,7 +123,7 @@ export function EvidenceStudio() {
       <div className="section-grid">
         <Reveal>
           <p className="section-kicker">
-            <TextPressure text="作品证据" />
+            <TextPressure text="作品集" />
           </p>
           <div className="grid gap-6 lg:grid-cols-[0.58fr_0.42fr] lg:items-end">
             <h2 className="section-title max-w-6xl">

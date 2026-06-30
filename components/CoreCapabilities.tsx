@@ -8,11 +8,11 @@ export function CoreCapabilities() {
       <div className="section-grid">
         <Reveal>
           <p className="section-kicker">
-            <TextPressure text="核心能力证明" />
+            <TextPressure text="核心竞争力" />
           </p>
           <div className="grid gap-6 lg:grid-cols-[0.44fr_0.56fr] lg:items-end">
             <h2 className="section-title">
-              <TextPressure text="能力不是罗列，是被项目验证" />
+              <TextPressure text="让项目展示能力" />
             </h2>
             <p className="max-w-2xl text-lg leading-8 text-[#5c5751]">
               网站内容按能力证据组织：AI系统、内容增长、业务转化、活动执行、视觉表达和视频脚本都落到可查看的项目与作品材料中。

@@ -25,7 +25,7 @@ export function Hero() {
 
       <div className="portfolio-bottom-right">
         <p className="portfolio-question">
-          <TextPressure text="What color are you?" italic />
+          <TextPressure text="陈丽君作品集" italic />
         </p>
         <p className="portfolio-year">
           <TextPressure text="2026" />
