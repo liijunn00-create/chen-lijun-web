@@ -20,7 +20,7 @@ export const projects: Project[] = [
     summary:
       "AI Native运营系统中的决策层项目。系统模拟增长团队的完整工作方式，将业务Brief转化为用户洞察、增长诊断、实验设计、执行清单、指标体系、复盘模板和Word作战报告。",
     tags: ["Dify Workflow", "RAG Knowledge Base", "Multi-Agent", "Prompt Engineering"],
-    metrics: ["策略决策层", "多Agent增长诊断", "DOCX作战报告"],
+    metrics: ["策略决策层", "多Agent增长诊断", "全自动化流程"],
     detailHref: "/projects/growth-os",
   },
   {

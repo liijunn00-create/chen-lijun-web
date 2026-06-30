@@ -1,3 +1,7 @@
+export const featuredWorkContent = {
+  title: "AI 内容矩阵自动化工作",
+};
+
 export const heroContent = {
   kicker: "AI运营 / 内容增长 / 产品化工作流",
   titleLines: ["AI原生", "运营作品集"],
@@ -9,8 +13,13 @@ export const heroContent = {
   ctas: [
     { label: "查看AI项目", href: "#work" },
     { label: "查看能力证明", href: "#capabilities" },
-    { label: "查看作品证据", href: "#evidence" },
+    { label: "查看作品集", href: "#evidence" },
   ],
+  questionLabel: "陈丽君作品集",
+  coverWordmark: "PORTFOLIO",
+  nameLine: "chen lijun",
+  yearMark: "2026",
+  visitButtonLabel: "访问网站",
 };
 
 export const capabilityCards = [

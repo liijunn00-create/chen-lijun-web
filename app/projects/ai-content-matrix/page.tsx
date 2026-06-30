@@ -155,8 +155,8 @@ export default function AiContentMatrixPage() {
               该工作流从基础要求、专有名词、背景信息和正文风格出发，依次完成多平台文案生成、标签生成、Bilibili/YouTube详情生成、封面图渲染请求、图片URL提取和最终Markdown汇总。
             </p>
           </div>
-          <div className="glass-panel overflow-hidden p-4 sm:p-6">
-            <div className="relative h-[360px] overflow-auto bg-[#171513]/90 p-3 sm:h-[520px]">
+          <div className="project-output-card overflow-hidden p-4 sm:p-6">
+            <div className="project-workflow-frame relative h-[360px] overflow-auto p-3 sm:h-[520px]">
               <Image
                 src="/images/ai-projects/content-matrix/content-matrix-workflow.png"
                 alt="AI内容矩阵自动化工作流Dify全链路模型"
@@ -183,8 +183,8 @@ export default function AiContentMatrixPage() {
           </div>
           <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
             {outputImages.map((item, index) => (
-              <article key={item.src} className="glass-panel overflow-hidden">
-                <div className="relative flex h-[620px] items-center justify-center overflow-hidden bg-[#171513]/88 p-3">
+              <article key={item.src} className="project-output-card overflow-hidden">
+                <div className="project-output-frame relative flex h-[620px] items-center justify-center overflow-hidden p-3">
                   <Image
                     src={item.src}
                     alt={item.title}
@@ -220,18 +220,18 @@ export default function AiContentMatrixPage() {
         </div>
       </section>
 
-      <section className="min-h-screen px-5 py-20 text-[#f6f1ec] sm:px-8">
-        <div className="glass-dark mx-auto flex min-h-[72vh] max-w-[1700px] flex-col justify-between gap-16 p-7 sm:p-10 lg:p-14">
+      <section className="min-h-screen px-5 py-20 text-[#171513] sm:px-8">
+        <div className="project-outcome-panel mx-auto flex min-h-[72vh] max-w-[1700px] flex-col justify-between gap-16 p-7 sm:p-10 lg:p-14">
           <div className="grid gap-10 lg:grid-cols-[0.36fr_0.64fr]">
             <div>
-              <p className="mb-6 text-xs font-bold uppercase tracking-[0.24em] text-[#dcd7ed]">Outcome</p>
+              <p className="mb-6 text-xs font-bold uppercase tracking-[0.24em] text-[#7a86a1]">Outcome</p>
               <h2 className="single-line-title text-[clamp(1.55rem,2.55vw,3.35rem)] font-black leading-[1.08]">项目成果</h2>
             </div>
-            <p className="max-w-4xl text-2xl leading-10 text-[#e9e0d8]">{projectCase.outcome}</p>
+            <p className="max-w-4xl text-2xl leading-10 text-[#403c37]">{projectCase.outcome}</p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {projectCase.applications.map((application) => (
-              <span key={application} className="border border-white/15 bg-white/[0.08] px-5 py-5 text-lg font-semibold backdrop-blur-xl">
+              <span key={application} className="project-outcome-chip px-5 py-5 text-lg font-semibold">
                 {application}
               </span>
             ))}

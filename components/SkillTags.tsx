@@ -1,3 +1,4 @@
+import { TextPressure } from "./TextPressure";
 import { skillTagGroups } from "@/data/siteContent";
 import { Reveal } from "./Reveal";
 
@@ -9,7 +10,7 @@ export function SkillTags() {
           <p className="section-kicker">工具与技能栈</p>
           <div className="grid gap-6 lg:grid-cols-[0.38fr_0.62fr] lg:items-end">
             <h2 className="single-line-title text-[clamp(1.45rem,2.25vw,2.75rem)] font-black leading-[1.08] tracking-normal text-[#171513]">
-              强调可迁移的AI与运营能力
+              <TextPressure text="可迁移的AI运营能力" />
             </h2>
             <p className="max-w-3xl text-lg leading-8 text-[#5c5751]">
               技能标签围绕岗位能力组织，突出 <span className="soft-mark px-1">AI 工具使用</span>、内容运营、增长实验、产品数据意识和视觉视频交付能力
