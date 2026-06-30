@@ -12,7 +12,7 @@ export function ExperienceCases() {
           </p>
           <div className="grid gap-6 lg:grid-cols-[0.42fr_0.58fr] lg:items-end">
             <h2 className="section-title">
-              <TextPressure text="经历保持简洁，重点呈现业务价值" />
+              <TextPressure text="实习、项目、个人经历" />
             </h2>
             <p className="max-w-2xl text-lg leading-8 text-[#5c5751]">
               实习与校园经历不按时间堆叠，而按业务场景展示：B2B内容增长、硬科技SEO、校园传播统筹，对应内容策略、线索转化和项目执行能力。

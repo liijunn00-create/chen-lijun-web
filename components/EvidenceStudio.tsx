@@ -127,10 +127,10 @@ export function EvidenceStudio() {
           </p>
           <div className="grid gap-6 lg:grid-cols-[0.58fr_0.42fr] lg:items-end">
             <h2 className="section-title max-w-6xl">
-              <TextPressure text="真实作品按能力场景展开" />
+              <TextPressure text="精选作品集展示" />
             </h2>
             <p className="max-w-2xl text-lg leading-8 text-[#5c5751]">
-              每组保留一件重点作品作为主证据，其余材料作为辅助证据，既展示完整作品，也避免素材无序堆叠。
+              持续更新中......
             </p>
           </div>
         </Reveal>
