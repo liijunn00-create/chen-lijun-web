@@ -1,82 +1,79 @@
-import Image from "next/image";
-import { profileHighlights, stats } from "@/data/skills";
-import { aboutCopy } from "@/data/siteContent";
+import type { CSSProperties } from "react";
 import { Reveal } from "./Reveal";
-import { TextPressure } from "./TextPressure";
+
+const floatingCards = [
+  {
+    eyebrow: "AI Operation",
+    title: "AI运营系统设计",
+    detail: "Dify Workflow / RAG / Multi-Agent 思路沉淀为可执行运营流程",
+    meta: "System 01",
+  },
+  {
+    eyebrow: "Content Growth",
+    title: "20万+ 内容曝光",
+    detail: "围绕平台机制、选题结构与内容节奏建立增长证据",
+    meta: "Reach",
+  },
+  {
+    eyebrow: "B2B Leads",
+    title: "460+ 有效线索",
+    detail: "从内容触点延伸到表单、咨询、入驻与销售跟进链路",
+    meta: "Conversion",
+  },
+  {
+    eyebrow: "Visual Proof",
+    title: "视觉排版与PPT",
+    detail: "将方案、报告与证据素材整理成可被快速理解的展示系统",
+    meta: "Design",
+  },
+  {
+    eyebrow: "Editorial",
+    title: "推文制作与文案",
+    detail: "覆盖公众号、小红书、活动策划与商业内容表达",
+    meta: "Copy",
+  },
+  {
+    eyebrow: "Growth Lab",
+    title: "实验与复盘意识",
+    detail: "用指标、假设、测试与复盘把运营动作转化为持续优化路径",
+    meta: "Iteration",
+  },
+];
+
+type FloatStyle = CSSProperties & {
+  "--x": string;
+  "--y": string;
+  "--delay": string;
+  "--duration": string;
+};
 
 export function About() {
   return (
-    <section id="about" className="px-5 py-24 sm:px-8">
-      <div className="mx-auto grid max-w-[1700px] gap-12">
-        <Reveal>
-          <p className="section-kicker">
-            <TextPressure text="个人概览" />
-          </p>
-          <div className="grid gap-8 lg:grid-cols-[0.42fr_0.58fr] lg:items-end">
-            <h2 className="single-line-title text-[clamp(1.45rem,2.25vw,2.9rem)] font-black leading-[1.08] tracking-normal text-[#171513]">
-              <TextPressure text={aboutCopy.title} />
-            </h2>
-            <p className="max-w-3xl text-xl leading-8 text-[#4a4641]">
-              {aboutCopy.description}
-            </p>
+    <section id="about" className="floating-overview section-shell">
+      <div className="section-grid">
+        <Reveal className="floating-overview-stage">
+          <div className="floating-overview-frame">
+            {floatingCards.map((card, index) => (
+              <article
+                key={card.title}
+                className={`floating-proof-card floating-proof-card-${index + 1}`}
+                style={
+                  {
+                    "--x": `${index % 2 === 0 ? -1 : 1}`,
+                    "--y": `${index % 3 === 0 ? -1 : 1}`,
+                    "--delay": `${index * -0.9}s`,
+                    "--duration": `${10 + index * 1.3}s`,
+                  } as FloatStyle
+                }
+              >
+                <span className="floating-proof-eyebrow">{card.eyebrow}</span>
+                <h2>{card.title}</h2>
+                <p>{card.detail}</p>
+                <span className="floating-proof-meta">{card.meta}</span>
+              </article>
+            ))}
           </div>
         </Reveal>
-        <div className="grid gap-6 lg:grid-cols-[0.36fr_0.64fr]">
-          <Reveal className="glass-panel relative min-h-[360px] overflow-hidden" delay={0.05}>
-            <Image
-              src="/images/portrait-abstract.svg"
-              alt="Chen Lijun portrait illustration"
-              fill
-              className="object-cover"
-              priority
-            />
-          </Reveal>
-          <div className="grid gap-6">
-            <Reveal className="grid gap-4 md:grid-cols-3" delay={0.1}>
-              {profileHighlights.map((highlight) => (
-                <div key={highlight} className="glass-panel p-5 text-base leading-7 text-[#403c37]">
-                  <TextPressure text={highlight} />
-                </div>
-              ))}
-            </Reveal>
-            <Reveal className="grid gap-4 md:grid-cols-2" delay={0.16}>
-              <div className="glass-panel p-6">
-                <p className="mb-4 text-xs uppercase tracking-[0.2em] text-[#7a746d]">
-                  <TextPressure text="实习经历" />
-                </p>
-                <h3 className="text-xl font-black text-[#171513]">
-                  <TextPressure text="佛山新基地实业集团" />
-                </h3>
-                <p className="mt-2 text-sm text-[#625c55]">
-                  <TextPressure text="内容运营 & 增长策略实习生 / 数字产业园B2B业务" />
-                </p>
-              </div>
-              <div className="glass-panel p-6">
-                <p className="mb-4 text-xs uppercase tracking-[0.2em] text-[#7a746d]">
-                  <TextPressure text="实习经历" />
-                </p>
-                <h3 className="text-xl font-black text-[#171513]">
-                  <TextPressure text="广东佛燃科技有限公司" />
-                </h3>
-                <p className="mt-2 text-sm text-[#625c55]">
-                  <TextPressure text="内容运营 & SEO增长实习生 / 硬科技B2B业务" />
-                </p>
-              </div>
-            </Reveal>
-            <Reveal className="glass-panel grid grid-cols-2 overflow-hidden md:grid-cols-6" delay={0.22}>
-              {stats.map((stat) => (
-                <div key={stat.label} className="border-b border-r border-black/10 p-5">
-                  <div className="text-3xl font-black text-[#171513]">
-                    <TextPressure text={stat.value} />
-                  </div>
-                  <div className="mt-2 text-xs uppercase tracking-[0.12em] text-[#77716a]">
-                    <TextPressure text={stat.label} />
-                  </div>
-                </div>
-              ))}
-            </Reveal>
-          </div>
-        </div>
       </div>
     </section>
   );

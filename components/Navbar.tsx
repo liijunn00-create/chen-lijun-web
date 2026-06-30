@@ -5,7 +5,7 @@ const navItems = [
   { label: "能力", href: "#capabilities" },
   { label: "作品", href: "#evidence" },
   { label: "成果", href: "#experience" },
-  { label: "概览", href: "#about" },
+  { label: "浮层", href: "#about" },
   { label: "联系", href: "#contact" },
 ];
 

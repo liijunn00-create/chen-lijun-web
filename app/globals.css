@@ -494,6 +494,235 @@ video {
   -webkit-backdrop-filter: blur(14px) saturate(1.1);
 }
 
+.floating-overview {
+  min-height: clamp(42rem, 58vw, 54rem);
+}
+
+.floating-overview-stage {
+  position: relative;
+  min-height: clamp(36rem, 52vw, 45rem);
+  overflow: hidden;
+  border-radius: clamp(2rem, 4vw, 4.8rem);
+  background:
+    linear-gradient(130deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.035) 42%, rgba(255, 255, 255, 0.12)),
+    radial-gradient(circle at 19% 18%, rgba(185, 224, 205, 0.34), transparent 22rem),
+    radial-gradient(circle at 82% 24%, rgba(246, 205, 225, 0.3), transparent 24rem),
+    radial-gradient(circle at 72% 82%, rgba(188, 226, 248, 0.28), transparent 24rem),
+    radial-gradient(circle at 30% 78%, rgba(247, 229, 154, 0.16), transparent 21rem);
+}
+
+.floating-overview-stage::before {
+  content: "";
+  position: absolute;
+  inset: clamp(1.1rem, 2.6vw, 2.5rem);
+  pointer-events: none;
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  border-radius: inherit;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    0 24px 64px rgba(89, 108, 118, 0.06);
+}
+
+.floating-overview-stage::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(115deg, transparent 12%, rgba(255, 255, 255, 0.22) 36%, transparent 58%),
+    radial-gradient(circle at 50% 46%, rgba(255, 255, 255, 0.24), transparent 21rem);
+  opacity: 0.66;
+  mix-blend-mode: soft-light;
+}
+
+.floating-overview-frame {
+  position: relative;
+  z-index: 1;
+  min-height: inherit;
+}
+
+.floating-proof-card {
+  position: absolute;
+  display: flex;
+  width: clamp(10.5rem, 15vw, 15.6rem);
+  min-height: clamp(10.5rem, 15vw, 15.6rem);
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid rgba(255, 255, 255, 0.54);
+  border-radius: clamp(2rem, 3.4vw, 3.9rem);
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.04) 48%, rgba(255, 255, 255, 0.14)),
+    radial-gradient(circle at 20% 16%, rgba(255, 255, 255, 0.32), transparent 7rem),
+    radial-gradient(circle at 92% 88%, rgba(182, 226, 248, 0.16), transparent 10rem),
+    rgba(255, 255, 255, 0.052);
+  padding: clamp(1rem, 1.6vw, 1.45rem);
+  color: #171513;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.76),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.16),
+    inset 18px 0 32px rgba(255, 255, 255, 0.09),
+    inset -18px 0 32px rgba(99, 122, 136, 0.05),
+    0 18px 40px rgba(81, 93, 102, 0.06);
+  backdrop-filter: blur(17px) saturate(1.12);
+  -webkit-backdrop-filter: blur(17px) saturate(1.12);
+  animation: overview-card-float var(--duration) ease-in-out var(--delay) infinite alternate;
+  will-change: transform;
+}
+
+.floating-proof-card::before,
+.floating-proof-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+.floating-proof-card::before {
+  background:
+    linear-gradient(120deg, rgba(255, 255, 255, 0.5), transparent 28%),
+    linear-gradient(320deg, transparent 64%, rgba(255, 255, 255, 0.22));
+  opacity: 0.64;
+}
+
+.floating-proof-card::after {
+  border: 1px solid rgba(23, 21, 19, 0.04);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.32),
+    inset 12px 12px 28px rgba(255, 255, 255, 0.08),
+    inset -12px -12px 28px rgba(102, 126, 137, 0.045);
+}
+
+.floating-proof-card-1 {
+  left: 11%;
+  top: 12%;
+}
+
+.floating-proof-card-2 {
+  left: 39%;
+  top: 5%;
+  width: clamp(11.5rem, 16vw, 16.8rem);
+  min-height: clamp(11.5rem, 16vw, 16.8rem);
+}
+
+.floating-proof-card-3 {
+  right: 9%;
+  top: 18%;
+}
+
+.floating-proof-card-4 {
+  left: 18%;
+  bottom: 12%;
+}
+
+.floating-proof-card-5 {
+  left: 47%;
+  bottom: 7%;
+}
+
+.floating-proof-card-6 {
+  right: 15%;
+  bottom: 19%;
+}
+
+.floating-proof-eyebrow,
+.floating-proof-meta {
+  position: relative;
+  z-index: 1;
+  width: fit-content;
+  border: 1px solid rgba(255, 255, 255, 0.44);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 0.42rem 0.68rem;
+  color: rgba(52, 46, 51, 0.68);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-transform: uppercase;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.floating-proof-card h2 {
+  position: relative;
+  z-index: 1;
+  margin: 1.2rem 0 0;
+  color: #171513;
+  font-size: clamp(1.02rem, 1.28vw, 1.38rem);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+
+.floating-proof-card p {
+  position: relative;
+  z-index: 1;
+  margin: 0.7rem 0 1.1rem;
+  color: rgba(52, 46, 51, 0.76);
+  font-size: clamp(0.78rem, 0.82vw, 0.9rem);
+  line-height: 1.62;
+  text-wrap: pretty;
+}
+
+.floating-proof-meta {
+  color: rgba(102, 134, 156, 0.78);
+}
+
+@keyframes overview-card-float {
+  0% {
+    transform: translate3d(calc(var(--x) * -0.7rem), calc(var(--y) * 0.6rem), 0) rotate(-1.1deg);
+  }
+
+  50% {
+    transform: translate3d(calc(var(--x) * 0.95rem), calc(var(--y) * -1rem), 0) rotate(0.8deg);
+  }
+
+  100% {
+    transform: translate3d(calc(var(--x) * -0.35rem), calc(var(--y) * -1.25rem), 0) rotate(1.2deg);
+  }
+}
+
+@media (max-width: 1023px) {
+  .floating-overview {
+    min-height: auto;
+  }
+
+  .floating-overview-stage {
+    min-height: auto;
+    padding: clamp(1.1rem, 4vw, 2rem);
+  }
+
+  .floating-overview-frame {
+    display: grid;
+    min-height: auto;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .floating-proof-card,
+  .floating-proof-card-2 {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    min-height: 14.5rem;
+    animation: overview-card-float 12s ease-in-out var(--delay) infinite alternate;
+  }
+}
+
+@media (max-width: 639px) {
+  .floating-overview-frame {
+    grid-template-columns: 1fr;
+  }
+
+  .floating-proof-card,
+  .floating-proof-card-2 {
+    min-height: 12.5rem;
+    border-radius: 2.2rem;
+  }
+}
+
 .text-pressure {
   display: inline-flex;
   flex-wrap: wrap;
