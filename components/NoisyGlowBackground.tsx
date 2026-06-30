@@ -12,17 +12,19 @@ type GlowStop = {
 };
 
 const glows: GlowStop[] = [
-  { color: "rgba(132, 177, 210, 0.72)", x: 0.12, y: 0.2, radius: 0.58, drift: 0.22 },
-  { color: "rgba(184, 158, 224, 0.68)", x: 0.78, y: 0.16, radius: 0.64, drift: 0.29 },
-  { color: "rgba(240, 160, 96, 0.52)", x: 0.74, y: 0.82, radius: 0.56, drift: 0.25 },
-  { color: "rgba(124, 212, 218, 0.4)", x: 0.36, y: 0.62, radius: 0.74, drift: 0.18 },
+  { color: "rgba(171, 221, 200, 0.78)", x: 0.12, y: 0.2, radius: 0.62, drift: 0.22 },
+  { color: "rgba(246, 198, 220, 0.7)", x: 0.78, y: 0.16, radius: 0.66, drift: 0.29 },
+  { color: "rgba(185, 221, 248, 0.72)", x: 0.74, y: 0.82, radius: 0.58, drift: 0.25 },
+  { color: "rgba(247, 226, 150, 0.52)", x: 0.36, y: 0.62, radius: 0.76, drift: 0.18 },
+  { color: "rgba(255, 255, 255, 0.48)", x: 0.5, y: 0.44, radius: 0.72, drift: 0.16 },
 ];
 
 const fieldColors = [
-  "rgba(107, 151, 190, 0.18)",
-  "rgba(174, 144, 220, 0.17)",
-  "rgba(239, 145, 82, 0.12)",
-  "rgba(255, 255, 255, 0.28)",
+  "rgba(147, 207, 183, 0.16)",
+  "rgba(242, 180, 211, 0.15)",
+  "rgba(170, 211, 244, 0.16)",
+  "rgba(245, 221, 139, 0.13)",
+  "rgba(255, 255, 255, 0.3)",
 ];
 
 function drawGlow(
@@ -86,7 +88,7 @@ export function NoisyGlowBackground() {
 
       context.clearRect(0, 0, width, height);
       context.globalCompositeOperation = "source-over";
-      context.fillStyle = "#e8edf2";
+      context.fillStyle = "#f6f8f3";
       context.fillRect(0, 0, width, height);
 
       context.globalCompositeOperation = "source-over";
@@ -105,7 +107,7 @@ export function NoisyGlowBackground() {
         for (let x = -cell; x < width + cell; x += cell) {
           const n = noise3D(x * 0.009, y * 0.009, time);
           const ridge = Math.abs(noise3D(x * 0.026 + 4, y * 0.026 - 2, time * 1.9));
-          const colorIndex = Math.max(0, Math.min(fieldColors.length - 1, Math.floor((n + 1) * 1.96)));
+          const colorIndex = Math.max(0, Math.min(fieldColors.length - 1, Math.floor((n + 1) * 2.45)));
           context.fillStyle = fieldColors[colorIndex];
           context.globalAlpha = 0.16 + ridge * 0.28;
           context.fillRect(x, y, cell, cell);
@@ -118,7 +120,7 @@ export function NoisyGlowBackground() {
         for (let x = 0; x < width; x += speck) {
           const n = noise3D(x * 0.1, y * 0.1, time * 3.2);
           if (Math.abs(n) < 0.48) continue;
-          context.fillStyle = n > 0 ? "rgba(255, 255, 255, 0.28)" : "rgba(45, 50, 62, 0.07)";
+          context.fillStyle = n > 0 ? "rgba(255, 255, 255, 0.3)" : "rgba(68, 78, 84, 0.05)";
           context.globalAlpha = Math.min(0.34, Math.abs(n) * 0.42);
           context.fillRect(x, y, 1, 1);
         }
@@ -129,7 +131,7 @@ export function NoisyGlowBackground() {
       const scan = context.createLinearGradient(0, 0, width, height);
       scan.addColorStop(0, "rgba(255, 255, 255, 0.2)");
       scan.addColorStop(0.5, "rgba(255, 255, 255, 0)");
-      scan.addColorStop(1, "rgba(225, 230, 238, 0.12)");
+      scan.addColorStop(1, "rgba(232, 238, 224, 0.12)");
       context.fillStyle = scan;
       context.fillRect(0, 0, width, height);
 

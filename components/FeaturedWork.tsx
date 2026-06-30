@@ -18,22 +18,8 @@ export function FeaturedWork() {
         <div className="case-gallery space-y-8">
           {projects.map((project, index) => {
             const card = (
-              <article className={`case-exhibit case-study-card group grid overflow-hidden ${index % 2 === 1 ? "lg:grid-cols-[0.5fr_0.5fr]" : "lg:grid-cols-[0.46fr_0.54fr]"}`}>
-                <div className={`case-visual relative min-h-[340px] overflow-hidden ${index % 2 === 1 ? "lg:order-2" : ""}`}>
-                  <div className="case-visual-grid" />
-                  <div className="case-orbit case-orbit-a" />
-                  <div className="case-orbit case-orbit-b" />
-                  <div className="case-plate">
-                    <span>{project.eyebrow}</span>
-                    <strong>{project.title}</strong>
-                  </div>
-                  <div className="case-signal-list">
-                    {project.metrics.map((metric) => (
-                      <span key={metric}>{metric}</span>
-                    ))}
-                  </div>
-                </div>
-                <div className="case-study-body flex min-h-[390px] flex-col justify-between p-7 sm:p-9 lg:p-10">
+              <article className="case-exhibit case-study-card case-study-card-solo group overflow-hidden">
+                <div className="case-study-body case-study-body-solo flex flex-col p-7 sm:p-10 lg:p-12">
                   <div>
                     <div className="flex items-center justify-between gap-4">
                       <span className="case-type-label">{project.eyebrow}</span>
