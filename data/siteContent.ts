@@ -1,3 +1,7 @@
+export const featuredWorkContent = {
+  title: "AI 内容矩阵自动化工作",
+};
+
 export const heroContent = {
   kicker: "AI运营 / 内容增长 / 产品化工作流",
   titleLines: ["AI原生", "运营作品集"],

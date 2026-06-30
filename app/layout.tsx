@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { NoisyGlowBackground } from "@/components/NoisyGlowBackground";
+import { BackgroundMusic } from "@/components/BackgroundMusic";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -66,6 +67,7 @@ export default function RootLayout({
           }}
         />
         <NoisyGlowBackground />
+        <BackgroundMusic src="/audio/after-hours-flow.mp3" />
         <div className="site-content relative z-10 flex min-h-full flex-col">{children}</div>
       </body>
     </html>
