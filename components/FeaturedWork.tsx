@@ -45,8 +45,8 @@ export function FeaturedWork() {
                           </div>
                         </div>
                       </div>
-                      <p className="mt-8 max-w-5xl text-[clamp(1rem,1.25vw,1.28rem)] leading-8 text-[#403c37]">{project.summary}</p>
-                      <div className="case-outcome-row mt-9">
+                      <p className="max-w-5xl text-[clamp(1rem,1.25vw,1.28rem)] leading-8 text-[#403c37]">{project.summary}</p>
+                      <div className="case-outcome-row">
                         <span>成果 / 亮点</span>
                         <div>
                           {project.metrics.map((metric) => (
@@ -54,7 +54,7 @@ export function FeaturedWork() {
                           ))}
                         </div>
                       </div>
-                      <div className="mt-7 flex flex-wrap gap-2">
+                      <div className="flex flex-wrap gap-2">
                         {project.tags.map((tag) => (
                           <span key={tag} className="glass-chip px-3 py-2 text-sm text-[#342e33]">
                             {tag}
@@ -62,7 +62,7 @@ export function FeaturedWork() {
                         ))}
                       </div>
                       {project.detailHref ? (
-                        <span className="mt-10 inline-flex w-fit border border-[#171513]/18 px-5 py-4 text-xs font-semibold uppercase tracking-[0.18em] text-[#171513] transition group-hover:bg-[#171513] group-hover:text-[#f8f5ef]">
+                        <span className="inline-flex w-fit border border-[#171513]/18 px-5 py-4 text-xs font-semibold uppercase tracking-[0.18em] text-[#171513] transition group-hover:bg-[#171513] group-hover:text-[#f8f5ef]">
                           查看项目详情
                         </span>
                       ) : null}

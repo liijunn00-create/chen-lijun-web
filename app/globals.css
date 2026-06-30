@@ -919,17 +919,44 @@ video {
 
 
 .case-gallery {
+  width: min(100%, 1088px);
+  margin-inline: auto;
   perspective: 1400px;
 }
 
 .case-exhibit {
   position: relative;
-  border: 1px solid rgba(255, 255, 255, 0.56);
-  border-radius: 1rem;
-  background: rgba(247, 246, 250, 0.56);
-  box-shadow: 0 28px 90px rgba(88, 69, 92, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.58);
-  backdrop-filter: blur(24px) saturate(1.1);
-  -webkit-backdrop-filter: blur(24px) saturate(1.1);
+  border: 1px solid rgba(255, 255, 255, 0.62);
+  border-radius: 1.85rem;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.08) 43%, rgba(255, 255, 255, 0.2)),
+    radial-gradient(circle at 14% 18%, rgba(255, 255, 255, 0.42), transparent 15rem),
+    radial-gradient(circle at 88% 16%, rgba(190, 229, 244, 0.22), transparent 20rem),
+    radial-gradient(circle at 76% 86%, rgba(246, 205, 226, 0.2), transparent 18rem),
+    rgba(255, 255, 255, 0.14);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.88),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.22),
+    inset 14px 0 26px rgba(255, 255, 255, 0.18),
+    inset -14px 0 26px rgba(111, 143, 160, 0.08),
+    0 18px 48px rgba(88, 69, 92, 0.07);
+  backdrop-filter: blur(34px) saturate(1.24);
+  -webkit-backdrop-filter: blur(34px) saturate(1.24);
+}
+
+.case-exhibit::after {
+  content: "";
+  position: absolute;
+  inset: 0.9rem;
+  z-index: 3;
+  pointer-events: none;
+  border-radius: 1.35rem;
+  border: 1px solid rgba(255, 255, 255, 0.36);
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.42), transparent 8%, transparent 91%, rgba(255, 255, 255, 0.36)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.4), transparent 15%, transparent 82%, rgba(255, 255, 255, 0.32));
+  opacity: 0.72;
+  mix-blend-mode: screen;
 }
 
 .case-study-card {
@@ -940,23 +967,30 @@ video {
 .case-study-card::before {
   content: "";
   position: absolute;
-  inset: 0;
+  inset: 0.35rem;
   z-index: 1;
   pointer-events: none;
   border-radius: inherit;
-  background: linear-gradient(125deg, rgba(255, 255, 255, 0.52), rgba(155, 132, 180, 0.18) 34%, transparent 54%, rgba(244, 202, 158, 0.18));
-  opacity: 0;
+  background:
+    linear-gradient(124deg, rgba(255, 255, 255, 0.56), rgba(190, 229, 244, 0.14) 30%, transparent 52%, rgba(246, 205, 226, 0.16)),
+    radial-gradient(circle at 96% 8%, rgba(255, 255, 255, 0.62), transparent 9rem);
+  opacity: 0.32;
   transition: opacity 700ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .case-study-card:hover {
-  border-color: rgba(155, 132, 180, 0.32);
-  box-shadow: 0 36px 100px rgba(78, 89, 110, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.64);
-  transform: translateY(-8px) rotateX(1.2deg) rotateY(-0.9deg);
+  border-color: rgba(255, 255, 255, 0.76);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.92),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.28),
+    inset 14px 0 28px rgba(255, 255, 255, 0.2),
+    inset -14px 0 28px rgba(111, 143, 160, 0.1),
+    0 22px 58px rgba(78, 89, 110, 0.1);
+  transform: translateY(-5px) rotateX(0.6deg) rotateY(-0.45deg);
 }
 
 .case-study-card:hover::before {
-  opacity: 1;
+  opacity: 0.6;
 }
 
 .case-study-card-solo {
@@ -975,26 +1009,28 @@ video {
 .case-study-body {
   position: relative;
   z-index: 2;
+  border-radius: inherit;
   background:
-    radial-gradient(circle at 86% 18%, rgba(247, 200, 224, 0.22), transparent 18rem),
-    radial-gradient(circle at 12% 88%, rgba(181, 225, 204, 0.2), transparent 20rem),
-    rgba(255, 255, 255, 0.34);
+    radial-gradient(circle at 86% 18%, rgba(247, 200, 224, 0.14), transparent 18rem),
+    radial-gradient(circle at 12% 88%, rgba(181, 225, 204, 0.12), transparent 20rem),
+    rgba(255, 255, 255, 0.1);
 }
 
 .case-study-body-solo {
   min-height: 0;
+  padding: clamp(1.65rem, 3.2vw, 2.4rem);
 }
 
 .case-study-layout {
   display: grid;
-  gap: 2rem;
+  gap: 1.6rem;
 }
 
 .case-copy {
   display: flex;
   min-width: 0;
   flex-direction: column;
-  gap: 1.8rem;
+  gap: 1.35rem;
 }
 
 .case-study-body-solo .case-meta-grid {
@@ -1115,7 +1151,7 @@ video {
 
 @media (min-width: 1024px) {
   .case-study-layout {
-    grid-template-columns: minmax(0, 1fr) minmax(15rem, 22rem);
+    grid-template-columns: minmax(0, 1fr) minmax(14rem, 19rem);
     align-items: start;
   }
 }
