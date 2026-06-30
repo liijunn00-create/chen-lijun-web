@@ -11,6 +11,7 @@ const eslintConfig = defineConfig([
     ".next/**",
     "out/**",
     "build/**",
+    "noise-portfilo copy/**",
     "next-env.d.ts",
   ]),
 ]);

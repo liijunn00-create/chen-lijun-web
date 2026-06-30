@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { NoisyGlowBackground } from "@/components/NoisyGlowBackground";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -14,7 +15,29 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="zh-CN" className="h-full antialiased">
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full">
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `
+              .glass-panel {
+                backdrop-filter: var(--glass-filter) !important;
+                -webkit-backdrop-filter: var(--glass-filter) !important;
+              }
+              .glass-panel-strong,
+              .evidence-gallery-window {
+                backdrop-filter: var(--glass-filter-strong) !important;
+                -webkit-backdrop-filter: var(--glass-filter-strong) !important;
+              }
+              .glass-chip {
+                backdrop-filter: var(--glass-filter-chip) !important;
+                -webkit-backdrop-filter: var(--glass-filter-chip) !important;
+              }
+            `,
+          }}
+        />
+        <NoisyGlowBackground />
+        <div className="site-content relative z-10 flex min-h-full flex-col">{children}</div>
+      </body>
     </html>
   );
 }

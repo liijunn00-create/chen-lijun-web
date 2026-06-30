@@ -6,10 +6,10 @@ import { Reveal } from "@/components/Reveal";
 
 // 屏 1 浮动信号点(与屏 2 三张能力卡的能力来源对齐)
 const coverSignals = [
-  { label: "知识解锁", meta: "Knowledge", x: 14, y: 26 },
-  { label: "策略判断", meta: "Decision", x: 72, y: 22 },
-  { label: "工作流智能", meta: "Workflow", x: 18, y: 72 },
-  { label: "系统在线", meta: "System", x: 76, y: 74 },
+  { label: "知识解锁", meta: "Knowledge", x: 18, y: 14 },
+  { label: "策略判断", meta: "Decision", x: 82, y: 22 },
+  { label: "工作流智能", meta: "Workflow", x: 22, y: 86 },
+  { label: "系统在线", meta: "System", x: 82, y: 74 },
 ] as const;
 
 export function Hero() {

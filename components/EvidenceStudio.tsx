@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { evidenceGroups } from "@/data/evidence";
+import { evidenceGroups, type EvidenceItem } from "@/data/evidence";
+import { CircularGallery } from "./CircularGallery";
 import { Reveal } from "./Reveal";
 
 const highlightTerms = [
@@ -41,6 +42,32 @@ function HighlightText({ text, className }: { text: string; className: string })
         )
       )}
     </p>
+  );
+}
+
+const visualGalleryItems = (items: EvidenceItem[]) =>
+  items
+    .filter((item) => item.type === "image" && item.src)
+    .map((item) => ({
+      image: item.src as string,
+      text: item.title,
+    }));
+
+const circularGalleryGroupTitles = new Set(["账号运营优质笔记", "设计排版能力", "推文制作"]);
+
+function EvidenceCircularGallery({ items }: { items: EvidenceItem[] }) {
+  return (
+    <div className="evidence-gallery-window glass-panel relative h-[min(66vw,620px)] min-h-[420px] overflow-hidden bg-transparent">
+      <CircularGallery
+        items={visualGalleryItems(items)}
+        bend={3}
+        textColor="#171513"
+        borderRadius={0.05}
+        font="bold 28px Figtree"
+        scrollSpeed={2}
+        scrollEase={0.02}
+      />
+    </div>
   );
 }
 
@@ -107,71 +134,75 @@ export function EvidenceStudio() {
                   </div>
                   <HighlightText text={group.description} className="max-w-3xl text-lg leading-8 text-[#504b45]" />
                 </div>
-                <div className="evidence-grid grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-                  {group.items.map((item, itemIndex) => (
-                    <article
-                      key={`${group.title}-${item.title}`}
-                      className={`${itemIndex === 0 ? "evidence-feature" : "evidence-support"} ${
-                        item.type === "placeholder" ? "glass-panel min-h-[300px] border-dashed p-6" : "glass-panel overflow-hidden"
-                      }`}
-                    >
-                      {item.type === "image" && item.src ? (
-                        <div className={`${itemIndex === 0 ? "h-[620px]" : "h-[430px]"} relative flex items-center justify-center overflow-hidden bg-white/28 p-3`}>
-                          <Image
-                            src={item.src}
-                            alt={item.title}
-                            fill
-                            className="object-contain"
-                            sizes="(min-width: 1024px) 25vw, 100vw"
-                            priority={groupIndex === 0 && itemIndex < 2}
-                          />
-                        </div>
-                      ) : null}
-                      {item.type === "video" && item.src ? (
-                        <div className={`${itemIndex === 0 ? "h-[620px]" : "h-[430px]"} flex items-center justify-center overflow-hidden bg-[#171513]/88 p-3`}>
-                          <video
-                            src={item.src}
-                            controls
-                            preload="metadata"
-                            playsInline
-                            className="h-full w-full object-contain"
-                          />
-                        </div>
-                      ) : null}
-                      {item.type === "pdf" && item.src ? (
-                        <PdfCover title={item.title} href={item.src} />
-                      ) : null}
-                      {item.type === "placeholder" ? (
-                        <div className="flex h-full min-h-[260px] flex-col justify-between">
-                          <span className="text-xs uppercase tracking-[0.2em] text-[#938b82]">预留位置</span>
-                          <p className="max-w-sm text-2xl font-semibold leading-tight text-[#292520]">{item.title}</p>
-                        </div>
-                      ) : null}
-                      <div className="p-5">
-                        <p className="mb-3 text-[11px] font-bold uppercase tracking-[0.18em] text-[#7a86a1]">
-                          {itemIndex === 0 ? "重点作品" : "辅助证据"}
-                        </p>
-                        <h4 className="single-line-title text-lg font-semibold text-[#171513] sm:text-xl">{item.title}</h4>
-                        <HighlightText text={item.note} className="mt-3 text-sm leading-6 text-[#625c55]" />
-                        {item.links ? (
-                          <div className="mt-5 flex flex-wrap gap-2">
-                            {item.links.map((link) => (
-                              <a
-                                key={link.href}
-                                href={link.href}
-                                target="_blank"
-                                rel="noreferrer"
-                                className="glass-chip px-3 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-[#171513] transition hover:bg-[#171513] hover:text-[#f6f1ec]"
-                              >
-                                {link.label}
-                              </a>
-                            ))}
+                {circularGalleryGroupTitles.has(group.title) ? (
+                  <EvidenceCircularGallery items={group.items} />
+                ) : (
+                  <div className="evidence-grid grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+                    {group.items.map((item, itemIndex) => (
+                      <article
+                        key={`${group.title}-${item.title}`}
+                        className={`${itemIndex === 0 ? "evidence-feature" : "evidence-support"} ${
+                          item.type === "placeholder" ? "glass-panel min-h-[300px] border-dashed p-6" : "glass-panel overflow-hidden"
+                        }`}
+                      >
+                        {item.type === "image" && item.src ? (
+                          <div className={`${itemIndex === 0 ? "h-[620px]" : "h-[430px]"} relative flex items-center justify-center overflow-hidden bg-white/28 p-3`}>
+                            <Image
+                              src={item.src}
+                              alt={item.title}
+                              fill
+                              className="object-contain"
+                              sizes="(min-width: 1024px) 25vw, 100vw"
+                              priority={groupIndex === 0 && itemIndex < 2}
+                            />
                           </div>
                         ) : null}
-                      </div>
-                    </article>
-                  ))}
-                </div>
+                        {item.type === "video" && item.src ? (
+                          <div className={`${itemIndex === 0 ? "h-[620px]" : "h-[430px]"} flex items-center justify-center overflow-hidden bg-[#171513]/88 p-3`}>
+                            <video
+                              src={item.src}
+                              controls
+                              preload="metadata"
+                              playsInline
+                              className="h-full w-full object-contain"
+                            />
+                          </div>
+                        ) : null}
+                        {item.type === "pdf" && item.src ? (
+                          <PdfCover title={item.title} href={item.src} />
+                        ) : null}
+                        {item.type === "placeholder" ? (
+                          <div className="flex h-full min-h-[260px] flex-col justify-between">
+                            <span className="text-xs uppercase tracking-[0.2em] text-[#938b82]">预留位置</span>
+                            <p className="max-w-sm text-2xl font-semibold leading-tight text-[#292520]">{item.title}</p>
+                          </div>
+                        ) : null}
+                        <div className="p-5">
+                          <p className="mb-3 text-[11px] font-bold uppercase tracking-[0.18em] text-[#7a86a1]">
+                            {itemIndex === 0 ? "重点作品" : "辅助证据"}
+                          </p>
+                          <h4 className="single-line-title text-lg font-semibold text-[#171513] sm:text-xl">{item.title}</h4>
+                          <HighlightText text={item.note} className="mt-3 text-sm leading-6 text-[#625c55]" />
+                          {item.links ? (
+                            <div className="mt-5 flex flex-wrap gap-2">
+                              {item.links.map((link) => (
+                                <a
+                                  key={link.href}
+                                  href={link.href}
+                                  target="_blank"
+                                  rel="noreferrer"
+                                  className="glass-chip px-3 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-[#171513] transition hover:bg-[#171513] hover:text-[#f6f1ec]"
+                                >
+                                  {link.label}
+                                </a>
+                              ))}
+                            </div>
+                          ) : null}
+                        </div>
+                      </article>
+                    ))}
+                  </div>
+                )}
               </section>
             </Reveal>
           ))}
