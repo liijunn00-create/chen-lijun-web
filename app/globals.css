@@ -983,6 +983,17 @@ video {
 
 .case-study-body-solo {
   min-height: 0;
+}
+
+.case-study-layout {
+  display: grid;
+  gap: 2rem;
+}
+
+.case-copy {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
   gap: 1.8rem;
 }
 
@@ -992,6 +1003,121 @@ video {
 
 .case-study-body-solo .case-outcome-row {
   max-width: 1120px;
+}
+
+.case-liquid-visual {
+  position: relative;
+  min-height: 15.5rem;
+  align-self: start;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 1.65rem;
+  background:
+    radial-gradient(circle at 18% 14%, rgba(255, 255, 255, 0.54), transparent 8rem),
+    radial-gradient(circle at 86% 22%, rgba(246, 198, 220, 0.34), transparent 8.8rem),
+    radial-gradient(circle at 78% 82%, rgba(171, 221, 200, 0.38), transparent 9rem),
+    rgba(255, 255, 255, 0.16);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.58),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(30px) saturate(1.34);
+  -webkit-backdrop-filter: blur(30px) saturate(1.34);
+}
+
+.case-liquid-visual::before {
+  content: "";
+  position: absolute;
+  inset: 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 1.25rem;
+  pointer-events: none;
+}
+
+.case-liquid-orb {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(14px);
+  opacity: 0.58;
+}
+
+.case-liquid-orb-a {
+  right: 8%;
+  top: 10%;
+  width: 6rem;
+  height: 6rem;
+  background: rgba(186, 222, 249, 0.8);
+}
+
+.case-liquid-orb-b {
+  left: 4%;
+  bottom: 3%;
+  width: 7.5rem;
+  height: 7.5rem;
+  background: rgba(247, 226, 150, 0.56);
+}
+
+.case-liquid-capsule,
+.case-liquid-metrics span {
+  position: relative;
+  z-index: 1;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.24);
+  color: rgba(23, 21, 26, 0.82);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.58),
+    0 8px 14px rgba(92, 115, 124, 0.07);
+  backdrop-filter: blur(18px) saturate(1.28);
+  -webkit-backdrop-filter: blur(18px) saturate(1.28);
+}
+
+.case-liquid-capsule-eyebrow {
+  width: fit-content;
+  margin: 1.6rem 1.35rem 0;
+  border-radius: 999px;
+  padding: 0.72rem 1rem;
+  color: #66869c;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.case-liquid-capsule-title {
+  margin: 1.15rem 1.35rem 0 auto;
+  max-width: min(18rem, calc(100% - 2.7rem));
+  border-radius: 1.35rem;
+  padding: 1rem 1.1rem;
+  color: #171513;
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 1.35;
+}
+
+.case-liquid-metrics {
+  position: relative;
+  z-index: 1;
+  margin: 1.25rem 1.35rem 1.35rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.case-liquid-metrics span {
+  display: inline-flex;
+  min-height: 2.35rem;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.6rem 0.82rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+@media (min-width: 1024px) {
+  .case-study-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(15rem, 22rem);
+    align-items: start;
+  }
 }
 
 .case-type-label {
